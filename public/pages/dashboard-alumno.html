@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1400, initial-scale=0.5, minimum-scale=0.1, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CONOCE-TEC - Inicio</title>
     <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
     <link
@@ -11919,5 +11919,27 @@
         <span>Servicios</span>
       </a>
     </nav>
+
+    <!-- ========================================
+         ZOOM MÓVIL: fuerza ancho de 1100px en móvil
+         para que la app se vea como desktop escalado
+         ======================================== -->
+    <script>
+      (function () {
+        // En pantallas físicas pequeñas, forzar viewport de 1100px
+        // El navegador lo comprimirá automáticamente al ancho real
+        if (window.screen.width <= 430) {
+          var meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1100, initial-scale=' + (window.screen.width / 1100).toFixed(3));
+          }
+        } else if (window.screen.width <= 600) {
+          var meta = document.querySelector('meta[name="viewport"]');
+          if (meta) {
+            meta.setAttribute('content', 'width=1100, initial-scale=' + (window.screen.width / 1100).toFixed(3));
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
