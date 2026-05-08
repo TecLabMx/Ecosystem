@@ -287,27 +287,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function cargarDatosUsuario() {
     // Obtener nombre del usuario desde sessionStorage o localStorage
-    const nombreUsuario =
+    const nombreRaw =
       sessionStorage.getItem("ct_nombre") ||
       sessionStorage.getItem("nombreUsuario") ||
       sessionStorage.getItem("usuarioActual") ||
-      "Alumno";
+      "";
 
-    // Primer nombre para saludo y rol
-    const primerNombre = nombreUsuario.split(" ")[0];
+    // Formatea "juan.perez", "juan_perez" o email -> "Juan Perez"
+    function formatearNombre(raw) {
+      if (!raw) return "";
+      let nombre = raw.includes("@") ? raw.split("@")[0] : raw;
+      nombre = nombre.replace(/[._\-]/g, " ");
+      nombre = nombre.split(" ").filter(Boolean).map(function(w) {
+        return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase();
+      }).join(" ");
+      return nombre;
+    }
+
+    const nombreUsuario = nombreRaw ? formatearNombre(nombreRaw) : "";
+    const primerNombre = nombreUsuario ? nombreUsuario.split(" ")[0] : "";
 
     // Actualizar nombre completo en la pastilla del header
-    if (userName) userName.textContent = nombreUsuario;
+    if (userName) userName.textContent = nombreUsuario || "Alumno";
 
     // Actualizar el span de rol con el primer nombre
     const userRole = document.getElementById("userRole");
-    if (userRole) userRole.textContent = primerNombre;
+    if (userRole) userRole.textContent = primerNombre || "Alumno";
 
     // Actualizar saludo del banner de bienvenida
     const welcomeName = document.getElementById("welcomeName");
-    if (welcomeName) welcomeName.textContent = primerNombre;
+    const welcomeNameWrap = document.getElementById("welcomeNameWrap");
+    if (primerNombre) {
+      if (welcomeName) welcomeName.textContent = primerNombre;
+      if (welcomeNameWrap) welcomeNameWrap.style.display = "";
+    } else {
+      // Sin nombre: mostrar solo "¡Bienvenido!"
+      if (welcomeNameWrap) welcomeNameWrap.style.display = "none";
+    }
 
-    console.log("Usuario cargado:", nombreUsuario);
+    console.log("Usuario cargado:", nombreUsuario || "(sin nombre)");
   }
 
   // ========================================
