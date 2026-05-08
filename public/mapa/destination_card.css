@@ -1,0 +1,364 @@
+/* ========================================
+   ESTILOS PARA TARJETA DE DESTINO
+   Optimizado para PC y móviles
+   ======================================== */
+
+/* Tarjeta de destino */
+.destination-card {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Header de la tarjeta */
+.destination-card-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 12px 0 12px;
+}
+
+.destination-card-close {
+  background: transparent;
+  border: none;
+  color: #95a5a6;
+  font-size: 20px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.destination-card-close:hover {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+/* Contenido de la tarjeta */
+.destination-card-content {
+  padding: 0 20px 20px 20px;
+}
+
+.destination-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ecf0f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px auto;
+}
+
+.destination-icon i {
+  font-size: 28px;
+}
+
+.destination-info {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.destination-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+}
+
+.destination-category {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.destination-description {
+  font-size: 14px;
+  color: #34495e;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Galería de imágenes */
+.destination-gallery {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 16px;
+  padding: 8px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #bdc3c7 #ecf0f1;
+}
+
+.destination-gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.destination-gallery::-webkit-scrollbar-track {
+  background: #ecf0f1;
+  border-radius: 3px;
+}
+
+.destination-gallery::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 3px;
+}
+
+.destination-gallery-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.destination-gallery-image:hover {
+  transform: scale(1.05);
+}
+
+/* Acciones de la tarjeta */
+.destination-card-actions {
+  padding: 16px 20px;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-destination-primary,
+.btn-destination-secondary {
+  width: 100%;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+}
+
+.btn-destination-primary {
+  background: #3498db;
+  color: white;
+}
+
+.btn-destination-primary:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-destination-secondary {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-destination-secondary:hover {
+  background: #229954;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3);
+}
+
+.btn-destination-primary:active,
+.btn-destination-secondary:active {
+  transform: translateY(0);
+}
+
+/* Marcador de destino seleccionado */
+.destination-marker-selected {
+  background: transparent;
+  border: none;
+}
+
+/* Notificaciones */
+.destination-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.3s ease;
+}
+
+.destination-notification.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.destination-notification i {
+  font-size: 20px;
+}
+
+.destination-notification-success {
+  border-left: 4px solid #27ae60;
+}
+
+.destination-notification-success i {
+  color: #27ae60;
+}
+
+.destination-notification-error {
+  border-left: 4px solid #e74c3c;
+}
+
+.destination-notification-error i {
+  color: #e74c3c;
+}
+
+.destination-notification-info {
+  border-left: 4px solid #3498db;
+}
+
+.destination-notification-info i {
+  color: #3498db;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .destination-card {
+    background: #2c3e50;
+  }
+  
+  .destination-card-close {
+    color: #bdc3c7;
+  }
+  
+  .destination-card-close:hover {
+    background: #34495e;
+    color: #ecf0f1;
+  }
+  
+  .destination-icon {
+    background: #34495e;
+  }
+  
+  .destination-name {
+    color: #ecf0f1;
+  }
+  
+  .destination-category {
+    color: #95a5a6;
+  }
+  
+  .destination-description {
+    color: #bdc3c7;
+  }
+  
+  .destination-card-actions {
+    background: #34495e;
+  }
+  
+  .destination-notification {
+    background: #2c3e50;
+    color: #ecf0f1;
+  }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+  .destination-card {
+    bottom: 10px;
+    width: 95%;
+    max-width: none;
+  }
+  
+  .destination-card-content {
+    padding: 0 16px 16px 16px;
+  }
+  
+  .destination-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .destination-icon i {
+    font-size: 24px;
+  }
+  
+  .destination-name {
+    font-size: 18px;
+  }
+  
+  .destination-category {
+    font-size: 12px;
+  }
+  
+  .destination-description {
+    font-size: 13px;
+  }
+  
+  .destination-gallery-image {
+    width: 100px;
+    height: 70px;
+  }
+  
+  .destination-card-actions {
+    padding: 12px 16px;
+  }
+  
+  .btn-destination-primary,
+  .btn-destination-secondary {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  
+  .destination-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Responsive - Tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .destination-card {
+    max-width: 400px;
+  }
+}
+
+/* Animaciones */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.destination-card {
+  animation: slideUp 0.3s ease;
+}

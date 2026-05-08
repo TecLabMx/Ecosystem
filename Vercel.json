@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/auth/(.*)", "dest": "src/server.js" },
+    { "src": "/api/agenda/(.*)", "dest": "src/server.js" },
+    { "src": "/api/notes/(.*)", "dest": "src/server.js" },
+    { "src": "/api/directory/(.*)", "dest": "src/server.js" },
+    { "src": "/api/services/(.*)", "dest": "src/server.js" },
+    { "src": "/dashboard-alumno", "dest": "src/server.js" },
+    { "src": "/dashboard-visitante", "dest": "src/server.js" },
+    { "src": "/(.*)", "dest": "public/$1" }
+  ]
+}

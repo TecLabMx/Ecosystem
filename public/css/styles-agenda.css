@@ -1,0 +1,694 @@
+/* ========================================
+   ESTILOS ADICIONALES PARA AGENDA v2
+   ======================================== */
+
+/* MODAL DE NUEVA ACTIVIDAD */
+.ag2-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.ag2-modal {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.ag2-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ag2-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a8a;
+}
+
+.ag2-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.ag2-modal-close:hover {
+    color: #1f2937;
+}
+
+.ag2-modal-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ag2-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.ag2-form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2937;
+}
+
+.ag2-form-group input,
+.ag2-form-group select,
+.ag2-form-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.ag2-form-group input:focus,
+.ag2-form-group select:focus,
+.ag2-form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.ag2-form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.ag2-modal-footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.ag2-btn-cancel,
+.ag2-btn-save {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ag2-btn-cancel {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.ag2-btn-cancel:hover {
+    background: #e5e7eb;
+}
+
+.ag2-btn-save {
+    background: #3b82f6;
+    color: white;
+}
+
+.ag2-btn-save:hover {
+    background: #2563eb;
+}
+
+/* BOTONES DE ACCIÓN EN PRIORIDADES */
+.ag2-priority-btn-edit,
+.ag2-priority-btn-delete {
+    margin-left: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.ag2-priority-item:hover .ag2-priority-btn-edit,
+.ag2-priority-item:hover .ag2-priority-btn-delete {
+    opacity: 1;
+}
+
+/* BOTÓN NUEVA PRIORIDAD */
+.ag2-btn-new-priority {
+    width: 100%;
+    padding: 8px;
+    margin-top: 8px;
+    border: 1px dashed #3b82f6;
+    border-radius: 6px;
+    background: transparent;
+    color: #3b82f6;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ag2-btn-new-priority:hover {
+    background: #eff6ff;
+}
+
+/* BOTONES DE ACCIÓN EN ACTIVIDADES */
+.ag2-activity-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.ag2-ev-block:hover .ag2-activity-actions {
+    opacity: 1;
+}
+
+.ag2-btn-edit-activity,
+.ag2-btn-delete-activity {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    transition: background 0.2s;
+}
+
+.ag2-btn-edit-activity:hover,
+.ag2-btn-delete-activity:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+/* ACTIVIDADES ARRASTRABLES */
+.ag2-ev-block {
+    cursor: grab;
+    user-select: none;
+}
+
+.ag2-ev-block:active {
+    cursor: grabbing;
+    opacity: 0.8;
+}
+
+.ag2-sched-slot {
+    transition: background-color 0.2s;
+}
+
+.ag2-sched-slot.ag2-has-event {
+    position: relative;
+}
+
+/* ESTILOS PARA PRIORIDADES COMPLETADAS */
+.ag2-priority-item input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE PARA MODALES */
+@media (max-width: 768px) {
+    .ag2-modal {
+        width: 95%;
+        max-height: 90vh;
+    }
+    
+    .ag2-modal-body {
+        padding: 16px;
+    }
+    
+    .ag2-modal-footer {
+        padding: 16px;
+        flex-direction: column;
+    }
+    
+    .ag2-btn-cancel,
+    .ag2-btn-save {
+        width: 100%;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ag2-modal-overlay {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* ESTILOS PARA DRAG & DROP */
+.ag2-sched-slot[style*="background-color: rgb(224, 231, 255)"] {
+    border: 2px dashed #3b82f6;
+}
+
+/* NOTA STICKY MEJORADA */
+.ag2-note-sticky {
+    position: relative;
+    padding: 15px;
+    background: #fef3c7;
+    border-radius: 8px;
+    border-left: 4px solid #f59e0b;
+}
+
+.ag2-note-sticky p {
+    margin: 0;
+    font-size: 13px;
+    color: #78350f;
+    line-height: 1.4;
+    padding-right: 60px;
+}
+
+.ag2-note-pin {
+    color: #f59e0b;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.ag2-note-sticky button {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+/* MEJORADO: VISTA DE SEMANA */
+.ag2-sched-col {
+    position: relative;
+}
+
+.ag2-sched-col:hover {
+    background: #f9fafb;
+}
+
+/* ESTILOS PARA CATEGORÍAS DE ACTIVIDADES */
+.ag2-ev-academico-blk {
+    background: #a7f3d0;
+    color: #065f46;
+}
+
+.ag2-ev-personal-blk {
+    background: #ddd6fe;
+    color: #4c1d95;
+}
+
+.ag2-ev-examen-blk {
+    background: #bfdbfe;
+    color: #1e40af;
+}
+
+.ag2-ev-deportes-blk {
+    background: #fcd34d;
+    color: #78350f;
+}
+
+.ag2-ev-estudio-blk {
+    background: #fbcfe8;
+    color: #831843;
+}
+
+.ag2-ev-comida-blk {
+    background: #a5f3fc;
+    color: #164e63;
+}
+
+/* ALTURA DE BLOQUES */
+.ag2-span1 {
+    min-height: 60px;
+}
+
+.ag2-span2 {
+    min-height: 120px;
+}
+
+.ag2-span3 {
+    min-height: 180px;
+}
+
+.ag2-span4 {
+    min-height: 240px;
+}
+
+/* SKIP PARA BLOQUES CONTINUOS */
+.ag2-skip {
+    display: none;
+}
+/* ========================================
+   VISTA MENSUAL - NUEVO DISEÑO
+   ======================================== */
+
+.ag2-monthly-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+    background: #f0f4ff;
+}
+
+.ag2-mv-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 18px 0;
+    gap: 10px;
+}
+
+.ag2-mv-nav-btn {
+    background: none;
+    border: 1px solid #e0e7ef;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #4b5580;
+    font-size: 0.72rem;
+    transition: background 0.15s;
+}
+.ag2-mv-nav-btn:hover { background: #dbeafe; }
+
+.ag2-mv-top-bar .ag2-mv-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #6b7280;
+    flex: 1;
+    text-align: center;
+}
+
+.ag2-mv-big-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1a2340;
+    text-align: center;
+    padding: 6px 0 10px;
+    letter-spacing: 0.01em;
+}
+
+.ag2-mv-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    flex: 1;
+    padding: 0 10px 10px;
+    overflow-y: auto;
+}
+
+.ag2-mv-hdr {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6b7280;
+    text-align: center;
+    padding: 5px 0;
+    background: transparent;
+}
+.ag2-mv-hdr-weekend {
+    color: #e55;
+}
+
+.ag2-mv-day {
+    min-height: 68px;
+    border: 1px solid #e8eaf2;
+    border-radius: 8px;
+    padding: 5px 6px 4px;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.12s, box-shadow 0.12s;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: relative;
+}
+.ag2-mv-day:hover { background: #eef1fd; box-shadow: 0 2px 8px rgba(59,91,219,0.10); }
+.ag2-mv-day.ag2-mv-other { color: #ccc; background: #f8f9fb; border-color: #f0f2f8; pointer-events: none; }
+.ag2-mv-day.ag2-mv-today {
+    border: 2px solid #3b5bdb;
+    background: #eef2ff;
+}
+.ag2-mv-day.ag2-mv-today .ag2-mv-day-num { color: #3b5bdb; font-weight: 800; }
+.ag2-mv-day.ag2-mv-selected {
+    background: #3b5bdb;
+    border-color: #3b5bdb;
+}
+.ag2-mv-day.ag2-mv-selected .ag2-mv-day-num { color: #fff; }
+.ag2-mv-day.ag2-mv-selected:hover { background: #2f4ac0; }
+
+.ag2-mv-day-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.ag2-mv-day-num {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a2340;
+    line-height: 1;
+}
+
+.ag2-mv-fi-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #f59e0b;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+.ag2-mv-evt-dot {
+    width: 100%;
+    font-size: 0.62rem;
+    border-radius: 3px;
+    padding: 1px 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+/* ========================================
+   VISTA 1 DÍA - NUEVO DISEÑO
+   ======================================== */
+
+.ag2-day-view {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #eef2ff;
+    padding: 10px 14px 12px;
+    gap: 0;
+}
+
+.ag2-dv-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.ag2-dv-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a2340;
+    flex: 1;
+    text-align: center;
+}
+
+.ag2-dv-view-size-wrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: white;
+    border: 1px solid #e0e7ef;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5580;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.ag2-dv-card {
+    flex: 1;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(59,91,219,0.10);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 18px 20px 14px;
+}
+
+.ag2-dv-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f4ff;
+    flex-shrink: 0;
+}
+
+.ag2-dv-card-num {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #3b5bdb;
+    line-height: 1;
+    letter-spacing: -2px;
+}
+
+.ag2-dv-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.ag2-dv-card-dayname {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #1a2340;
+    line-height: 1.2;
+}
+
+.ag2-dv-card-monthyear {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.ag2-dv-body {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 4px;
+}
+
+/* Empty day card */
+.ag2-dv-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px 24px;
+    gap: 10px;
+    flex: 1;
+    min-height: 160px;
+}
+
+.ag2-dv-ill {
+    width: 200px;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ag2-dv-ill svg {
+    width: 200px;
+    height: 140px;
+}
+
+.ag2-dv-empty-title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #1a2340;
+    margin-top: 6px;
+}
+
+.ag2-dv-empty-sub {
+    font-size: 0.82rem;
+    color: #9ca3af;
+    text-align: center;
+    margin: 0;
+}
+
+/* Time rows (when there are events) */
+.ag2-dv-time-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    min-height: 48px;
+    border-top: 1px solid #f0f2f8;
+    padding: 4px 0;
+}
+
+.ag2-dv-hour {
+    width: 46px;
+    font-size: 0.72rem;
+    color: #aaa;
+    flex-shrink: 0;
+    padding-top: 3px;
+    text-align: right;
+}
+
+.ag2-dv-slot {
+    flex: 1;
+    min-height: 44px;
+    position: relative;
+}
+
+.ag2-dv-event {
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 3px;
+}
+
+/* ========================================
+   CALENDARIO ANUAL - FECHAS IMPORTANTES
+   ======================================== */
+
+.ag2-anual-mini-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    position: relative;
+}
+
+.ag2-anual-mini-day.ag2-anual-fi {
+    background: #fef3c7;
+    color: #92400e;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+.ag2-anual-mini-day.ag2-anual-today.ag2-anual-fi {
+    background: #3b5bdb;
+    color: #fff;
+}
+
+.ag2-anual-fi-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f59e0b;
+    display: block;
+    margin: 0 auto;
+}

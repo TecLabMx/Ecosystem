@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONOCE-TEC - Mi Perfil</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/styles-perfil.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-dashboard">
+        <div class="container-fluid">
+            <div class="header-content">
+                <!-- Botón Atrás -->
+                <button class="btn-back" onclick="window.history.back()" title="Volver atrás">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <!-- Logo y Título -->
+                <div class="header-logo">
+                    <div class="logo-circle-small">CT</div>
+                    <div class="header-text">
+                        <h1>CONOCE-TEC</h1>
+                        <p>Instituto Tecnológico de Minatitlán</p>
+                    </div>
+                </div>
+
+                <!-- Botón Cerrar Sesión -->
+                <div class="header-right">
+                    <button class="btn-logout" id="btnLogout" title="Cerrar Sesión">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Salir</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        <!-- Contenido del Perfil -->
+        <div class="profile-container">
+            <!-- Tarjeta de Perfil -->
+            <div class="profile-card">
+                <!-- Avatar Grande -->
+                <div class="profile-avatar-section">
+                    <img src="../img/icono-alumno.png" alt="Foto de Perfil" class="profile-avatar">
+                    <button class="btn-edit-avatar" title="Cambiar Foto">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+
+                <!-- Información del Perfil -->
+                <div class="profile-info">
+                    <h2 id="profileName">Juan Pérez García</h2>
+                    <p class="profile-email" id="profileEmail">juan.perez@estudiante.edu.mx</p>
+                    <p class="profile-status">Alumno Activo</p>
+                </div>
+
+                <!-- Botón Editar Perfil -->
+                <a href="editar-perfil.html" class="btn btn-primary btn-edit-profile" id="btnEditProfile">
+                    <i class="fas fa-edit"></i> Editar Perfil
+                </a>
+            </div>
+
+            <!-- Secciones de Información -->
+            <div class="profile-sections">
+                <!-- Información Personal -->
+                <div class="info-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-user"></i> Información Personal
+                    </h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Nombre Completo</label>
+                            <p id="infoNombre">Juan Pérez García</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Número de Control</label>
+                            <p id="infoMatricula">21181916001</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Correo Electrónico</label>
+                            <p id="infoCorreo">juan.perez@estudiante.edu.mx</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Teléfono</label>
+                            <p id="infoTelefono">+52 921 1234567</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información Académica -->
+                <div class="info-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-graduation-cap"></i> Información Académica
+                    </h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Carrera</label>
+                            <p id="infoCarrera">Ingeniería en Sistemas Computacionales</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Semestre</label>
+                            <p id="infoSemestre">6to Semestre</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Estado</label>
+                            <p id="infoEstado"><span class="badge bg-success">Activo</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="info-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-phone"></i> Información de Contacto
+                    </h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Teléfono Celular</label>
+                            <p id="infoTelefonoCelular">+52 921 1234567</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Teléfono de Emergencia</label>
+                            <p id="infoTelefonoEmergencia">+52 921 7654321</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Dirección</label>
+                            <p id="infoDireccion">Calle Principal 123, Minatitlán, Veracruz</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Ciudad</label>
+                            <p id="infoCiudad">Minatitlán, Veracruz</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Configuración de Cuenta -->
+                <div class="info-section">
+                    <h3 class="section-title">
+                        <i class="fas fa-cog"></i> Configuración de Cuenta
+                    </h3>
+                    <div class="config-options">
+                        <button class="config-btn" id="btnChangePassword">
+                            <i class="fas fa-key"></i>
+                            <span>Cambiar Contraseña</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="config-btn" id="btnNotifications">
+                            <i class="fas fa-bell"></i>
+                            <span>Notificaciones</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="config-btn" id="btnPrivacy">
+                            <i class="fas fa-lock"></i>
+                            <span>Privacidad</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="config-btn danger" id="btnDeleteAccount">
+                            <i class="fas fa-trash"></i>
+                            <span>Eliminar Cuenta</span>
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="profile-actions">
+                <button class="btn btn-secondary" id="btnCancel" onclick="window.history.back()">
+                    <i class="fas fa-times"></i> Volver
+                </button>
+                <button class="btn btn-danger" id="btnLogoutBottom">
+                    <i class="fas fa-sign-out-alt"></i> Cerrar Sesión
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: CONFIGURACIÓN DE NOTIFICACIONES ===== -->
+    <div class="prf-modal-overlay" id="notifModalOverlay">
+        <div class="prf-modal">
+            <div class="prf-modal-header">
+                <i class="fas fa-bell"></i>
+                <h3>Notificaciones</h3>
+                <button class="prf-modal-close" id="notifModalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="prf-modal-body">
+                <p class="prf-modal-desc">Elige qué tipo de notificaciones quieres recibir dentro de la aplicación.</p>
+
+                <div class="notif-toggle-group">
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-calendar-plus" style="color:#3b5bdb;"></i>
+                            <div>
+                                <strong>Actividades de Agenda</strong>
+                                <span>Cuando agregas o editas una actividad en tu agenda</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="notifPrefAgenda" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-sticky-note" style="color:#f59e0b;"></i>
+                            <div>
+                                <strong>Notas</strong>
+                                <span>Cuando creas o modificas una nota</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="notifPrefNotas" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-clock" style="color:#e74c3c;"></i>
+                            <div>
+                                <strong>Recordatorios</strong>
+                                <span>Alertas programadas en tus notas o agenda</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="notifPrefRecordatorios" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-check-circle" style="color:#2eaa62;"></i>
+                            <div>
+                                <strong>Prioridades completadas</strong>
+                                <span>Cuando marcas una prioridad como completada</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="notifPrefPrioridades" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-volume-up" style="color:#8e44ad;"></i>
+                            <div>
+                                <strong>Sonido de notificación</strong>
+                                <span>Reproducir un sonido al recibir notificaciones</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="notifPrefSonido">
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="prf-modal-footer">
+                <button class="prf-btn-cancel" id="notifModalCancel">Cancelar</button>
+                <button class="prf-btn-save" id="notifModalSave"><i class="fas fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: PRIVACIDAD ===== -->
+    <div class="prf-modal-overlay" id="privacyModalOverlay">
+        <div class="prf-modal">
+            <div class="prf-modal-header">
+                <i class="fas fa-lock"></i>
+                <h3>Privacidad</h3>
+                <button class="prf-modal-close" id="privacyModalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="prf-modal-body">
+                <p class="prf-modal-desc">Controla qué información tuya puede ser visible para otros usuarios dentro de CONOCE-TEC.</p>
+
+                <div class="notif-toggle-group">
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-user" style="color:#3b5bdb;"></i>
+                            <div>
+                                <strong>Mostrar mi nombre en el directorio</strong>
+                                <span>Otros alumnos podrán ver tu nombre en la app</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="privPrefNombre" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-envelope" style="color:#2eaa62;"></i>
+                            <div>
+                                <strong>Mostrar mi correo institucional</strong>
+                                <span>Visible para compañeros dentro de la app</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="privPrefCorreo">
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-graduation-cap" style="color:#f59e0b;"></i>
+                            <div>
+                                <strong>Mostrar mi carrera y semestre</strong>
+                                <span>Información académica visible para otros</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="privPrefCarrera" checked>
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="notif-toggle-item">
+                        <div class="notif-toggle-info">
+                            <i class="fas fa-phone" style="color:#e74c3c;"></i>
+                            <div>
+                                <strong>Mostrar mi número de teléfono</strong>
+                                <span>Solo visible para administradores</span>
+                            </div>
+                        </div>
+                        <label class="prf-toggle-switch">
+                            <input type="checkbox" id="privPrefTelefono">
+                            <span class="prf-toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="prf-privacy-note">
+                    <i class="fas fa-info-circle"></i>
+                    Tu información personal nunca se comparte con terceros fuera del Instituto Tecnológico de Minatitlán.
+                </div>
+            </div>
+            <div class="prf-modal-footer">
+                <button class="prf-btn-cancel" id="privacyModalCancel">Cancelar</button>
+                <button class="prf-btn-save" id="privacyModalSave"><i class="fas fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Estilos de modales de perfil -->
+    <style>
+    .prf-modal-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.45);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+    }
+    .prf-modal-overlay.active { display: flex; }
+    .prf-modal {
+        background: #fff;
+        border-radius: 18px;
+        width: 100%;
+        max-width: 480px;
+        box-shadow: 0 12px 48px rgba(30,42,90,0.22);
+        overflow: hidden;
+        animation: pModalIn .2s ease;
+    }
+    @keyframes pModalIn { from { opacity:0; transform:translateY(-16px) scale(.97); } to { opacity:1; transform:none; } }
+    .prf-modal-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 18px 22px;
+        background: linear-gradient(90deg,#1e2a5a,#2d4499);
+        color: #fff;
+    }
+    .prf-modal-header i { font-size: 1.3rem; }
+    .prf-modal-header h3 { margin: 0; font-size: 1.1rem; font-weight: 700; flex: 1; }
+    .prf-modal-close {
+        background: rgba(255,255,255,0.15);
+        border: none;
+        color: #fff;
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        font-size: .95rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .prf-modal-close:hover { background: rgba(255,255,255,0.3); }
+    .prf-modal-body { padding: 20px 22px; }
+    .prf-modal-desc { font-size: .9rem; color: #555; margin: 0 0 16px; }
+    .notif-toggle-group { display: flex; flex-direction: column; gap: 0; }
+    .notif-toggle-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+        border-bottom: 1px solid #f0f2f8;
+        gap: 12px;
+    }
+    .notif-toggle-item:last-child { border-bottom: none; }
+    .notif-toggle-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+    }
+    .notif-toggle-info i { font-size: 1.1rem; width: 22px; text-align: center; flex-shrink: 0; }
+    .notif-toggle-info div { display: flex; flex-direction: column; gap: 2px; }
+    .notif-toggle-info strong { font-size: .87rem; color: #1e2a5a; }
+    .notif-toggle-info span { font-size: .78rem; color: #888; }
+    /* Toggle switch */
+    .prf-toggle-switch { position: relative; display: inline-block; width: 46px; height: 26px; flex-shrink: 0; }
+    .prf-toggle-switch input { opacity: 0; width: 0; height: 0; }
+    .prf-toggle-slider {
+        position: absolute;
+        inset: 0;
+        background: #ccc;
+        border-radius: 26px;
+        cursor: pointer;
+        transition: background .25s;
+    }
+    .prf-toggle-slider::before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: 3px;
+        top: 3px;
+        background: #fff;
+        border-radius: 50%;
+        transition: transform .25s;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.18);
+    }
+    .prf-toggle-switch input:checked + .prf-toggle-slider { background: #3b5bdb; }
+    .prf-toggle-switch input:checked + .prf-toggle-slider::before { transform: translateX(20px); }
+    .prf-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 14px 22px;
+        border-top: 1px solid #f0f2f8;
+        background: #f8f9ff;
+    }
+    .prf-btn-cancel {
+        padding: 9px 20px;
+        border: 1.5px solid #ddd;
+        background: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: .9rem;
+        color: #555;
+        transition: background .2s;
+    }
+    .prf-btn-cancel:hover { background: #f0f2f8; }
+    .prf-btn-save {
+        padding: 9px 22px;
+        border: none;
+        background: #3b5bdb;
+        color: #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: .9rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        transition: background .2s;
+    }
+    .prf-btn-save:hover { background: #2d4499; }
+    .prf-privacy-note {
+        display: flex;
+        align-items: flex-start;
+        gap: 8px;
+        background: #eef2ff;
+        border-radius: 10px;
+        padding: 12px 14px;
+        font-size: .82rem;
+        color: #3b5bdb;
+        margin-top: 14px;
+    }
+    .prf-privacy-note i { margin-top: 2px; flex-shrink: 0; }
+    </style>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="../js/script-perfil.js"></script>
+</body>
+</html>

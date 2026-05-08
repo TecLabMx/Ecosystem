@@ -1,0 +1,47 @@
+/* ========================================
+   ESTILOS PARA UBICACIÓN ESTABLE
+   ======================================== */
+
+/* Icono del usuario con rotación suave */
+.user-location-marker i {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  filter: drop-shadow(0 0 4px rgba(52, 152, 219, 0.6));
+}
+
+/* Línea de dirección */
+.leaflet-pane .direction-line {
+  filter: drop-shadow(0 0 2px rgba(52, 152, 219, 0.5));
+}
+
+/* Efecto de brillo en la línea */
+.leaflet-overlay-pane svg path[stroke='#3498db'] {
+  filter: drop-shadow(0 0 3px rgba(52, 152, 219, 0.4));
+}
+
+/* Popup de ubicación */
+.leaflet-popup-content {
+  font-size: 13px;
+  color: #2c3e50;
+}
+
+@media (prefers-color-scheme: dark) {
+  .leaflet-popup-content {
+    color: #ecf0f1;
+    background-color: #2c3e50;
+  }
+}
+
+/* Animación suave para cambios de ubicación */
+@keyframes location-update {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.user-location-marker {
+  animation: location-update 0.3s ease-out;
+}

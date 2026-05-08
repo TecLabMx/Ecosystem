@@ -1,0 +1,1531 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "8",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "amenity": "university",
+        "name": "Instituto Tecnológico de Minatitlán",
+        "id": "way/558712711"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55774821017397,
+          18.006757130390497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-10T20:25:50Z",
+        "version": "1",
+        "changeset": "171755106",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "access": "private",
+        "leisure": "pitch",
+        "name": "Campo de voleibol",
+        "sport": "volleyball",
+        "surface": "sand",
+        "id": "way/1428860569"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55892116243434,
+          18.00663941551334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-10T20:25:50Z",
+        "version": "1",
+        "changeset": "171755106",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "access": "private",
+        "leisure": "pitch",
+        "lit": "no",
+        "name": "Cancha de futbol",
+        "sport": "soccer",
+        "surface": "asphalt",
+        "id": "way/1428860570"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5580701908483,
+          18.006955248012183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "leisure": "park",
+        "name": "Plaza",
+        "id": "way/1429350116"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55667722806298,
+          18.006011535669014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "leisure": "park",
+        "name": "Explanada",
+        "id": "way/1429350117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5559790288037,
+          18.005506876925057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "1",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "architect": "Moderna Funcional",
+        "building": "school",
+        "building:levels": "2",
+        "height": "8",
+        "name": "Edificio ACB",
+        "id": "way/1434248966",
+        "description": "Dirección<br>Subdirección Administrativa y de Servicios<br>Departamento de Recursos Financieros<br>Departamento de Planeación Programación y Presupuestación<br>Departamento de Comunicación y Difusión<br>Subdirección de planeación y vinculación<br>Departamento de Servicios Escolares<br>Departamento de Gestión Tecnológica y Vinculación<br>Departamento de Recursos Humanos",
+        "description_kml": "Dirección<br>Subdirección Administrativa y de Servicios<br>Departamento de Recursos Financieros<br>Departamento de Planeación Programación y Presupuestación<br>Departamento de Comunicación y Difusión<br>Subdirección de planeación y vinculación<br>Departamento de Servicios Escolares<br>Departamento de Gestión Tecnológica y Vinculación<br>Departamento de Recursos Humanos",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55589215069888,
+          18.005179976646534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "2",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "school",
+        "building:levels": "1",
+        "height": "3.5",
+        "name": "Edificio ACA",
+        "id": "way/1434248967",
+        "description": "Subdirección Académica<br>División de Estudios Profesionales<br>Departamento de Desarrollo Académica<br>Sala de Titulación",
+        "description_kml": "Subdirección Académica<br>División de Estudios Profesionales<br>Departamento de Desarrollo Académica<br>Sala de Titulación",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55589416080304,
+          18.004955689105877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "1",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "school",
+        "building:levels": "1",
+        "height": "3",
+        "name": "Edificio B",
+        "id": "way/1434248970",
+        "description": "Servicio Medico<br>Delegación Sindical DV-117<br>Aulas",
+        "description_kml": "Servicio Medico<br>Delegación Sindical DV-117<br>Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55564366501333,
+          18.005432166622967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "2",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Avenida Tecnológico",
+        "building": "school",
+        "height": "3",
+        "layer": "1",
+        "name": "Edificio LQG",
+        "id": "way/1434248973",
+        "description": "Laboratorio de Investigación del Medio Ambiente<br>Laboratorio de Química General <br>Papelería",
+        "description_kml": "Laboratorio de Investigación del Medio Ambiente<br>Laboratorio de Química General <br>Papelería",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5560730565462,
+          18.00571702376178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:11:48Z",
+        "version": "2",
+        "changeset": "172665393",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "6",
+        "name": "Edificio SUM",
+        "id": "way/1434260880",
+        "description": "Sala de Usos Múltiples, Taller de Electromecánica, Departamento de Recursos Materiales Y Servicios, Departamento de Mantenimiento",
+        "description_kml": "Sala de Usos Múltiples, Taller de Electromecánica, Departamento de Recursos Materiales Y Servicios, Departamento de Mantenimiento",
+        "amenity": "community_centre"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55534318981364,
+          18.006037763394385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "1",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "1",
+        "height": "3",
+        "name": "Edificio C",
+        "id": "way/1434260881",
+        "description": "Aulas",
+        "description_kml": "Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55644634106642,
+          18.005284622771242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:11:48Z",
+        "version": "1",
+        "changeset": "172665393",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "1",
+        "height": "3",
+        "layer": "1",
+        "name": "Edificio A",
+        "id": "way/1434394328",
+        "description": "Jefatura del Departamento de Química y Bioquímica<br>Aulas",
+        "description_kml": "Jefatura del Departamento de Química y Bioquímica<br>Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55538556065557,
+          18.00564080914811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:11:48Z",
+        "version": "1",
+        "changeset": "172665393",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "6",
+        "name": "Edificio H",
+        "id": "way/1434394333",
+        "description": "Aulas",
+        "description_kml": "Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55720103996943,
+          18.006240184437566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "1",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "8",
+        "name": "Edificio LISC",
+        "id": "way/1434402989",
+        "description": "Departamento de Centro de Computo <br>Departamento de Sistemas y Computación<br>Laboratorios de Computo<br>Laboratorio de Redes",
+        "description_kml": "Departamento de Centro de Computo <br>Departamento de Sistemas y Computación<br>Laboratorios de Computo<br>Laboratorio de Redes",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55749573927483,
+          18.006483126868847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "1",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "6",
+        "layer": "1",
+        "name": "Edificio F",
+        "id": "way/1434402994",
+        "description": "Sala Audiovisual<br>Aulas",
+        "description_kml": "Sala Audiovisual<br>Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55662383732708,
+          18.005784203989226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "1",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "1",
+        "height": "3",
+        "name": "Edificio G",
+        "id": "way/1434402995",
+        "description": "Departamento de Ingeniería Electrónica<br>Aulas<br>Laboratorio de Física",
+        "description_kml": "Departamento de Ingeniería Electrónica<br>Aulas<br>Laboratorio de Física",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55712558260359,
+          18.005982253026577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001010",
+        "description": "Departamento de Ciencias Básicas<br>Aulas de Unidad Académico (UAD)",
+        "description_kml": "Departamento de Ciencias Básicas<br>Aulas de Unidad Académico (UAD)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55748045935866,
+          18.007184398050548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001011",
+        "description": "Laboratorio de Electrónica 2",
+        "description_kml": "Laboratorio de Electrónica 2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55746861864802,
+          18.006934903554566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001012",
+        "description": "Aulas",
+        "description_kml": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55676233226544,
+          18.006930291800153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001013",
+        "description": "Departamento de Actividades Extraescolares<br>Laboratorios de Instrumentación<br>Laboratorios de PLC",
+        "description_kml": "Departamento de Actividades Extraescolares<br>Laboratorios de Instrumentación<br>Laboratorios de PLC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55665088589285,
+          18.006702119732292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001014"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55668852734037,
+          18.00634149852364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001015",
+        "description": "Laboratorios de Análisis Industriales",
+        "description_kml": "Laboratorios de Análisis Industriales"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55624881141794,
+          18.006655038549628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "amenity": "fast_food",
+        "building": "yes",
+        "fast_food": "cafeteria",
+        "id": "way/1436001016",
+        "description": "Cafetería Secundaria de ITMina",
+        "description_kml": "Cafetería Secundaria de ITMina"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55603258634213,
+          18.006638635671166
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001017",
+        "description": "Cubículos de Maestros",
+        "description_kml": "Cubículos de Maestros"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55595744285274,
+          18.006500241436232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001018",
+        "description": "Departamento de Metal Mecánica<br>Laboratorio EM4 de Sistemas y Maquinas Hidráulicas<br> Laboratorio EM5 Controles Eléctricos<br>Laboratorio EM6 Sistemas Hidráulicos y Neumáticos",
+        "description_kml": "Departamento de Metal Mecánica<br>Laboratorio EM4 de Sistemas y Maquinas Hidráulicas<br> Laboratorio EM5 Controles Eléctricos<br>Laboratorio EM6 Sistemas Hidráulicos y Neumáticos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55572111893196,
+          18.006287724492132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001019",
+        "description": "División de Estudios de Postgrado e Investigaciones <br>Aulas<br>Laboratorio de Química Analítica",
+        "description_kml": "División de Estudios de Postgrado e Investigaciones <br>Aulas<br>Laboratorio de Química Analítica"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5562329692326,
+          18.006017879068075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "layer": "1",
+        "id": "way/1436001020",
+        "description": "Unidad de Investigaciones del Medio Ambiente",
+        "description_kml": "Unidad de Investigaciones del Medio Ambiente"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55581063144797,
+          18.005946297538518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001021",
+        "description": "Aulas",
+        "description_kml": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55633473563964,
+          18.00551696351271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001022",
+        "description": "Aulas",
+        "description_kml": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5568185385496,
+          18.005565409748232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001023",
+        "description": "Laboratorio de Industrial",
+        "description_kml": "Laboratorio de Industrial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55712988098361,
+          18.005613025448188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001024",
+        "description": "Coordinación de Idiomas",
+        "description_kml": "Coordinación de Idiomas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5568123,
+          18.0054121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "amenity": "cafe",
+        "building": "yes",
+        "name": "Cafetería",
+        "id": "way/1436001025_new",
+        "description": "Cafetería Principal ITMina",
+        "description_kml": "Cafetería Principal ITMina",
+        "category": "Cafetería"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5571071,
+          18.0064557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "amenity": "cafe",
+        "building": "yes",
+        "id": "way/1436001025"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55712225818957,
+          18.0064525299415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-06T20:55:22Z",
+        "version": "1",
+        "changeset": "172933602",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "building": "school",
+        "id": "way/1436001026",
+        "description": "Laboratorio de Electrónica 1",
+        "description_kml": "Laboratorio de Electrónica 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55751277165356,
+          18.00670759710067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-14T21:24:17Z",
+        "version": "1",
+        "changeset": "173294474",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "leisure": "sports_centre",
+        "name": "Domo",
+        "id": "way/1442232408",
+        "description": "Domo Deportivo ITMina",
+        "description_kml": "Domo Deportivo ITMina",
+        "category": "Deportes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55771986567905,
+          18.00603906365548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3962824640",
+      "properties": {
+        "timestamp": "2016-01-24T04:00:07Z",
+        "version": "1",
+        "changeset": "36769457",
+        "user": "mikertw",
+        "uid": "733941",
+        "amenity": "restaurant",
+        "name": "Taqueria",
+        "id": "node/3962824640"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5558142,
+          18.0045123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3962824650",
+      "properties": {
+        "timestamp": "2022-12-30T23:48:01Z",
+        "version": "3",
+        "changeset": "130706045",
+        "user": "Moisés Torres",
+        "uid": "18134887",
+        "brand": "Oxxo",
+        "brand:wikidata": "Q1342538",
+        "name": "Oxxo",
+        "shop": "convenience",
+        "id": "node/3962824650"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5553377,
+          18.0043607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5444149020",
+      "properties": {
+        "timestamp": "2018-03-01T02:46:49Z",
+        "version": "1",
+        "changeset": "56773070",
+        "user": "Ter0h",
+        "uid": "7140977",
+        "leisure": "park",
+        "name": "Area Verde Constitucion",
+        "id": "node/5444149020"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574112,
+          18.0016652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10296066316",
+      "properties": {
+        "timestamp": "2023-07-27T20:17:13Z",
+        "version": "2",
+        "changeset": "139105870",
+        "user": "म्यापर",
+        "uid": "17365610",
+        "addr:city": "Minatitlan",
+        "addr:postcode": "96848",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "amenity": "fuel",
+        "brand": "Pemex",
+        "brand:wikidata": "Q871308",
+        "fuel:diesel": "yes",
+        "name": "Pemex",
+        "id": "node/10296066316"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5559887,
+          18.0037179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10296066317",
+      "properties": {
+        "timestamp": "2022-12-30T23:48:01Z",
+        "version": "1",
+        "changeset": "130706045",
+        "user": "Moisés Torres",
+        "uid": "18134887",
+        "name": "Vulcanizadora",
+        "phone": "+529222533808",
+        "shop": "yes",
+        "id": "node/10296066317"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556245,
+          18.003532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10296066318",
+      "properties": {
+        "timestamp": "2022-12-30T23:48:01Z",
+        "version": "1",
+        "changeset": "130706045",
+        "user": "Moisés Torres",
+        "uid": "18134887",
+        "amenity": "place_of_worship",
+        "name": "La Iglesia de Jesucristo de los Santos de los Últimos Días",
+        "id": "node/10296066318"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556365,
+          18.0030743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673260",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "2",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "name": "Edificio. LISC",
+        "office": "it",
+        "id": "node/13139673260"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574778,
+          18.0064814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673264",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LIE-2",
+        "id": "node/13139673264",
+        "description": "Laboratorio de Electrónica 2",
+        "description_kml": "Laboratorio de Electrónica 2",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.557472,
+          18.00671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673265",
+      "properties": {
+        "timestamp": "2025-10-14T21:24:17Z",
+        "version": "2",
+        "changeset": "173294474",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LIE-1",
+        "id": "node/13139673265",
+        "description": "Laboratorio de Electrónica 1",
+        "description_kml": "Laboratorio de Electrónica 1",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574331,
+          18.0069005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673266",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio CECT",
+        "id": "node/13139673266",
+        "description": "Departamento de Ciencias Básicas<br>Aulas de Unidad Académico (UAD)",
+        "category": "Servicio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574421,
+          18.0071819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673272",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "library",
+        "name": "Edificio O",
+        "id": "node/13139673272",
+        "description": "Centro de Información",
+        "description_kml": "Centro de Información",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5566627,
+          18.0063285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673273",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio J",
+        "id": "node/13139673273",
+        "description": "Departamento de Actividades Extraescolares<br>Laboratorios de Instrumentación<br>Laboratorios de PLC",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5566346,
+          18.0067243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673274",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio I",
+        "id": "node/13139673274",
+        "description": "Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556756,
+          18.0069246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673275",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LII",
+        "id": "node/13139673275",
+        "description": "Laboratorio de Industrial",
+        "description_kml": "Laboratorio de Industrial",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5571032,
+          18.0056146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673276",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio E",
+        "id": "node/13139673276",
+        "description": "Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5567752,
+          18.0055757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673277",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "language_school",
+        "name": "Edificio CI",
+        "id": "node/13139673277",
+        "description": "Coordinación de Idiomas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5567909,
+          18.0054216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673278",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio D",
+        "id": "node/13139673278",
+        "description": "Aulas",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5563057,
+          18.0055249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673281",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio DPI",
+        "id": "node/13139673281",
+        "description": "División de Estudios de Postgrado e Investigaciones <br>Aulas<br>Laboratorio de Química Analítica",
+        "category": "Servicio"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5562137,
+          18.0060021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673283",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio UVMA",
+        "id": "node/13139673283",
+        "description": "Unidad de Investigaciones del Medio Ambiente"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5557874,
+          18.0059295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673288",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio AC",
+        "id": "node/13139673288",
+        "description": "Departamento de Ciencias Económico Administrativo",
+        "description_kml": "Departamento de Ciencias Económico Administrativo",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556393,
+          18.0050462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673289",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "2",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "amenity": "school",
+        "name": "Entrada lateral",
+        "id": "node/13139673289",
+        "description": "Punto de Acceso y Salida",
+        "description_kml": "Punto de Acceso y Salida"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55627,
+          18.0049725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673290",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Entrada principal",
+        "id": "node/13139673290",
+        "description": "Punto de Acceso y Salida",
+        "description_kml": "Punto de Acceso y Salida"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.555433,
+          18.0053377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673296",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LCI",
+        "id": "node/13139673296",
+        "description": "Sala de Usos Múltiples<br>  Taller de Electromecánica<br>  Departamento de Recursos Materiales Y Servicios<br>  Departamento de Mantenimiento",
+        "description_kml": "Sala de Usos Múltiples<br>  Taller de Electromecánica<br>  Departamento de Recursos Materiales Y Servicios<br>  Departamento de Mantenimiento",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5553519,
+          18.006011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673297",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio LIEM",
+        "id": "node/13139673297",
+        "description": "Departamento de Metal Mecánica<br>Laboratorio EM4 de Sistemas y Maquinas Hidráulicas<br> Laboratorio EM5 Controles Eléctricos<br>Laboratorio EM6 Sistemas Hidráulicos y Neumáticos",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5557267,
+          18.0062752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673298",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio LAI",
+        "id": "node/13139673298",
+        "description": "Laboratorios de Análisis Industriales",
+        "category": "Laboratorios"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5562375,
+          18.006642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673299",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "cafe",
+        "name": "Palapa",
+        "id": "node/13139673299",
+        "description": "Cafetería Secundaria de ITMina",
+        "category": "Deportes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5560301,
+          18.0066074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673300",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio V",
+        "id": "node/13139673300",
+        "description": "Cubículos de Maestros",
+        "category": "Aulas"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5559496,
+          18.006511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139686801",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio S.G",
+        "id": "node/13139686801",
+        "description": "Servicios Generales",
+        "description_kml": "Servicios Generales"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.555679,
+          18.0065002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5570715,
+          18.0066604
+        ]
+      },
+      "properties": {
+        "name": "Subastación",
+        "description": null,
+        "source": "KML_NEW",
+        "description_kml": null
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5549402,
+          18.005815
+        ]
+      },
+      "properties": {
+        "name": "Edificio LIQP",
+        "description": "Laboratorio de Ingeniería Química",
+        "source": "KML_NEW",
+        "description_kml": "Laboratorio de Ingeniería Química",
+        "category": "Laboratorios"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5546291,
+          18.00594
+        ]
+      },
+      "properties": {
+        "name": "Edificio X",
+        "description": "Calderas",
+        "source": "KML_NEW",
+        "description_kml": "Calderas"
+      }
+    }
+  ]
+}

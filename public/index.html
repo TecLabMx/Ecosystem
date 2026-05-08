@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CONOCE-TEC - Login</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header-section">
+      <div class="container-fluid">
+        <div
+          class="row align-items-center g-0 px-2 px-sm-3"
+          style="padding-top: 12px; padding-bottom: 12px"
+        >
+          <div class="col-auto me-3">
+            <div class="logo-circle">
+              <span class="logo-text">CT</span>
+            </div>
+          </div>
+          <div class="col">
+            <h1 class="header-title">CONOCE-TEC</h1>
+            <p class="header-subtitle">
+              Explorando el Instituto Tecnológico de Minatitlán
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner Hero -->
+    <section class="banner-section">
+      <img
+        src="img/banner-profesionales.png"
+        alt="Profesionales"
+        class="banner-image"
+      />
+      <div class="banner-overlay"></div>
+    </section>
+
+    <!-- Sección Principal -->
+    <main class="main-section">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Columna Izquierda - Iniciar Sesión como Alumno -->
+          <div class="col-lg-6 section-column">
+            <h2 class="section-title">Iniciar sesión como</h2>
+
+            <div class="login-card card-alumno">
+              <div class="card-icon-container">
+                <img
+                  src="img/icono-alumno.png"
+                  alt="Icono Alumno"
+                  class="card-icon"
+                />
+              </div>
+              <h3 class="card-title">ALUMNO</h3>
+              <button
+                class="btn btn-primary btn-login btn-alumno"
+                id="btnAlumno"
+              >
+                Acceso completo
+              </button>
+              <div class="card-footer-link">
+                <p class="mb-0">
+                  ¿No tienes cuenta?
+                  <a href="pages/registro-alumno.html" class="link-registro"
+                    >Regístrate aquí</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha - Entrar como Visitante -->
+          <div class="col-lg-6 section-column">
+            <h2 class="section-title">Entrar como</h2>
+
+            <div class="login-card card-visitante">
+              <div class="card-icon-container">
+                <img
+                  src="img/icono-visitante.png"
+                  alt="Icono Visitante"
+                  class="card-icon"
+                />
+              </div>
+              <h3 class="card-title">VISITANTE</h3>
+              <button
+                class="btn btn-secondary btn-login btn-visitante"
+                id="btnVisitante"
+              >
+                Acceso limitado
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Acceso Admin (discreto) -->
+        <div class="row mt-2">
+          <div class="col-12 text-center">
+            <button
+              id="btnAdmin"
+              class="btn btn-link btn-sm"
+              style="color: #aaa; font-size: 0.78rem; text-decoration: none"
+            >
+              <i class="fas fa-shield-alt" style="margin-right: 4px"></i>Acceso
+              administrativo
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal para Alumno -->
+    <div
+      class="modal fade"
+      id="modalAlumno"
+      tabindex="-1"
+      aria-labelledby="modalAlumnoLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalAlumnoLabel">Acceso de Alumno</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formAlumno">
+              <div class="mb-3">
+                <label for="usuarioAlumno" class="form-label">Usuario</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="usuarioAlumno"
+                  placeholder="Ingresa tu usuario"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="passwordAlumno" class="form-label"
+                  >Contraseña</label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="passwordAlumno"
+                    placeholder="Ingresa tu contraseña"
+                    maxlength="30"
+                    required
+                  />
+                  <button
+                    class="btn btn-outline-secondary toggle-password"
+                    type="button"
+                    data-target="passwordAlumno"
+                  >
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="recordarAlumno"
+                />
+                <label class="form-check-label" for="recordarAlumno">
+                  Recuérdame
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnConfirmarAlumno"
+            >
+              Ingresar
+            </button>
+          </div>
+          <div class="modal-body text-center border-top pt-3">
+            <p class="text-muted mb-0">
+              ¿No tienes cuenta?
+              <a href="pages/registro-alumno.html" class="text-primary fw-bold"
+                >Regístrate aquí</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para Visitante -->
+    <div
+      class="modal fade"
+      id="modalVisitante"
+      tabindex="-1"
+      aria-labelledby="modalVisitanteLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalVisitanteLabel">
+              Acceso de Visitante
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="formVisitante">
+              <div class="mb-3">
+                <label for="nombreVisitante" class="form-label"
+                  >Nombre Completo</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="nombreVisitante"
+                  placeholder="Ingresa tu nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="emailVisitante" class="form-label"
+                  >Correo Electrónico</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailVisitante"
+                  placeholder="Ingresa tu correo"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Motivo de la Visita</label>
+                <!-- Select oculto para compatibilidad con el JS existente -->
+                <select class="d-none" id="motivoVisitante" required>
+                  <option value="">Selecciona un motivo</option>
+                  <option value="informacion">Información General</option>
+                  <option value="admision">Proceso de Admisión</option>
+                  <option value="evento">Evento o Taller</option>
+                  <option value="otro">Otro</option>
+                </select>
+                <!-- Custom dropdown que se queda dentro del modal -->
+                <div class="custom-select-wrapper" id="customMotivoWrapper">
+                  <button
+                    type="button"
+                    class="custom-select-btn"
+                    id="customMotivoBtn"
+                  >
+                    <span id="customMotivoText">Selecciona un motivo</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                      />
+                    </svg>
+                  </button>
+                  <ul class="custom-select-menu" id="customMotivoMenu">
+                    <li class="custom-select-item" data-value="">
+                      Selecciona un motivo
+                    </li>
+                    <li class="custom-select-item" data-value="informacion">
+                      Información General
+                    </li>
+                    <li class="custom-select-item" data-value="admision">
+                      Proceso de Admisión
+                    </li>
+                    <li class="custom-select-item" data-value="evento">
+                      Evento o Taller
+                    </li>
+                    <li class="custom-select-item" data-value="otro">Otro</li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnConfirmarVisitante"
+            >
+              Continuar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Admin -->
+    <div class="modal fade" id="modalAdmin" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" style="max-width: 380px">
+        <div
+          class="modal-content"
+          style="border-radius: 16px; overflow: hidden"
+        >
+          <div
+            class="modal-header"
+            style="
+              background: linear-gradient(135deg, #1e2a5a, #2d4499);
+              color: #fff;
+              border: none;
+            "
+          >
+            <h5 class="modal-title" style="font-weight: 700">
+              <i class="fas fa-shield-alt me-2"></i>Acceso Administrador
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body" style="padding: 24px">
+            <div class="mb-3">
+              <label class="form-label fw-bold" style="font-size: 0.9rem"
+                >Usuario</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="usuarioAdmin"
+                placeholder="admin"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label fw-bold" style="font-size: 0.9rem"
+                >Contraseña</label
+              >
+              <div class="input-group">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordAdmin"
+                  placeholder="••••••••"
+                  onkeydown="
+                    if (event.key === 'Enter')
+                      document.getElementById('btnConfirmarAdmin').click();
+                  "
+                />
+                <button
+                  class="btn btn-outline-secondary toggle-password"
+                  type="button"
+                  data-target="passwordAdmin"
+                >
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div
+              id="adminLoginError"
+              style="
+                display: none;
+                color: #c62828;
+                font-size: 0.83rem;
+                margin-bottom: 8px;
+              "
+            >
+              <i class="fas fa-exclamation-circle me-1"></i>Credenciales
+              incorrectas.
+            </div>
+          </div>
+          <div class="modal-footer" style="border: none; padding: 0 24px 20px">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="btnConfirmarAdmin"
+              style="background: #1e2a5a; border-color: #1e2a5a"
+            >
+              <i class="fas fa-sign-in-alt me-1"></i>Ingresar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="js/script.js"></script>
+    <!-- Custom Select Dropdown -->
+    <script>
+      (function () {
+        const btn = document.getElementById("customMotivoBtn");
+        const menu = document.getElementById("customMotivoMenu");
+        const text = document.getElementById("customMotivoText");
+        const hidden = document.getElementById("motivoVisitante");
+        const wrapper = document.getElementById("customMotivoWrapper");
+
+        if (!btn) return;
+
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          wrapper.classList.toggle("open");
+        });
+
+        menu.querySelectorAll(".custom-select-item").forEach(function (item) {
+          item.addEventListener("click", function () {
+            const val = this.dataset.value;
+            hidden.value = val;
+            text.textContent = this.textContent;
+            menu
+              .querySelectorAll(".custom-select-item")
+              .forEach((i) => i.classList.remove("selected"));
+            if (val !== "") this.classList.add("selected");
+            wrapper.classList.remove("open");
+            btn.classList.remove("is-invalid");
+          });
+        });
+
+        document.addEventListener("click", function () {
+          wrapper.classList.remove("open");
+        });
+
+        document
+          .getElementById("modalVisitante")
+          .addEventListener("hidden.bs.modal", function () {
+            hidden.value = "";
+            text.textContent = "Selecciona un motivo";
+            menu
+              .querySelectorAll(".custom-select-item")
+              .forEach((i) => i.classList.remove("selected"));
+            wrapper.classList.remove("open");
+            btn.classList.remove("is-invalid");
+          });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+/* ========================================
+   ESTILOS PARA EL SISTEMA DE REPORTES WAZE
+   ======================================== */
+
+/* Botón flotante de Reportar */
+.waze-report-button {
+    position: fixed;
+    bottom: 90px; /* Mover arriba para evitar colisión con el botón de modo oscuro */
+    right: 20px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Naranja Waze */
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+    transition: all 0.3s ease;
+}
+
+.waze-report-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 87, 34, 0.6);
+}
+
+.waze-report-button i {
+    margin-right: 8px;
+}
+
+/* Modal de Reporte */
+.waze-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+}
+
+.waze-modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde arriba y centrado */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Ancho del modal */
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Animación de entrada */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.waze-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.waze-modal-close:hover,
+.waze-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Grid de Tipos de Reporte */
+.report-type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.report-type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.report-type-btn:hover {
+    border-color: #ff5722;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.2);
+}
+
+.report-type-btn i {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+/* Estilos para el modo oscuro (Waze Dark Mode) */
+body.dark-mode .waze-modal-content {
+    background-color: var(--waze-bg-secondary);
+    color: var(--waze-text-primary);
+    border: 1px solid var(--waze-bg-tertiary);
+}
+
+body.dark-mode .waze-modal-close {
+    color: var(--waze-text-muted);
+}
+
+body.dark-mode .waze-modal-close:hover,
+body.dark-mode .waze-modal-close:focus {
+    color: var(--waze-text-primary);
+}
+
+body.dark-mode .report-type-btn {
+    background-color: var(--waze-bg-tertiary);
+    border-color: var(--waze-bg-tertiary);
+    color: var(--waze-text-primary);
+}
+
+body.dark-mode .report-type-btn:hover {
+    border-color: var(--waze-accent-blue);
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+}
+
+/* Estilo para los marcadores de reporte */
+.waze-report-icon {
+    text-align: center;
+    line-height: 1;
+}
+
+.waze-report-icon i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

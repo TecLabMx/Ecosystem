@@ -1,0 +1,575 @@
+/**
+ * Navigation Panel Styles - Estilos tipo Waze/Google Maps
+ */
+
+/* Panel principal */
+.navigation-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+  border-top: 1px solid #e0e0e0;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  max-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.3s ease-out;
+  border-radius: 16px 16px 0 0;
+}
+
+.navigation-panel.hidden {
+  display: none;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header del panel */
+.navigation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.route-info-compact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  font-size: 14px;
+}
+
+.route-origin,
+.route-destination {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.route-origin i {
+  color: #4CAF50;
+  font-size: 16px;
+}
+
+.route-destination i {
+  color: #f44336;
+  font-size: 16px;
+}
+
+.route-swap {
+  display: flex;
+  align-items: center;
+}
+
+.btn-swap {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-swap:hover {
+  color: #2980b9;
+  transform: scale(1.1);
+}
+
+.btn-close-nav {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-close-nav:hover {
+  color: #333;
+}
+
+/* Resumen de ruta */
+.route-summary {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 16px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.summary-item .label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+}
+
+.summary-item .value {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Instrucción actual destacada */
+.current-instruction {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.instruction-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 28px;
+}
+
+.instruction-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.instruction-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.instruction-distance {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.instruction-progress {
+  width: 100%;
+}
+
+.progress-bar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Lista de instrucciones */
+.instructions-list-container {
+  flex: 1;
+  overflow-y: auto;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.instruction-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.2s ease;
+  background: white;
+}
+
+.instruction-item:hover {
+  background: #f9f9f9;
+}
+
+.instruction-item.active {
+  background: #e3f2fd;
+  border-left: 4px solid #3498db;
+  padding-left: 12px;
+}
+
+.instruction-step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  font-weight: 600;
+  color: #333;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.instruction-item.active .instruction-step-number {
+  background: #3498db;
+  color: white;
+}
+
+.instruction-step-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.instruction-step-text {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.instruction-step-distance {
+  font-size: 12px;
+  color: #999;
+}
+
+.instruction-step-icon {
+  color: #999;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.instruction-item.active .instruction-step-icon {
+  color: #3498db;
+}
+
+/* Botones de acción */
+.navigation-actions {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background: white;
+  border-radius: 0 0 16px 16px;
+}
+
+.navigation-actions .btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.navigation-actions .btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.navigation-actions .btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+.navigation-actions .btn-danger {
+  background: #f44336;
+  color: white;
+}
+
+.navigation-actions .btn-danger:hover {
+  background: #d32f2f;
+}
+
+.navigation-actions .btn-primary {
+  background: #4CAF50;
+  color: white;
+}
+
+.navigation-actions .btn-primary:hover {
+  background: #388E3C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navigation-panel {
+    max-height: 70vh;
+  }
+
+  .route-info-compact {
+    font-size: 12px;
+  }
+
+  .current-instruction {
+    padding: 12px;
+  }
+
+  .instruction-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .instruction-text {
+    font-size: 14px;
+  }
+
+  .navigation-actions {
+    flex-wrap: wrap;
+  }
+
+  .navigation-actions .btn {
+    flex: 1 1 calc(50% - 4px);
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation-panel {
+    max-height: 80vh;
+  }
+
+  .route-summary {
+    flex-wrap: wrap;
+  }
+
+  .summary-item {
+    flex: 1 1 calc(33.333% - 8px);
+  }
+
+  .route-info-compact {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .route-origin,
+  .route-destination {
+    width: 100%;
+  }
+
+  .navigation-actions .btn {
+    flex: 1 1 100%;
+  }
+}
+
+/* Modo oscuro - MEJORADO CON MEJOR CONTRASTE */
+@media (prefers-color-scheme: dark) {
+  .navigation-panel {
+    background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
+    border-top-color: #2a2a2a;
+  }
+
+  .navigation-header {
+    background: #0f0f0f;
+    border-bottom-color: #2a2a2a;
+  }
+
+  .route-origin,
+  .route-destination {
+    color: #ffffff;
+  }
+
+  .route-summary {
+    background: #1a1a1a;
+    border-bottom-color: #2a2a2a;
+  }
+
+  .summary-item .label {
+    color: #cccccc;
+  }
+
+  .summary-item .value {
+    color: #ffffff;
+  }
+
+  .instructions-list-container {
+    border-bottom-color: #2a2a2a;
+  }
+
+  .instruction-item {
+    background: #0f0f0f;
+    border-bottom-color: #2a2a2a;
+  }
+
+  .instruction-item:hover {
+    background: #1a1a1a;
+  }
+
+  .instruction-item.active {
+    background: #1a3a52;
+    border-left-color: #3498db;
+  }
+
+  .instruction-step-number {
+    background: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .instruction-item.active .instruction-step-number {
+    background: #3498db;
+    color: #ffffff;
+  }
+
+  .instruction-step-text {
+    color: #ffffff;
+  }
+
+  .instruction-step-distance {
+    color: #cccccc;
+  }
+
+  .instruction-step-icon {
+    color: #cccccc;
+  }
+
+  .instruction-item.active .instruction-step-icon {
+    color: #3498db;
+  }
+
+  .btn-close-nav {
+    color: #cccccc;
+  }
+
+  .btn-close-nav:hover {
+    color: #ffffff;
+  }
+
+  .btn-swap {
+    color: #3498db;
+  }
+
+  .btn-swap:hover {
+    color: #5dade2;
+  }
+
+  .current-instruction {
+    background: linear-gradient(135deg, #1a3a52 0%, #0f2940 100%);
+    color: #ffffff;
+  }
+
+  .instruction-text {
+    color: #ffffff;
+  }
+
+  .instruction-distance {
+    color: #cccccc;
+  }
+
+  .navigation-actions {
+    background: #0f0f0f;
+    border-radius: 0 0 16px 16px;
+  }
+
+  .navigation-actions .btn-secondary {
+    background: #2a2a2a;
+    color: #ffffff;
+  }
+
+  .navigation-actions .btn-secondary:hover {
+    background: #3a3a3a;
+  }
+
+  .navigation-actions .btn-danger {
+    background: #d32f2f;
+    color: #ffffff;
+  }
+
+  .navigation-actions .btn-danger:hover {
+    background: #b71c1c;
+  }
+
+  .navigation-actions .btn-primary {
+    background: #388E3C;
+    color: #ffffff;
+  }
+
+  .navigation-actions .btn-primary:hover {
+    background: #2e7d32;
+  }
+
+  .instructions-list-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+
+  .instructions-list-container::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+  }
+
+  .instructions-list-container::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+  }
+}
+
+/* Animaciones suaves */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.instruction-icon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Scroll suave en la lista */
+.instructions-list-container {
+  scroll-behavior: smooth;
+}
+
+.instructions-list-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.instructions-list-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.instructions-list-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.instructions-list-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

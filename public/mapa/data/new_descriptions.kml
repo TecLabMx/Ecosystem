@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Copia de ApoyaTEC</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-A1C2FA-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>fffac2a1</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dfac2a1</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-A1C2FA-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>fffac2a1</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dfac2a1</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-A1C2FA-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-A1C2FA-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-A1C2FA-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-B2EBF2-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>fff2ebb2</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4df2ebb2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-B2EBF2-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>fff2ebb2</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4df2ebb2</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-B2EBF2-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-B2EBF2-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-B2EBF2-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="poly-BDBDBD-1200-77-nodesc-normal">
+      <LineStyle>
+        <color>ffbdbdbd</color>
+        <width>1.2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dbdbdbd</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="poly-BDBDBD-1200-77-nodesc-highlight">
+      <LineStyle>
+        <color>ffbdbdbd</color>
+        <width>1.8</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4dbdbdbd</color>
+        <fill>1</fill>
+        <outline>1</outline>
+      </PolyStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="poly-BDBDBD-1200-77-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#poly-BDBDBD-1200-77-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#poly-BDBDBD-1200-77-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Edificios</name>
+      <Placemark>
+        <name>Edificio H</name>
+        <description>Aulas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.557156,18.0062205,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cafetería</name>
+        <description>Cafetería Principal ITMina</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5571761,18.0064601,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Subastación</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5570715,18.0066604,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Domo </name>
+        <description>Domo Deportivo ITMina</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5576956,18.0060492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centro de Computo</name>
+        <description><![CDATA[Departamento de Centro de Computo <br>Departamento de Sistemas y Computación<br>Laboratorios de Computo<br>Laboratorio de Redes ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5575238,18.0065273,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Centro de Informacion </name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5566383,18.0062425,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio G</name>
+        <description><![CDATA[Departamento de Ingeniería Electrónica<br>Aulas<br>Laboratorio de Física]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.55711,18.0060297,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LIE 1</name>
+        <description>Laboratorio de Electrónica 1 </description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5575059,18.0067096,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LIE 2</name>
+        <description>Laboratorio de Electrónica 2</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5574697,18.006943,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio CECT</name>
+        <description><![CDATA[Departamento de Ciencias Básicas<br>Aulas de Unidad Académico (UAD)]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.557419,18.0072377,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio I</name>
+        <description>Aulas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5566818,18.0069294,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio J</name>
+        <description><![CDATA[Departamento de Actividades Extraescolares<br>Laboratorios de Instrumentación<br>Laboratorios de PLC]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5566512,18.0066973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio A</name>
+        <description><![CDATA[Jefatura del Departamento de Química y Bioquímica<br>Aulas]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.555417,18.0056479,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio B</name>
+        <description><![CDATA[Servicio Medico<br>Delegación Sindical DV-117<br>Aulas]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5555833,18.0054489,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio ACA</name>
+        <description><![CDATA[Subdirección Académica<br>División de Estudios Profesionales<br>Departamento de Desarrollo Académica<br>Sala de Titulación]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5558891,18.0049719,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio ACB</name>
+        <description><![CDATA[Dirección<br>Subdirección Administrativa y de Servicios<br>Departamento de Recursos Financieros<br>Departamento de Planeación Programación y Presupuestación<br>Departamento de Comunicación y Difusión<br>Subdirección de planeación y vinculación<br>Departamento de Servicios Escolares<br>Departamento de Gestión Tecnológica y Vinculación<br>Departamento de Recursos Humanos ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5558864,18.0052168,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LIQP</name>
+        <description>Laboratorio de Ingeniería Química</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5549402,18.005815,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio X</name>
+        <description>Calderas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5546291,18.00594,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Departamento LCI</name>
+        <description><![CDATA[Sala de Usos Múltiples<br>Taller de Electromecánica<br>Departamento de Recursos Materiales  Y Servicios<br>Departamento de Mantenimiento]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5553021,18.0060701,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LIEM</name>
+        <description><![CDATA[Departamento de Metal Mecánica<br>Laboratorio EM4 de Sistemas y Maquinas Hidráulicas<br> Laboratorio EM5 Controles Eléctricos<br>Laboratorio EM6 Sistemas Hidráulicos y Neumáticos ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5556886,18.0062818,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio UVMA</name>
+        <description>Unidad de Investigaciones del Medio Ambiente</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.555809,18.005917,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LQG</name>
+        <description><![CDATA[Laboratorio de Investigación del Medio Ambiente<br>Laboratorio de Química General <br>Papelería]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5560099,18.0057357,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio DPI</name>
+        <description><![CDATA[División de Estudios de Postgrado e Investigaciones <br>Aulas<br>Laboratorio de Química Analítica ]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5562272,18.0060163,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio F</name>
+        <description><![CDATA[Sala Audiovisual<br>Aulas]]></description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5566635,18.0058071,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Instituto Tecnológico de Minatitlán</name>
+        <styleUrl>#poly-B2EBF2-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -94.559559,18.0087867,0
+                -94.5602698,18.0082357,0
+                -94.560015,18.0070776,0
+                -94.5562759,18.0049854,0
+                -94.5559608,18.0047398,0
+                -94.5556628,18.0045653,0
+                -94.5555881,18.0046311,0
+                -94.555475,18.0047385,0
+                -94.5553238,18.0048712,0
+                -94.555061,18.0051824,0
+                -94.5547391,18.0056262,0
+                -94.554428,18.0059476,0
+                -94.559559,18.0087867,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name/>
+        <styleUrl>#poly-A1C2FA-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -94.5565541,18.0053199,0
+                -94.5565501,18.0052421,0
+                -94.5564374,18.0052421,0
+                -94.556428,18.0052115,0
+                -94.556137,18.0052115,0
+                -94.5561397,18.0053224,0
+                -94.5565541,18.0053199,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name/>
+        <styleUrl>#poly-A1C2FA-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -94.55634,18.0050889,0
+                -94.5563722,18.0050429,0
+                -94.5563011,18.0050149,0
+                -94.5562515,18.0050302,0
+                -94.5562796,18.0050672,0
+                -94.55634,18.0050889,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Edificio D</name>
+        <description>Aulas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5563319,18.0055098,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio C</name>
+        <description>Aulas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5563493,18.0052776,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio AC</name>
+        <description>Departamento de Ciencias Económico Administrativo</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5563118,18.0050366,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio E</name>
+        <description>Aulas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5568115,18.0055598,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio CI</name>
+        <description>Coordinación de Idiomas</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.55679,18.0054195,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LII</name>
+        <description>Laboratorio de Industrial</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5571495,18.005621,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio S.G</name>
+        <description>Servicios Generales</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5557053,18.0065056,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio LAI</name>
+        <description>Laboratorios de Análisis Industriales</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5562471,18.0066561,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palapa</name>
+        <description>Cafetería Secundaria de ITMina</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5560392,18.0066369,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Edificio V</name>
+        <description>Cubículos de Maestros</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5559789,18.0065222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name/>
+        <styleUrl>#poly-BDBDBD-1200-77-nodesc</styleUrl>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing>
+              <tessellate>1</tessellate>
+              <coordinates>
+                -94.5562055,18.0049888,0
+                -94.5562068,18.0049659,0
+                -94.5561532,18.0049697,0
+                -94.5561559,18.0049888,0
+                -94.5562055,18.0049888,0
+              </coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark>
+        <name>Entrada Lateral</name>
+        <description>Punto de Acceso y Salida </description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5561827,18.0049773,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Entrada Principal</name>
+        <description>Punto de Acceso y Salida</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -94.5554221,18.0053377,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

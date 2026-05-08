@@ -1,0 +1,304 @@
+/* ========================================
+   MEJORAS VISUALES PARA CONOCETEC
+   ======================================== */
+
+/* Mejoras en la ruta visualizada */
+.route-line-enhanced {
+  filter: drop-shadow(0 2px 4px rgba(231, 76, 60, 0.3));
+}
+
+/* Mejoras en los marcadores de ruta */
+.route-marker {
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.route-marker-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.route-marker-icon:hover {
+  transform: scale(1.15);
+}
+
+.route-start-marker .route-marker-icon {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+  box-shadow: 0 3px 8px rgba(39, 174, 96, 0.4);
+}
+
+.route-end-marker .route-marker-icon {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  box-shadow: 0 3px 8px rgba(231, 76, 60, 0.4);
+  animation: pulse-destination 2s ease-in-out infinite;
+}
+
+@keyframes pulse-destination {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 3px 8px rgba(231, 76, 60, 0.4);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.6);
+  }
+}
+
+/* Mejoras en el panel de información de ruta */
+.route-info {
+  background: linear-gradient(135deg, #ffffff, #f8f9fa);
+  border: 2px solid #3498db;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.route-info.active {
+  animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Mejoras en botones */
+.btn-enhanced {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-enhanced:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Mejoras en POI cards */
+.poi-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.poi-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-left-color: #3498db;
+}
+
+.poi-card.selected {
+  background: linear-gradient(90deg, #e8f4fd, #ffffff);
+  border-left-color: #3498db;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Mejoras en el marcador de usuario */
+.user-location-marker {
+  animation: pulse-user 2s ease-in-out infinite;
+}
+
+@keyframes pulse-user {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(52, 152, 219, 0);
+  }
+}
+
+/* Mejoras en el header */
+.header-enhanced {
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #3498db);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mejoras en la barra de búsqueda */
+.search-input-enhanced {
+  transition: all 0.3s ease;
+  border: 2px solid #e1e5e9;
+}
+
+.search-input-enhanced:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Mejoras en las categorías */
+.category-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.category-aulas {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  color: white;
+}
+
+.category-laboratorios {
+  background: linear-gradient(135deg, #9b59b6, #8e44ad);
+  color: white;
+}
+
+.category-cafeteria {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+}
+
+.category-deportes {
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  color: white;
+}
+
+.category-servicio {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  color: white;
+}
+
+/* Mejoras en el loading state */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Mejoras en las direcciones paso a paso */
+.direction-step {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.direction-step:hover {
+  background: #f8f9fa;
+  border-left-color: #3498db;
+  transform: translateX(5px);
+}
+
+.direction-step.active {
+  background: linear-gradient(90deg, #e8f4fd, #ffffff);
+  border-left-color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Mejoras en tooltips */
+.tooltip-enhanced {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mejoras en el bottom sheet móvil */
+.bottom-sheet-enhanced {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.bottom-sheet-handle {
+  width: 40px;
+  height: 4px;
+  background: #cbd5e0;
+  border-radius: 2px;
+  margin: 12px auto;
+  transition: background 0.3s ease;
+}
+
+.bottom-sheet-handle:hover {
+  background: #a0aec0;
+}
+
+/* Mejoras en accesibilidad */
+.focus-visible:focus {
+  outline: 3px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Modo oscuro (preparación) */
+@media (prefers-color-scheme: dark) {
+  .route-info {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #ecf0f1;
+  }
+  
+  .poi-card {
+    background: #34495e;
+    color: #ecf0f1;
+  }
+}
+
+/* Mejoras en la animación de carga de datos */
+.skeleton-loader {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Mejoras en el indicador de progreso de ruta */
+.route-progress-bar {
+  height: 4px;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  box-shadow: 0 2px 4px rgba(39, 174, 96, 0.3);
+}
+
+/* Mejoras visuales para el mapa */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}

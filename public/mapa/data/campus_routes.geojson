@@ -1,0 +1,3525 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/113715653",
+      "properties": {
+        "timestamp": "2021-01-06T21:46:53Z",
+        "version": "3",
+        "changeset": "97072675",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Agust\u00edn de Iturbide",
+        "id": "way/113715653"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5555851,
+            18.0044292
+          ],
+          [
+            -94.5550291,
+            18.004078
+          ],
+          [
+            -94.5540129,
+            18.0034363
+          ],
+          [
+            -94.5535244,
+            18.0031278
+          ],
+          [
+            -94.5524753,
+            18.0024757
+          ],
+          [
+            -94.5519304,
+            18.0021198
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/113715671",
+      "properties": {
+        "timestamp": "2021-01-06T21:41:27Z",
+        "version": "4",
+        "changeset": "97072538",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Adalberto Tejeda",
+        "id": "way/113715671"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5532209,
+            18.0014225
+          ],
+          [
+            -94.5542763,
+            18.0020479
+          ],
+          [
+            -94.5547583,
+            18.0023567
+          ],
+          [
+            -94.5553546,
+            18.0027388
+          ],
+          [
+            -94.5556063,
+            18.0029001
+          ],
+          [
+            -94.5557856,
+            18.003015
+          ],
+          [
+            -94.5564698,
+            18.0034756
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/113715692",
+      "properties": {
+        "timestamp": "2021-01-06T22:30:08Z",
+        "version": "7",
+        "changeset": "97073751",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle Constituci\u00f3n",
+        "highway": "secondary",
+        "name": "Hilario C. Salas",
+        "oneway": "yes",
+        "id": "way/113715692"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5559894,
+            18.0008561
+          ],
+          [
+            -94.5560932,
+            18.0009566
+          ],
+          [
+            -94.5568605,
+            18.0014087
+          ],
+          [
+            -94.5575456,
+            18.0018616
+          ],
+          [
+            -94.5577782,
+            18.0020216
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/113715713",
+      "properties": {
+        "timestamp": "2021-01-06T22:22:49Z",
+        "version": "4",
+        "changeset": "97073583",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle C\u00e1ndido Aguilar",
+        "highway": "residential",
+        "name": "Adalberto Tejeda",
+        "id": "way/113715713"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5524967,
+            18.0001376
+          ],
+          [
+            -94.5535924,
+            18.0008825
+          ],
+          [
+            -94.5546396,
+            18.0015296
+          ],
+          [
+            -94.5551235,
+            18.0018278
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839028",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "3",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle 5 de mayo",
+        "id": "way/117839028"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5568991,
+            18.0044849
+          ],
+          [
+            -94.5563899,
+            18.0041795
+          ],
+          [
+            -94.5561625,
+            18.0040431
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839049",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "4",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Callej\u00f3n Los Pinos",
+        "id": "way/117839049"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5583444,
+            18.0049504
+          ],
+          [
+            -94.558093,
+            18.0052314
+          ],
+          [
+            -94.5576961,
+            18.0056751
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839080",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "4",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Miguel Hidalgo",
+        "id": "way/117839080"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5585687,
+            18.0061723
+          ],
+          [
+            -94.558897,
+            18.0058172
+          ],
+          [
+            -94.5592428,
+            18.0054433
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839260",
+      "properties": {
+        "timestamp": "2021-01-06T21:20:09Z",
+        "version": "3",
+        "changeset": "97071936",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Emiliano Zapata",
+        "id": "way/117839260"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5579828,
+            18.0034908
+          ],
+          [
+            -94.557825,
+            18.0036355
+          ],
+          [
+            -94.5577225,
+            18.0037294
+          ],
+          [
+            -94.5571221,
+            18.0042796
+          ],
+          [
+            -94.5568991,
+            18.0044849
+          ],
+          [
+            -94.5564052,
+            18.0049397
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839370",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "6",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle 21 de Marzo",
+        "id": "way/117839370"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5556919,
+            18.0045333
+          ],
+          [
+            -94.5560307,
+            18.0047263
+          ],
+          [
+            -94.5564052,
+            18.0049397
+          ],
+          [
+            -94.5576961,
+            18.0056751
+          ],
+          [
+            -94.5585286,
+            18.0061494
+          ],
+          [
+            -94.5585687,
+            18.0061723
+          ],
+          [
+            -94.5594246,
+            18.0066811
+          ],
+          [
+            -94.5603585,
+            18.0071919
+          ],
+          [
+            -94.5612627,
+            18.0077223
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117839371",
+      "properties": {
+        "timestamp": "2021-01-06T21:17:31Z",
+        "version": "7",
+        "changeset": "97071858",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Avenida Tecnol\u00f3gico",
+        "id": "way/117839371"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5543401,
+            18.0059411
+          ],
+          [
+            -94.5550212,
+            18.0063173
+          ],
+          [
+            -94.5555474,
+            18.0066079
+          ],
+          [
+            -94.5561315,
+            18.0069305
+          ],
+          [
+            -94.5565033,
+            18.0071364
+          ],
+          [
+            -94.55665,
+            18.0072176
+          ],
+          [
+            -94.5574177,
+            18.0076408
+          ],
+          [
+            -94.5585416,
+            18.0082615
+          ],
+          [
+            -94.5595939,
+            18.0088427
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616782774",
+      "properties": {
+        "timestamp": "2021-01-06T20:39:09Z",
+        "version": "3",
+        "changeset": "97070625",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Isaac Newton",
+        "id": "way/616782774"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5555221,
+            18.0079075
+          ],
+          [
+            -94.5551949,
+            18.0077377
+          ],
+          [
+            -94.5548135,
+            18.0074502
+          ],
+          [
+            -94.5542767,
+            18.0071038
+          ],
+          [
+            -94.5536266,
+            18.0066843
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616782775",
+      "properties": {
+        "timestamp": "2021-01-06T20:39:09Z",
+        "version": "3",
+        "changeset": "97070625",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Linus Pawling",
+        "id": "way/616782775"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5561315,
+            18.0069305
+          ],
+          [
+            -94.5555221,
+            18.0079075
+          ],
+          [
+            -94.5553498,
+            18.0081949
+          ],
+          [
+            -94.5553234,
+            18.0082217
+          ],
+          [
+            -94.555276,
+            18.0082255
+          ],
+          [
+            -94.5551513,
+            18.0081579
+          ],
+          [
+            -94.5551142,
+            18.0081488
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616782777",
+      "properties": {
+        "timestamp": "2021-01-06T21:17:31Z",
+        "version": "3",
+        "changeset": "97071858",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle Alfred Nobel",
+        "highway": "residential",
+        "name": "Alfred novel",
+        "id": "way/616782777"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5548135,
+            18.0074502
+          ],
+          [
+            -94.5553377,
+            18.0068506
+          ],
+          [
+            -94.5555474,
+            18.0066079
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616782778",
+      "properties": {
+        "timestamp": "2021-01-06T20:23:43Z",
+        "version": "2",
+        "changeset": "97070127",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Albert Einstein",
+        "id": "way/616782778"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5550212,
+            18.0063173
+          ],
+          [
+            -94.5542767,
+            18.0071038
+          ],
+          [
+            -94.5538429,
+            18.0075115
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616784108",
+      "properties": {
+        "timestamp": "2021-01-06T20:46:24Z",
+        "version": "4",
+        "changeset": "97070845",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Lasser",
+        "id": "way/616784108"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5574177,
+            18.0076408
+          ],
+          [
+            -94.5572173,
+            18.0083966
+          ],
+          [
+            -94.5571585,
+            18.0086186
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616784109",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "2",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Prolongaci\u00f3n Candido aguilar",
+        "id": "way/616784109"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5577225,
+            18.0037294
+          ],
+          [
+            -94.5570497,
+            18.0031193
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616784110",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "3",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle C\u00e1ndido Aguilar",
+        "highway": "path",
+        "name": "Candido perez",
+        "id": "way/616784110"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5591276,
+            18.0045494
+          ],
+          [
+            -94.5587924,
+            18.0043143
+          ],
+          [
+            -94.5583703,
+            18.004018
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616784111",
+      "properties": {
+        "timestamp": "2018-08-13T21:44:26Z",
+        "version": "1",
+        "changeset": "61639902",
+        "user": "Guillermo Larios Barrios",
+        "uid": "7620588",
+        "highway": "residential",
+        "name": "El roble",
+        "id": "way/616784111"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5587924,
+            18.0043143
+          ],
+          [
+            -94.5583444,
+            18.0049504
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/616784112",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "2",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle Los Almendros",
+        "highway": "residential",
+        "name": "Los robles",
+        "id": "way/616784112"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5583703,
+            18.004018
+          ],
+          [
+            -94.5583005,
+            18.0041521
+          ],
+          [
+            -94.5581948,
+            18.0043574
+          ],
+          [
+            -94.5579806,
+            18.0047507
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/682515376",
+      "properties": {
+        "timestamp": "2021-01-06T22:36:54Z",
+        "version": "3",
+        "changeset": "97073922",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "secondary_link",
+        "oneway": "no",
+        "id": "way/682515376"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5576589,
+            18.0017081
+          ],
+          [
+            -94.5575456,
+            18.0018616
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/682516965",
+      "properties": {
+        "timestamp": "2019-06-20T16:43:20Z",
+        "version": "2",
+        "changeset": "71452468",
+        "user": "Andrew Matheny",
+        "uid": "3265371",
+        "highway": "tertiary",
+        "oneway": "yes",
+        "id": "way/682516965"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.560649,
+            17.9990858
+          ],
+          [
+            -94.5605022,
+            17.9991782
+          ],
+          [
+            -94.5602973,
+            17.9993626
+          ],
+          [
+            -94.5594651,
+            18.0002262
+          ],
+          [
+            -94.5590033,
+            18.0007054
+          ],
+          [
+            -94.5584718,
+            18.0012569
+          ],
+          [
+            -94.5580755,
+            18.0016683
+          ],
+          [
+            -94.5580088,
+            18.0017476
+          ],
+          [
+            -94.5579125,
+            18.001862
+          ],
+          [
+            -94.5577782,
+            18.0020216
+          ],
+          [
+            -94.5573352,
+            18.0024891
+          ],
+          [
+            -94.5573235,
+            18.0025015
+          ],
+          [
+            -94.5573159,
+            18.002608
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/682516966",
+      "properties": {
+        "timestamp": "2021-01-06T22:36:54Z",
+        "version": "3",
+        "changeset": "97073922",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "tertiary",
+        "lanes": "1",
+        "oneway": "yes",
+        "id": "way/682516966"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5573757,
+            18.0026943
+          ],
+          [
+            -94.5575309,
+            18.0026287
+          ],
+          [
+            -94.557596,
+            18.0025626
+          ],
+          [
+            -94.5579497,
+            18.0022029
+          ],
+          [
+            -94.5582476,
+            18.0019036
+          ],
+          [
+            -94.5583115,
+            18.0018394
+          ],
+          [
+            -94.5587361,
+            18.0014083
+          ],
+          [
+            -94.5604687,
+            17.9995608
+          ],
+          [
+            -94.5606923,
+            17.9993211
+          ],
+          [
+            -94.560752,
+            17.9991784
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/698728309",
+      "properties": {
+        "timestamp": "2021-01-06T22:30:08Z",
+        "version": "2",
+        "changeset": "97073751",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "secondary",
+        "name": "Calle Constituci\u00f3n",
+        "oneway": "yes",
+        "id": "way/698728309"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5579125,
+            18.001862
+          ],
+          [
+            -94.5576589,
+            18.0017081
+          ],
+          [
+            -94.5569621,
+            18.0012623
+          ],
+          [
+            -94.5564915,
+            18.0010084
+          ],
+          [
+            -94.5561278,
+            18.000881
+          ],
+          [
+            -94.5559894,
+            18.0008561
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872568",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "2",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle C\u00e1ndido Aguilar",
+        "highway": "residential",
+        "name": "Candido perez",
+        "id": "way/881872568"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5583703,
+            18.004018
+          ],
+          [
+            -94.557825,
+            18.0036355
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872570",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "2",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Privada Los Pinos",
+        "id": "way/881872570"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.558093,
+            18.0052314
+          ],
+          [
+            -94.5577866,
+            18.0050395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872571",
+      "properties": {
+        "timestamp": "2021-01-06T21:41:27Z",
+        "version": "2",
+        "changeset": "97072538",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Independencia",
+        "id": "way/881872571"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5560307,
+            18.0047263
+          ],
+          [
+            -94.5563899,
+            18.0041795
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872572",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "2",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Privada Colima",
+        "id": "way/881872572"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5595367,
+            18.0051926
+          ],
+          [
+            -94.558905,
+            18.0048038
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872573",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "2",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle El Roble",
+        "id": "way/881872573"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5586365,
+            18.0051106
+          ],
+          [
+            -94.558905,
+            18.0048038
+          ],
+          [
+            -94.5591276,
+            18.0045494
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881872574",
+      "properties": {
+        "timestamp": "2023-04-05T18:02:40Z",
+        "version": "2",
+        "changeset": "134549116",
+        "user": "Abr_mx",
+        "uid": "6766137",
+        "highway": "primary_link",
+        "id": "way/881872574"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5562476,
+            18.0039545
+          ],
+          [
+            -94.5561375,
+            18.003852
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881936255",
+      "properties": {
+        "timestamp": "2020-12-07T12:05:12Z",
+        "version": "1",
+        "changeset": "95420188",
+        "user": "BanjaraHills",
+        "uid": "10811160",
+        "highway": "service",
+        "id": "way/881936255"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5585286,
+            18.0061494
+          ],
+          [
+            -94.5584062,
+            18.0062843
+          ],
+          [
+            -94.5583391,
+            18.0063073
+          ],
+          [
+            -94.5579274,
+            18.0062901
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/881936256",
+      "properties": {
+        "timestamp": "2021-07-05T07:17:58Z",
+        "version": "2",
+        "changeset": "107422327",
+        "user": "AlQuoz",
+        "uid": "10652799",
+        "highway": "service",
+        "id": "way/881936256"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5579274,
+            18.0062901
+          ],
+          [
+            -94.5579066,
+            18.0067744
+          ],
+          [
+            -94.5577446,
+            18.006777
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882238209",
+      "properties": {
+        "timestamp": "2020-12-08T06:59:57Z",
+        "version": "1",
+        "changeset": "95464816",
+        "user": "BanjaraHills",
+        "uid": "10811160",
+        "highway": "residential",
+        "id": "way/882238209"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5553546,
+            18.0027388
+          ],
+          [
+            -94.5557187,
+            18.0022389
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882238210",
+      "properties": {
+        "timestamp": "2020-12-08T06:59:57Z",
+        "version": "1",
+        "changeset": "95464816",
+        "user": "BanjaraHills",
+        "uid": "10811160",
+        "highway": "residential",
+        "id": "way/882238210"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5556063,
+            18.0029001
+          ],
+          [
+            -94.5559455,
+            18.0023955
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882238211",
+      "properties": {
+        "timestamp": "2021-01-06T21:41:27Z",
+        "version": "2",
+        "changeset": "97072538",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle C\u00e1ndido Aguilar",
+        "highway": "path",
+        "name": "Adalberto Tejeda",
+        "id": "way/882238211"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551235,
+            18.0018278
+          ],
+          [
+            -94.5557187,
+            18.0022389
+          ],
+          [
+            -94.5559455,
+            18.0023955
+          ],
+          [
+            -94.5561338,
+            18.0025256
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882238212",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "2",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle C\u00e1ndido Aguilar",
+        "highway": "residential",
+        "name": "Adalberto Tejeda",
+        "id": "way/882238212"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5561338,
+            18.0025256
+          ],
+          [
+            -94.5569226,
+            18.0030013
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882245209",
+      "properties": {
+        "timestamp": "2020-12-08T07:28:59Z",
+        "version": "1",
+        "changeset": "95467152",
+        "user": "BanjaraHills",
+        "uid": "10811160",
+        "highway": "service",
+        "id": "way/882245209"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551702,
+            18.0033634
+          ],
+          [
+            -94.554967,
+            18.0036604
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882248992",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitl\u00e1n",
+        "uid": "23257776",
+        "highway": "service",
+        "id": "way/882248992"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5552166,
+            18.0054286
+          ],
+          [
+            -94.555057,
+            18.0054262
+          ],
+          [
+            -94.5549753,
+            18.0055015
+          ],
+          [
+            -94.5548957,
+            18.0055902
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/882248994",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitl\u00e1n",
+        "uid": "23257776",
+        "highway": "service",
+        "id": "way/882248994"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5548957,
+            18.0055902
+          ],
+          [
+            -94.5551077,
+            18.0055905
+          ],
+          [
+            -94.5551291,
+            18.0055202
+          ],
+          [
+            -94.5551917,
+            18.0054812
+          ],
+          [
+            -94.5552166,
+            18.0054286
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892807161",
+      "properties": {
+        "timestamp": "2021-01-06T20:39:09Z",
+        "version": "2",
+        "changeset": "97070625",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Gay Lussac",
+        "id": "way/892807161"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.55665,
+            18.0072176
+          ],
+          [
+            -94.5563543,
+            18.0076873
+          ],
+          [
+            -94.5563449,
+            18.0077523
+          ],
+          [
+            -94.5563851,
+            18.0078212
+          ],
+          [
+            -94.5563838,
+            18.007871
+          ],
+          [
+            -94.5563516,
+            18.0079628
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892823941",
+      "properties": {
+        "timestamp": "2021-01-06T21:41:27Z",
+        "version": "2",
+        "changeset": "97072538",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Miguel Hidalgo",
+        "id": "way/892823941"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5569621,
+            18.0012623
+          ],
+          [
+            -94.5568605,
+            18.0014087
+          ],
+          [
+            -94.5565351,
+            18.0019616
+          ],
+          [
+            -94.5561338,
+            18.0025256
+          ],
+          [
+            -94.5557856,
+            18.003015
+          ],
+          [
+            -94.5554238,
+            18.0035234
+          ],
+          [
+            -94.5550291,
+            18.004078
+          ],
+          [
+            -94.5545074,
+            18.0044844
+          ],
+          [
+            -94.5538636,
+            18.005161
+          ],
+          [
+            -94.5532152,
+            18.0058605
+          ],
+          [
+            -94.5529138,
+            18.0061917
+          ],
+          [
+            -94.552527,
+            18.0066178
+          ],
+          [
+            -94.5521524,
+            18.0071191
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892824398",
+      "properties": {
+        "timestamp": "2021-01-06T21:17:31Z",
+        "version": "1",
+        "changeset": "97071858",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "id": "way/892824398"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5553377,
+            18.0068506
+          ],
+          [
+            -94.5555952,
+            18.0069858
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892824399",
+      "properties": {
+        "timestamp": "2021-01-06T21:20:09Z",
+        "version": "2",
+        "changeset": "97071936",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Privada John Dalton",
+        "id": "way/892824399"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5565033,
+            18.0071364
+          ],
+          [
+            -94.5563892,
+            18.0072945
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892824636",
+      "properties": {
+        "timestamp": "2021-01-06T21:41:27Z",
+        "version": "2",
+        "changeset": "97072538",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle \u00darsulo Galv\u00e1n",
+        "id": "way/892824636"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551548,
+            18.0048786
+          ],
+          [
+            -94.5545074,
+            18.0044844
+          ],
+          [
+            -94.553919,
+            18.0041261
+          ],
+          [
+            -94.5536498,
+            18.0039621
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892825351",
+      "properties": {
+        "timestamp": "2021-01-06T21:24:46Z",
+        "version": "2",
+        "changeset": "97072066",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Privada Hidalgo",
+        "id": "way/892825351"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.558897,
+            18.0058172
+          ],
+          [
+            -94.5592564,
+            18.0060216
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892825542",
+      "properties": {
+        "timestamp": "2021-01-07T18:23:00Z",
+        "version": "2",
+        "changeset": "97125389",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle 5 de mayo",
+        "id": "way/892825542"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5609989,
+            18.0064744
+          ],
+          [
+            -94.5608014,
+            18.0062767
+          ],
+          [
+            -94.5601553,
+            18.0059441
+          ],
+          [
+            -94.5592428,
+            18.0054433
+          ],
+          [
+            -94.5586365,
+            18.0051106
+          ],
+          [
+            -94.5583444,
+            18.0049504
+          ],
+          [
+            -94.5579806,
+            18.0047507
+          ],
+          [
+            -94.5571221,
+            18.0042796
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892826366",
+      "properties": {
+        "timestamp": "2021-01-06T21:29:18Z",
+        "version": "1",
+        "changeset": "97072185",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "id": "way/892826366"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5585459,
+            18.0028704
+          ],
+          [
+            -94.5585188,
+            18.0032603
+          ],
+          [
+            -94.5585765,
+            18.0034146
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892827667",
+      "properties": {
+        "timestamp": "2021-01-06T21:34:28Z",
+        "version": "1",
+        "changeset": "97072337",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle Hilario C. Salas",
+        "highway": "tertiary",
+        "name": "Heroe de nacozari",
+        "id": "way/892827667"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.557596,
+            18.0025626
+          ],
+          [
+            -94.5585459,
+            18.0028704
+          ],
+          [
+            -94.5592661,
+            18.0031038
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892827668",
+      "properties": {
+        "timestamp": "2021-05-13T22:36:47Z",
+        "version": "2",
+        "changeset": "104661483",
+        "user": "Amonite1025",
+        "uid": "8792833",
+        "alt_name": "Calle Hilario C. Salas",
+        "highway": "residential",
+        "name": "C\u00e1ndido Aguilar",
+        "oneway": "yes",
+        "id": "way/892827668"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5565351,
+            18.0019616
+          ],
+          [
+            -94.5573352,
+            18.0024891
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892828826",
+      "properties": {
+        "timestamp": "2021-01-06T22:18:23Z",
+        "version": "3",
+        "changeset": "97073464",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Jos\u00e9 Mar\u00eda Morelos",
+        "id": "way/892828826"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5560649,
+            18.0039279
+          ],
+          [
+            -94.5554238,
+            18.0035234
+          ],
+          [
+            -94.5551702,
+            18.0033634
+          ],
+          [
+            -94.5543991,
+            18.0028769
+          ],
+          [
+            -94.5539127,
+            18.0025701
+          ],
+          [
+            -94.5528497,
+            18.0019307
+          ],
+          [
+            -94.552256,
+            18.0016003
+          ],
+          [
+            -94.5522163,
+            18.001572
+          ],
+          [
+            -94.5513504,
+            18.0009537
+          ],
+          [
+            -94.5508093,
+            18.0006101
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892835228",
+      "properties": {
+        "timestamp": "2021-05-13T22:36:47Z",
+        "version": "3",
+        "changeset": "104661483",
+        "user": "Amonite1025",
+        "uid": "8792833",
+        "alt_name": "Calle Hilario C. Salas",
+        "highway": "residential",
+        "name": "C\u00e1ndido Aguilar",
+        "oneway": "yes",
+        "id": "way/892835228"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.553331,
+            17.9999418
+          ],
+          [
+            -94.5539465,
+            18.0003543
+          ],
+          [
+            -94.554985,
+            18.0010096
+          ],
+          [
+            -94.5554691,
+            18.0013364
+          ],
+          [
+            -94.5565351,
+            18.0019616
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892836010",
+      "properties": {
+        "timestamp": "2021-01-07T22:47:37Z",
+        "version": "2",
+        "changeset": "97133285",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle Benito Ju\u00e1rez",
+        "id": "way/892836010"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.558744,
+            17.996513
+          ],
+          [
+            -94.5582821,
+            17.9972159
+          ],
+          [
+            -94.5578778,
+            17.997798
+          ],
+          [
+            -94.55716,
+            17.9987902
+          ],
+          [
+            -94.5568302,
+            17.9992893
+          ],
+          [
+            -94.5564057,
+            17.9999317
+          ],
+          [
+            -94.5560757,
+            18.0004267
+          ],
+          [
+            -94.5560436,
+            18.000477
+          ],
+          [
+            -94.5560083,
+            18.0005324
+          ],
+          [
+            -94.5558518,
+            18.0007779
+          ],
+          [
+            -94.5558099,
+            18.0008336
+          ],
+          [
+            -94.5554691,
+            18.0013364
+          ],
+          [
+            -94.5551235,
+            18.0018278
+          ],
+          [
+            -94.5547583,
+            18.0023567
+          ],
+          [
+            -94.5543991,
+            18.0028769
+          ],
+          [
+            -94.5540129,
+            18.0034363
+          ],
+          [
+            -94.5536498,
+            18.0039621
+          ],
+          [
+            -94.553108,
+            18.0047468
+          ],
+          [
+            -94.5525748,
+            18.0055258
+          ],
+          [
+            -94.5522853,
+            18.0059588
+          ],
+          [
+            -94.5519356,
+            18.0064772
+          ],
+          [
+            -94.5516341,
+            18.0070167
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892836012",
+      "properties": {
+        "timestamp": "2021-01-07T22:54:24Z",
+        "version": "2",
+        "changeset": "97133441",
+        "user": "127logs",
+        "uid": "9633823",
+        "alt_name": "Calle Ferrocarril",
+        "highway": "residential",
+        "name": "Calle Altamira",
+        "id": "way/892836012"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5580755,
+            18.0016683
+          ],
+          [
+            -94.5570756,
+            18.0010455
+          ],
+          [
+            -94.5560757,
+            18.0004267
+          ],
+          [
+            -94.5555858,
+            18.0001189
+          ],
+          [
+            -94.554578,
+            17.9994464
+          ],
+          [
+            -94.5535939,
+            17.9988305
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/892837183",
+      "properties": {
+        "timestamp": "2021-01-06T22:36:54Z",
+        "version": "1",
+        "changeset": "97073922",
+        "user": "127logs",
+        "uid": "9633823",
+        "highway": "residential",
+        "name": "Calle H\u00e9roe de Nacozari",
+        "id": "way/892837183"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5587361,
+            18.0014083
+          ],
+          [
+            -94.5598304,
+            18.0021022
+          ],
+          [
+            -94.5598599,
+            18.0021417
+          ],
+          [
+            -94.5598733,
+            18.0021927
+          ],
+          [
+            -94.5597513,
+            18.0025613
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/961515180",
+      "properties": {
+        "timestamp": "2021-07-05T07:17:58Z",
+        "version": "1",
+        "changeset": "107422327",
+        "user": "AlQuoz",
+        "uid": "10652799",
+        "highway": "service",
+        "id": "way/961515180"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5577446,
+            18.006777
+          ],
+          [
+            -94.5577987,
+            18.0063398
+          ],
+          [
+            -94.5579274,
+            18.0062901
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/997525033",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitl\u00e1n",
+        "uid": "23257776",
+        "highway": "service",
+        "service": "driveway",
+        "surface": "concrete",
+        "id": "way/997525033"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551608,
+            18.0050864
+          ],
+          [
+            -94.555253,
+            18.0051426
+          ],
+          [
+            -94.555296,
+            18.005167
+          ],
+          [
+            -94.5551986,
+            18.0052596
+          ],
+          [
+            -94.5553454,
+            18.0052802
+          ],
+          [
+            -94.5554186,
+            18.005211
+          ],
+          [
+            -94.5553896,
+            18.0050688
+          ],
+          [
+            -94.555296,
+            18.005167
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1192739729",
+      "properties": {
+        "timestamp": "2023-07-27T20:17:13Z",
+        "version": "1",
+        "changeset": "139105870",
+        "user": "\u092e\u094d\u092f\u093e\u092a\u0930",
+        "uid": "17365610",
+        "highway": "footway",
+        "id": "way/1192739729"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5563935,
+            18.0038939
+          ],
+          [
+            -94.5563452,
+            18.0038529
+          ],
+          [
+            -94.5562261,
+            18.0037516
+          ],
+          [
+            -94.5561266,
+            18.0036671
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1250114947",
+      "properties": {
+        "timestamp": "2024-02-14T02:28:59Z",
+        "version": "1",
+        "changeset": "147432533",
+        "user": "Ferrocarriles de M\u00e9xico",
+        "uid": "19456985",
+        "alt_name": "Boulevard Instituto Tecnol\u00f3gico",
+        "highway": "primary",
+        "lanes": "2",
+        "name": "Boulevard Instituto Tecnol\u00f3gico (Carretera Trans\u00edstmica)",
+        "ref": "MEX 185",
+        "surface": "asphalt",
+        "id": "way/1250114947"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5575001,
+            18.0025268
+          ],
+          [
+            -94.558131,
+            18.0018499
+          ],
+          [
+            -94.5603073,
+            17.9995896
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1250114948",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitl\u00e1n",
+        "uid": "23257776",
+        "alt_name": "Boulevard Instituto Tecnol\u00f3gico",
+        "highway": "primary",
+        "lanes": "2",
+        "name": "Boulevard Instituto Tecnol\u00f3gico (Carretera Trans\u00edstmica)",
+        "oneway": "yes",
+        "ref": "MEX 185",
+        "surface": "asphalt",
+        "id": "way/1250114948"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5520937,
+            18.0082808
+          ],
+          [
+            -94.5522643,
+            18.0081031
+          ],
+          [
+            -94.5527309,
+            18.0076169
+          ],
+          [
+            -94.5527861,
+            18.0075595
+          ],
+          [
+            -94.5530615,
+            18.0072728
+          ],
+          [
+            -94.5531688,
+            18.007161
+          ],
+          [
+            -94.5536266,
+            18.0066843
+          ],
+          [
+            -94.5541137,
+            18.0061769
+          ],
+          [
+            -94.5543401,
+            18.0059411
+          ],
+          [
+            -94.5546663,
+            18.0056014
+          ],
+          [
+            -94.5549285,
+            18.0053283
+          ],
+          [
+            -94.5551608,
+            18.0050864
+          ],
+          [
+            -94.5553262,
+            18.0049142
+          ],
+          [
+            -94.5556919,
+            18.0045333
+          ],
+          [
+            -94.5561625,
+            18.0040431
+          ],
+          [
+            -94.5562476,
+            18.0039545
+          ],
+          [
+            -94.5563452,
+            18.0038529
+          ],
+          [
+            -94.5570497,
+            18.0031193
+          ],
+          [
+            -94.5573757,
+            18.0026943
+          ],
+          [
+            -94.5575001,
+            18.0025268
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1250114949",
+      "properties": {
+        "timestamp": "2024-02-14T02:28:59Z",
+        "version": "1",
+        "changeset": "147432533",
+        "user": "Ferrocarriles de M\u00e9xico",
+        "uid": "19456985",
+        "alt_name": "Boulevard Instituto Tecnol\u00f3gico",
+        "highway": "primary",
+        "lanes": "2",
+        "name": "Boulevard Instituto Tecnol\u00f3gico (Carretera Trans\u00edstmica)",
+        "oneway": "yes",
+        "ref": "MEX 185",
+        "surface": "asphalt",
+        "id": "way/1250114949"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5575001,
+            18.0025268
+          ],
+          [
+            -94.5573159,
+            18.002608
+          ],
+          [
+            -94.5569226,
+            18.0030013
+          ],
+          [
+            -94.5564698,
+            18.0034756
+          ],
+          [
+            -94.5562261,
+            18.0037516
+          ],
+          [
+            -94.5561375,
+            18.003852
+          ],
+          [
+            -94.5560649,
+            18.0039279
+          ],
+          [
+            -94.5555851,
+            18.0044292
+          ],
+          [
+            -94.5551548,
+            18.0048786
+          ],
+          [
+            -94.5545331,
+            18.0055281
+          ],
+          [
+            -94.5540019,
+            18.0060829
+          ],
+          [
+            -94.5538816,
+            18.0062086
+          ],
+          [
+            -94.5535638,
+            18.0065407
+          ],
+          [
+            -94.5530319,
+            18.0070403
+          ],
+          [
+            -94.5530235,
+            18.0070493
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434248968",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "5",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "0%",
+        "motor_vehicle": "no",
+        "name": "Acera Principal",
+        "surface": "ground",
+        "width": "2",
+        "id": "way/1434248968"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5549285,
+            18.0053283
+          ],
+          [
+            -94.555434,
+            18.0053358
+          ],
+          [
+            -94.5554566,
+            18.0053362
+          ],
+          [
+            -94.5556973,
+            18.0053398
+          ],
+          [
+            -94.5557,
+            18.0050758
+          ],
+          [
+            -94.5558712,
+            18.0050752
+          ],
+          [
+            -94.5560997,
+            18.0050745
+          ],
+          [
+            -94.5560956,
+            18.0053372
+          ],
+          [
+            -94.5558605,
+            18.0053387
+          ],
+          [
+            -94.5557751,
+            18.0053393
+          ],
+          [
+            -94.5557362,
+            18.0053395
+          ],
+          [
+            -94.5556973,
+            18.0053398
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434248969",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "0%",
+        "motor_vehicle": "no",
+        "name": "Acera Principal Izquierda",
+        "surface": "ground",
+        "wheelchair": "yes",
+        "width": "1",
+        "id": "way/1434248969"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5553262,
+            18.0049142
+          ],
+          [
+            -94.555431,
+            18.0049905
+          ],
+          [
+            -94.5554336,
+            18.0052908
+          ],
+          [
+            -94.555434,
+            18.0053358
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434248971",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "7",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "0%",
+        "motor_vehicle": "no",
+        "name": "Acera 1",
+        "surface": "ground",
+        "width": "0",
+        "id": "way/1434248971"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5558605,
+            18.0053387
+          ],
+          [
+            -94.5558627,
+            18.005505
+          ],
+          [
+            -94.5558634,
+            18.0055618
+          ],
+          [
+            -94.5558661,
+            18.0057658
+          ],
+          [
+            -94.5558665,
+            18.0057967
+          ],
+          [
+            -94.555867,
+            18.0058474
+          ],
+          [
+            -94.5558675,
+            18.0058989
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434248972",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "0%",
+        "motor_vehicle": "no",
+        "name": "Acera 2",
+        "surface": "ground",
+        "id": "way/1434248972"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5554566,
+            18.0053362
+          ],
+          [
+            -94.5554542,
+            18.0053593
+          ],
+          [
+            -94.5554239,
+            18.0053837
+          ],
+          [
+            -94.5554239,
+            18.0055077
+          ],
+          [
+            -94.555511,
+            18.0055048
+          ],
+          [
+            -94.5555107,
+            18.0057236
+          ],
+          [
+            -94.5555126,
+            18.0058012
+          ],
+          [
+            -94.5558665,
+            18.0057967
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434260882",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "6",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "0%",
+        "layer": "-1",
+        "motor_vehicle": "no",
+        "name": "Acera Columna",
+        "surface": "ground",
+        "width": "2.5",
+        "id": "way/1434260882"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5560997,
+            18.0050745
+          ],
+          [
+            -94.5561302,
+            18.005074
+          ],
+          [
+            -94.5562266,
+            18.0050726
+          ],
+          [
+            -94.5562327,
+            18.0053688
+          ],
+          [
+            -94.5562338,
+            18.005423
+          ],
+          [
+            -94.5562343,
+            18.0054497
+          ],
+          [
+            -94.5562385,
+            18.0056535
+          ],
+          [
+            -94.5562447,
+            18.0058612
+          ],
+          [
+            -94.5562465,
+            18.0059221
+          ],
+          [
+            -94.5564093,
+            18.0059271
+          ],
+          [
+            -94.5566694,
+            18.0061493
+          ],
+          [
+            -94.5568655,
+            18.0061493
+          ],
+          [
+            -94.5573143,
+            18.0061493
+          ],
+          [
+            -94.5574664,
+            18.0061493
+          ],
+          [
+            -94.557468,
+            18.0063259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434260883",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "3",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "highway": "service",
+        "horse": "no",
+        "incline": "-10%",
+        "motor_vehicle": "no",
+        "name": "Acera Entrada Lateral",
+        "surface": "ground",
+        "width": "2",
+        "id": "way/1434260883"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5562266,
+            18.0050726
+          ],
+          [
+            -94.5562883,
+            18.0050034
+          ],
+          [
+            -94.5563198,
+            18.0049682
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434260884",
+      "properties": {
+        "timestamp": "2025-10-01T19:27:57Z",
+        "version": "3",
+        "changeset": "172721744",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "footway",
+        "name": "Acera 3",
+        "surface": "ground",
+        "id": "way/1434260884"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.555511,
+            18.0055048
+          ],
+          [
+            -94.5557795,
+            18.005505
+          ],
+          [
+            -94.5558627,
+            18.005505
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434260885",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "1",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitl\u00e1n",
+        "uid": "23257776",
+        "access": "permit",
+        "bicycle": "no",
+        "foot": "yes",
+        "footway": "sidewalk",
+        "highway": "footway",
+        "horse": "no",
+        "motor_vehicle": "no",
+        "name": "Cruce Edificio Principal",
+        "surface": "asphalt",
+        "width": "3",
+        "id": "way/1434260885"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5558712,
+            18.0050752
+          ],
+          [
+            -94.5558712,
+            18.0050124
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434260886",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434260886"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5561302,
+            18.005074
+          ],
+          [
+            -94.5561329,
+            18.0053692
+          ],
+          [
+            -94.5561329,
+            18.0054444
+          ],
+          [
+            -94.5561115,
+            18.0054725
+          ],
+          [
+            -94.5561115,
+            18.0055388
+          ],
+          [
+            -94.5561423,
+            18.0056383
+          ],
+          [
+            -94.5561797,
+            18.0056442
+          ],
+          [
+            -94.5562385,
+            18.0056535
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434261187",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "3",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "access": "no",
+        "highway": "service",
+        "name": "Conector",
+        "surface": "ground",
+        "width": "2",
+        "id": "way/1434261187"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5561329,
+            18.0053692
+          ],
+          [
+            -94.5561828,
+            18.005369
+          ],
+          [
+            -94.5562327,
+            18.0053688
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434394329",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434394329"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5555126,
+            18.0058012
+          ],
+          [
+            -94.5553422,
+            18.0057996
+          ],
+          [
+            -94.5551718,
+            18.0057979
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434394330",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434394330"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551718,
+            18.0057979
+          ],
+          [
+            -94.5551762,
+            18.0058387
+          ],
+          [
+            -94.5551799,
+            18.0058727
+          ],
+          [
+            -94.5552068,
+            18.0058779
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434394331",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434394331"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5551762,
+            18.0058387
+          ],
+          [
+            -94.5550956,
+            18.0058349
+          ],
+          [
+            -94.5550498,
+            18.0058327
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434402990",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434402990"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5562327,
+            18.0053688
+          ],
+          [
+            -94.5565503,
+            18.005372
+          ],
+          [
+            -94.5565529,
+            18.0054541
+          ],
+          [
+            -94.5565619,
+            18.0057259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434402991",
+      "properties": {
+        "timestamp": "2025-10-01T19:27:57Z",
+        "version": "3",
+        "changeset": "172721744",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "footway",
+        "surface": "ground",
+        "id": "way/1434402991"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5565619,
+            18.0057259
+          ],
+          [
+            -94.5565702,
+            18.0059212
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434402992",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434402992"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5565702,
+            18.0059212
+          ],
+          [
+            -94.5564093,
+            18.0059271
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434402993",
+      "properties": {
+        "timestamp": "2025-10-01T20:04:23Z",
+        "version": "4",
+        "changeset": "172723131",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "surface": "ground",
+        "id": "way/1434402993"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5562343,
+            18.0054497
+          ],
+          [
+            -94.5565529,
+            18.0054541
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933619",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933619"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5558675,
+            18.0058989
+          ],
+          [
+            -94.5558623,
+            18.0061399
+          ],
+          [
+            -94.5555154,
+            18.006133
+          ],
+          [
+            -94.5555126,
+            18.0058012
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933620",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933620"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5558623,
+            18.0061399
+          ],
+          [
+            -94.5564114,
+            18.0061463
+          ],
+          [
+            -94.5566694,
+            18.0061493
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933621",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933621"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.555867,
+            18.0058474
+          ],
+          [
+            -94.5562447,
+            18.0058612
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933622",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933622"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5564114,
+            18.0061463
+          ],
+          [
+            -94.556418,
+            18.0065548
+          ],
+          [
+            -94.5564187,
+            18.0065958
+          ],
+          [
+            -94.556422,
+            18.0068031
+          ],
+          [
+            -94.5568816,
+            18.0068065
+          ],
+          [
+            -94.5568811,
+            18.0067861
+          ],
+          [
+            -94.5568764,
+            18.0065957
+          ],
+          [
+            -94.5568674,
+            18.0062267
+          ],
+          [
+            -94.5568655,
+            18.0061493
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933623",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933623"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5568764,
+            18.0065957
+          ],
+          [
+            -94.5564187,
+            18.0065958
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933624",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933624"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5561037,
+            18.0065548
+          ],
+          [
+            -94.556418,
+            18.0065548
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933625",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933625"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5568674,
+            18.0062267
+          ],
+          [
+            -94.5569602,
+            18.0063252
+          ],
+          [
+            -94.557468,
+            18.0063259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933626",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933626"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5569602,
+            18.0063252
+          ],
+          [
+            -94.5569634,
+            18.0065956
+          ],
+          [
+            -94.5569656,
+            18.0067844
+          ],
+          [
+            -94.5572196,
+            18.0067855
+          ],
+          [
+            -94.557727,
+            18.0067878
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933627",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933627"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5569656,
+            18.0067844
+          ],
+          [
+            -94.5568811,
+            18.0067861
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933628",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933628"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5576701,
+            18.0070275
+          ],
+          [
+            -94.5572231,
+            18.0070224
+          ],
+          [
+            -94.5572196,
+            18.0067855
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933629",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933629"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5574664,
+            18.0061493
+          ],
+          [
+            -94.5574574,
+            18.0057419
+          ],
+          [
+            -94.5573091,
+            18.0057393
+          ],
+          [
+            -94.5568619,
+            18.0057313
+          ],
+          [
+            -94.5565619,
+            18.0057259
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933630",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933630"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5568655,
+            18.0061493
+          ],
+          [
+            -94.5568619,
+            18.0057313
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933631",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933631"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5573143,
+            18.0061493
+          ],
+          [
+            -94.5573091,
+            18.0057393
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1434933632",
+      "properties": {
+        "timestamp": "2025-10-02T20:01:16Z",
+        "version": "1",
+        "changeset": "172764439",
+        "user": "Angel H Cervantes",
+        "uid": "23254573",
+        "highway": "service",
+        "id": "way/1434933632"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -94.5568764,
+            18.0065957
+          ],
+          [
+            -94.5569634,
+            18.0065956
+          ]
+        ]
+      }
+    }
+  ]
+}

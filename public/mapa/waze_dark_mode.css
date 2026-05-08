@@ -1,0 +1,457 @@
+/* ========================================
+   MODO OSCURO ESTILO WAZE
+   ======================================== */
+
+:root {
+  /* Colores Waze Dark Theme */
+  --waze-bg-primary: #1a1a2e;
+  --waze-bg-secondary: #16213e;
+  --waze-bg-tertiary: #0f3460;
+  --waze-accent-blue: #00d9ff;
+  --waze-accent-purple: #6c5ce7;
+  --waze-text-primary: #ffffff;
+  --waze-text-secondary: #b8c1ec;
+  --waze-text-muted: #7f8c9f;
+  --waze-success: #00b894;
+  --waze-warning: #fdcb6e;
+  --waze-danger: #ff7675;
+  --waze-route-active: #00d9ff;
+  --waze-route-upcoming: #6c5ce7;
+  --waze-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   ESTILOS GLOBALES MODO OSCURO
+   ======================================== */
+
+body.dark-mode {
+  background: var(--waze-bg-primary);
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode #app {
+  background: var(--waze-bg-primary);
+}
+
+/* ========================================
+   HEADER ESTILO WAZE
+   ======================================== */
+
+body.dark-mode .header {
+  background: linear-gradient(135deg, var(--waze-bg-secondary), var(--waze-bg-tertiary));
+  box-shadow: 0 4px 20px var(--waze-shadow);
+  border-bottom: 2px solid var(--waze-accent-blue);
+}
+
+body.dark-mode .logo h1 {
+  color: var(--waze-text-primary);
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+}
+
+body.dark-mode .logo i {
+  color: var(--waze-accent-blue);
+}
+
+/* ========================================
+   SIDEBAR MODO OSCURO
+   ======================================== */
+
+body.dark-mode .sidebar {
+  background: var(--waze-bg-secondary);
+  border-right: 1px solid var(--waze-bg-tertiary);
+  box-shadow: 4px 0 20px var(--waze-shadow);
+}
+
+body.dark-mode .sidebar-section {
+  border-bottom: 1px solid var(--waze-bg-tertiary);
+}
+
+body.dark-mode .sidebar-title {
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .sidebar-title i {
+  color: var(--waze-accent-blue);
+}
+
+/* ========================================
+   BOTONES ESTILO WAZE
+   ======================================== */
+
+body.dark-mode .btn {
+  background: linear-gradient(135deg, var(--waze-accent-blue), var(--waze-accent-purple));
+  color: var(--waze-text-primary);
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.3);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.5);
+}
+
+body.dark-mode .btn-primary {
+  background: linear-gradient(135deg, var(--waze-accent-blue), #0099cc);
+}
+
+body.dark-mode .btn-success {
+  background: linear-gradient(135deg, var(--waze-success), #00a884);
+}
+
+body.dark-mode .btn-outline {
+  background: transparent;
+  border: 2px solid var(--waze-accent-blue);
+  color: var(--waze-accent-blue);
+}
+
+body.dark-mode .btn-outline:hover {
+  background: var(--waze-accent-blue);
+  color: var(--waze-bg-primary);
+}
+
+/* ========================================
+   INPUTS Y FORMULARIOS
+   ======================================== */
+
+body.dark-mode .form-input,
+body.dark-mode .form-select {
+  background: var(--waze-bg-tertiary);
+  border: 2px solid var(--waze-bg-tertiary);
+  color: var(--waze-text-primary);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .form-input:focus,
+body.dark-mode .form-select:focus {
+  background: var(--waze-bg-secondary);
+  border-color: var(--waze-accent-blue);
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+}
+
+body.dark-mode .form-input::placeholder {
+  color: var(--waze-text-muted);
+}
+
+/* ========================================
+   POI CARDS
+   ======================================== */
+
+body.dark-mode .poi-card {
+  background: var(--waze-bg-tertiary);
+  border: 1px solid var(--waze-bg-tertiary);
+  color: var(--waze-text-primary);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .poi-card:hover {
+  background: var(--waze-bg-secondary);
+  border-left: 4px solid var(--waze-accent-blue);
+  box-shadow: 0 4px 15px var(--waze-shadow);
+}
+
+body.dark-mode .poi-card.selected {
+  background: linear-gradient(90deg, var(--waze-bg-tertiary), var(--waze-bg-secondary));
+  border-left: 4px solid var(--waze-accent-blue);
+  box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+}
+
+/* ========================================
+   STATUS MESSAGES
+   ======================================== */
+
+body.dark-mode .status-message {
+  background: var(--waze-bg-tertiary);
+  color: var(--waze-text-primary);
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+body.dark-mode .status-success {
+  background: rgba(0, 184, 148, 0.2);
+  border-left: 4px solid var(--waze-success);
+  color: var(--waze-success);
+}
+
+body.dark-mode .status-error {
+  background: rgba(255, 118, 117, 0.2);
+  border-left: 4px solid var(--waze-danger);
+  color: var(--waze-danger);
+}
+
+body.dark-mode .status-info {
+  background: rgba(0, 217, 255, 0.2);
+  border-left: 4px solid var(--waze-accent-blue);
+  color: var(--waze-accent-blue);
+}
+
+/* ========================================
+   MAPA - TILES OSCUROS
+   ======================================== */
+
+body.dark-mode .leaflet-container {
+  background: var(--waze-bg-primary);
+}
+
+/* Filtro para oscurecer las tiles del mapa */
+body.dark-mode .leaflet-tile-pane {
+  filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
+
+/* ========================================
+   BOTTOM SHEET MÓVIL
+   ======================================== */
+
+body.dark-mode .bottom-sheet {
+  background: var(--waze-bg-secondary);
+  box-shadow: 0 -4px 30px var(--waze-shadow);
+  border-top: 2px solid var(--waze-accent-blue);
+}
+
+body.dark-mode .bottom-sheet-handle {
+  background: var(--waze-text-muted);
+}
+
+body.dark-mode .tab-button {
+  background: transparent;
+  color: var(--waze-text-muted);
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .tab-button.active {
+  color: var(--waze-accent-blue);
+  border-bottom-color: var(--waze-accent-blue);
+}
+
+body.dark-mode .tab-button:hover {
+  color: var(--waze-text-primary);
+}
+
+/* ========================================
+   ROUTE INFO PANEL
+   ======================================== */
+
+body.dark-mode .route-info {
+  background: linear-gradient(135deg, var(--waze-bg-secondary), var(--waze-bg-tertiary));
+  border: 2px solid var(--waze-accent-blue);
+  box-shadow: 0 4px 30px var(--waze-shadow);
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .route-header {
+  border-bottom: 2px solid var(--waze-bg-tertiary);
+}
+
+body.dark-mode .route-title {
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .route-close {
+  background: rgba(255, 118, 117, 0.2);
+  color: var(--waze-danger);
+}
+
+body.dark-mode .route-close:hover {
+  background: var(--waze-danger);
+  color: white;
+}
+
+/* ========================================
+   SEARCH RESULTS
+   ======================================== */
+
+body.dark-mode .search-results {
+  background: var(--waze-bg-tertiary);
+  border: 1px solid var(--waze-bg-tertiary);
+  box-shadow: 0 8px 25px var(--waze-shadow);
+}
+
+body.dark-mode .search-result-item {
+  color: var(--waze-text-primary);
+  border-bottom: 1px solid var(--waze-bg-secondary);
+}
+
+body.dark-mode .search-result-item:hover {
+  background: var(--waze-bg-secondary);
+  color: var(--waze-accent-blue);
+}
+
+/* ========================================
+   POPUPS DEL MAPA
+   ======================================== */
+
+body.dark-mode .leaflet-popup-content-wrapper {
+  background: var(--waze-bg-secondary);
+  color: var(--waze-text-primary);
+  border: 2px solid var(--waze-accent-blue);
+  box-shadow: 0 6px 25px var(--waze-shadow);
+}
+
+body.dark-mode .leaflet-popup-tip {
+  background: var(--waze-bg-secondary);
+  border: 2px solid var(--waze-accent-blue);
+}
+
+/* ========================================
+   TOGGLE MODO OSCURO
+   ======================================== */
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1001;
+  background: linear-gradient(135deg, var(--waze-accent-blue), var(--waze-accent-purple));
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 217, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 6px 20px rgba(0, 217, 255, 0.6);
+}
+
+.dark-mode-toggle i {
+  font-size: 20px;
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@keyframes waze-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 217, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(0, 217, 255, 0);
+  }
+}
+
+body.dark-mode .route-marker-icon {
+  animation: waze-pulse 2s ease-in-out infinite;
+}
+
+/* ========================================
+   SCROLLBAR PERSONALIZADO
+   ======================================== */
+
+body.dark-mode ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body.dark-mode ::-webkit-scrollbar-track {
+  background: var(--waze-bg-primary);
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: var(--waze-accent-blue);
+  border-radius: 5px;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb:hover {
+  background: var(--waze-accent-purple);
+}
+
+/* ========================================
+   RESPONSIVE - MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  .dark-mode-toggle {
+    top: auto;
+    bottom: 100px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  body.dark-mode .sidebar {
+    background: var(--waze-bg-secondary);
+  }
+}
+
+/* ========================================
+   ETIQUETAS DE EDIFICIOS EN MODO OSCURO
+   ======================================== */
+
+body.dark-mode .leaflet-marker-icon.poi-marker,
+body.dark-mode .poi-marker {
+  color: white !important;
+}
+
+body.dark-mode .leaflet-popup-content-wrapper {
+  background: var(--waze-bg-secondary);
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .leaflet-popup-tip {
+  background: var(--waze-bg-secondary);
+}
+
+body.dark-mode .poi-popup-header {
+  background: var(--waze-bg-tertiary);
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .poi-popup-title {
+  color: var(--waze-text-primary);
+}
+
+body.dark-mode .poi-popup-category {
+  color: var(--waze-accent-blue);
+}
+
+body.dark-mode .poi-popup-body {
+  background: var(--waze-bg-secondary);
+  color: var(--waze-text-secondary);
+}
+
+body.dark-mode .poi-popup-description {
+  color: var(--waze-text-secondary);
+}
+
+/* ========================================
+   MARCADOR DE USUARIO (PERSONA CAMINANDO)
+   ======================================== */
+
+.user-location-marker {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .user-location-marker i {
+  color: var(--waze-accent-blue) !important;
+  filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.6));
+}
+
+/* Animación de pulso para el marcador de usuario */
+@keyframes user-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.user-location-marker {
+  animation: user-pulse 2s ease-in-out infinite;
+}

@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cafetería — Subir Menú del Día</title>
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon-32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px 48px;
+        color: #2d2d2d;
+      }
+
+      /* ---- Header ---- */
+      .admin-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 28px;
+        text-align: center;
+        flex-direction: column;
+      }
+      .admin-logo {
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(135deg, #e65100, #f57c00);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: #fff;
+        box-shadow: 0 4px 16px rgba(230, 81, 0, 0.3);
+      }
+      .admin-header h1 {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #bf360c;
+      }
+      .admin-header p {
+        font-size: 0.9rem;
+        color: #795548;
+        margin-top: 4px;
+      }
+
+      /* ---- Card ---- */
+      .admin-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        padding: 32px 28px;
+        width: 100%;
+        max-width: 540px;
+      }
+
+      /* ---- Password lock ---- */
+      #lockSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 8px 0;
+      }
+      #lockSection h2 {
+        font-size: 1.1rem;
+        color: #bf360c;
+      }
+      #lockSection p {
+        font-size: 0.87rem;
+        color: #888;
+        text-align: center;
+      }
+      .pw-field {
+        display: flex;
+        gap: 8px;
+        width: 100%;
+      }
+      .pw-field input {
+        flex: 1;
+        border: 2px solid #ffe0b2;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+      .pw-field input:focus {
+        border-color: #f57c00;
+      }
+      .pw-btn {
+        background: #e65100;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .pw-btn:hover {
+        background: #bf360c;
+      }
+      .pw-error {
+        color: #c62828;
+        font-size: 0.83rem;
+        display: none;
+      }
+
+      /* ---- Upload section ---- */
+      #uploadSection {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .section-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #bf360c;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 4px;
+      }
+
+      /* Drop zone */
+      .drop-zone {
+        border: 2.5px dashed #ffb74d;
+        border-radius: 14px;
+        padding: 32px 20px;
+        text-align: center;
+        cursor: pointer;
+        background: #fff8e1;
+        transition:
+          background 0.2s,
+          border-color 0.2s;
+        position: relative;
+      }
+      .drop-zone:hover,
+      .drop-zone.dragover {
+        background: #fff3e0;
+        border-color: #f57c00;
+      }
+      .drop-zone input[type="file"] {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+      }
+      .drop-zone-icon {
+        font-size: 2.2rem;
+        color: #f57c00;
+        margin-bottom: 10px;
+      }
+      .drop-zone-text {
+        font-size: 0.92rem;
+        color: #795548;
+      }
+      .drop-zone-hint {
+        font-size: 0.78rem;
+        color: #bbb;
+        margin-top: 6px;
+      }
+
+      /* Preview */
+      .preview-wrap {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .preview-wrap img {
+        max-width: 100%;
+        max-height: 340px;
+        border-radius: 10px;
+        border: 2px solid #ffe0b2;
+        object-fit: contain;
+      }
+      .preview-pdf-icon {
+        font-size: 3rem;
+        color: #c62828;
+      }
+      .preview-filename {
+        font-size: 0.85rem;
+        color: #795548;
+        font-weight: 600;
+      }
+      .preview-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Date input */
+      .date-row {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .date-row label {
+        font-size: 0.87rem;
+        font-weight: 700;
+        color: #555;
+      }
+      .date-row input {
+        border: 2px solid #ffe0b2;
+        border-radius: 10px;
+        padding: 9px 14px;
+        font-size: 0.93rem;
+        outline: none;
+        transition: border-color 0.2s;
+        font-family: inherit;
+      }
+      .date-row input:focus {
+        border-color: #f57c00;
+      }
+
+      /* Action buttons */
+      .btn-primary {
+        background: #e65100;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 13px 28px;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition:
+          background 0.2s,
+          transform 0.1s;
+        width: 100%;
+        justify-content: center;
+      }
+      .btn-primary:hover {
+        background: #bf360c;
+        transform: translateY(-1px);
+      }
+      .btn-primary:active {
+        transform: translateY(0);
+      }
+
+      .btn-secondary {
+        background: #fff;
+        color: #e65100;
+        border: 2px solid #e65100;
+        border-radius: 12px;
+        padding: 9px 18px;
+        font-size: 0.87rem;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        transition: background 0.2s;
+      }
+      .btn-secondary:hover {
+        background: #fff8e1;
+      }
+
+      /* Status messages */
+      .status-msg {
+        display: none;
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        align-items: center;
+        gap: 10px;
+      }
+      .status-msg.ok {
+        background: #e8f5e9;
+        color: #2e7d32;
+        display: flex;
+      }
+      .status-msg.err {
+        background: #ffebee;
+        color: #c62828;
+        display: flex;
+      }
+
+      /* Current menu info */
+      .current-info {
+        background: #fff3e0;
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 0.85rem;
+        color: #795548;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .current-info i {
+        color: #f57c00;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+      .current-info strong {
+        color: #e65100;
+      }
+
+      /* Divider */
+      .divider {
+        border: none;
+        border-top: 1.5px solid #f5f5f5;
+        margin: 4px 0;
+      }
+
+      /* Footer */
+      .admin-footer {
+        margin-top: 24px;
+        font-size: 0.78rem;
+        color: #bbb;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="admin-header">
+      <div class="admin-logo"><i class="fas fa-utensils"></i></div>
+      <div>
+        <h1>Panel de Menú — Cafetería ITM</h1>
+        <p>Instituto Tecnológico de Minatitlán</p>
+      </div>
+    </div>
+
+    <div class="admin-card">
+      <!-- ===== SECCIÓN DE ACCESO ===== -->
+      <div id="lockSection">
+        <i class="fas fa-lock" style="font-size: 2rem; color: #f57c00"></i>
+        <h2>Acceso para encargados</h2>
+        <p>
+          Ingresa la contraseña para acceder al panel de actualización del menú
+          diario.
+        </p>
+        <div class="pw-field">
+          <input
+            type="email"
+            id="pwInput"
+            placeholder="Correo institucional (@itm.edu.mx)"
+            onkeydown="if (event.key === 'Enter') verificarAcceso();"
+            autocomplete="email"
+          />
+          <button class="pw-btn" onclick="verificarAcceso()">
+            <i class="fas fa-arrow-right"></i> Entrar
+          </button>
+        </div>
+        <!-- REQ-02: el mensaje de error es dinámico desde JS -->
+        <span class="pw-error" id="pwError" style="display: none"></span>
+      </div>
+
+      <!-- ===== PANEL DE SUBIDA (visible tras autenticación) ===== -->
+      <div id="uploadSection">
+        <!-- Menú actual -->
+        <div class="current-info" id="currentMenuInfo">
+          <i class="fas fa-info-circle"></i>
+          <div id="currentMenuText">Cargando estado del menú...</div>
+        </div>
+
+        <hr class="divider" />
+
+        <!-- Subida -->
+        <div>
+          <p class="section-title">
+            <i class="fas fa-cloud-upload-alt"></i> Subir nuevo menú
+          </p>
+
+          <div class="drop-zone" id="dropZone">
+            <input
+              type="file"
+              id="fileInput"
+              accept="image/*,application/pdf"
+              onchange="manejarArchivo(event)"
+            />
+            <div class="drop-zone-icon"><i class="fas fa-image"></i></div>
+            <div class="drop-zone-text">
+              Arrastra aquí la imagen o PDF del menú<br />o haz clic para
+              seleccionar
+            </div>
+            <div class="drop-zone-hint">JPG, PNG, WEBP o PDF — máx. 5 MB</div>
+          </div>
+
+          <!-- Vista previa -->
+          <div class="preview-wrap" id="previewWrap">
+            <img
+              id="previewImg"
+              src=""
+              alt="Vista previa"
+              style="display: none"
+            />
+            <i
+              class="fas fa-file-pdf preview-pdf-icon"
+              id="previewPdfIcon"
+              style="display: none"
+            ></i>
+            <span class="preview-filename" id="previewFilename"></span>
+            <div class="preview-actions">
+              <button class="btn-secondary" onclick="resetArchivo()">
+                <i class="fas fa-times"></i> Quitar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fecha del menú -->
+        <div class="date-row">
+          <label for="menuFecha"
+            ><i class="fas fa-calendar-day"></i> Fecha del menú</label
+          >
+          <input type="date" id="menuFecha" />
+        </div>
+
+        <!-- Guardar -->
+        <button class="btn-primary" id="btnGuardar" onclick="guardarMenu()">
+          <i class="fas fa-save"></i> Publicar menú del día
+        </button>
+
+        <!-- Mensaje de estado -->
+        <div class="status-msg" id="statusMsg"></div>
+
+        <hr class="divider" />
+
+        <!-- Eliminar menú actual -->
+        <button
+          class="btn-secondary"
+          onclick="eliminarMenu()"
+          style="
+            width: 100%;
+            justify-content: center;
+            color: #c62828;
+            border-color: #c62828;
+          "
+        >
+          <i class="fas fa-trash"></i> Borrar menú actual
+        </button>
+
+        <!-- Cerrar sesión -->
+        <button
+          class="btn-secondary"
+          onclick="cerrarSesionAdmin()"
+          style="width: 100%; justify-content: center; margin-top: 4px"
+        >
+          <i class="fas fa-sign-out-alt"></i> Cerrar sesión
+        </button>
+      </div>
+    </div>
+
+    <div class="admin-footer">
+      CONOCE-TEC &mdash; Panel de Administración de Cafetería<br />
+      Los cambios se reflejan automáticamente en la app para alumnos y
+      visitantes.
+    </div>
+
+    <script>
+      // ============================================================
+      // REQ-02: AUTENTICACIÓN POR ROL — JWT del sistema
+      // La contraseña hardcodeada fue eliminada. El acceso requiere
+      // un token JWT válido con rol 'admin' o 'cafeteria'.
+      // ============================================================
+      var LS_KEY_IMG = "cafeteria_menu_shared";
+      var LS_KEY_META = "cafeteria_menu_meta";
+      var LS_KEY_TOKEN = "conocetec_token"; // mismo key que usa script.js / registro
+
+      var ROLES_PERMITIDOS = ["admin", "cafeteria"];
+
+      // ── Obtener token y rol del storage ──
+      function getSession() {
+        var token =
+          localStorage.getItem(LS_KEY_TOKEN) ||
+          sessionStorage.getItem(LS_KEY_TOKEN);
+        if (!token) return null;
+        try {
+          var payload = JSON.parse(atob(token.split(".")[1]));
+          return { token: token, role: payload.role, exp: payload.exp };
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function tokenValido(session) {
+        if (!session) return false;
+        var ahora = Math.floor(Date.now() / 1000);
+        return session.exp > ahora;
+      }
+
+      // ── Al cargar la página: verificar si ya tiene sesión autorizada ──
+      (function init() {
+        var session = getSession();
+        if (
+          session &&
+          tokenValido(session) &&
+          ROLES_PERMITIDOS.includes(session.role)
+        ) {
+          mostrarPanel();
+        }
+        // Si no, lockSection permanece visible (es el estado default del HTML)
+      })();
+
+      // ── verificarAcceso: ahora valida contra el backend ──
+      function verificarAcceso() {
+        var email = document.getElementById("pwInput").value.trim();
+        var err = document.getElementById("pwError");
+        err.style.display = "none";
+
+        // El campo ahora funciona como "email" para reusar el login del sistema
+        // Si el usuario ya está logueado, el init() ya abrió el panel.
+        // Este botón sirve para el flujo explícito de login desde esta página.
+        if (!email) {
+          err.textContent = "Ingresa tu correo institucional.";
+          err.style.display = "block";
+          return;
+        }
+
+        var pw = prompt("Contraseña para " + email);
+        if (!pw) return;
+
+        fetch("/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: email, password: pw }),
+        })
+          .then(function (r) {
+            return r.json();
+          })
+          .then(function (data) {
+            if (!data.token) {
+              err.textContent = data.message || "Credenciales inválidas.";
+              err.style.display = "block";
+              return;
+            }
+            var role = data.user && data.user.role;
+            if (!ROLES_PERMITIDOS.includes(role)) {
+              err.textContent =
+                "Acceso denegado: tu rol no tiene permisos de gestión.";
+              err.style.display = "block";
+              return;
+            }
+            localStorage.setItem(LS_KEY_TOKEN, data.token);
+            mostrarPanel();
+          })
+          .catch(function () {
+            err.textContent = "Error de conexión. Intenta de nuevo.";
+            err.style.display = "block";
+          });
+      }
+
+      function mostrarPanel() {
+        document.getElementById("lockSection").style.display = "none";
+        document.getElementById("uploadSection").style.display = "flex";
+        actualizarInfoActual();
+        // Poner fecha de hoy por defecto
+        var hoy = new Date();
+        var yyyy = hoy.getFullYear();
+        var mm = String(hoy.getMonth() + 1).padStart(2, "0");
+        var dd = String(hoy.getDate()).padStart(2, "0");
+        document.getElementById("menuFecha").value = yyyy + "-" + mm + "-" + dd;
+      }
+
+      function cerrarSesionAdmin() {
+        sessionStorage.removeItem(LS_KEY_SESSION);
+        document.getElementById("lockSection").style.display = "flex";
+        document.getElementById("uploadSection").style.display = "none";
+        document.getElementById("pwInput").value = "";
+      }
+
+      // ============================================================
+      // ESTADO DEL MENÚ ACTUAL
+      // ============================================================
+      function actualizarInfoActual() {
+        var infoDiv = document.getElementById("currentMenuText");
+        try {
+          var meta = JSON.parse(localStorage.getItem(LS_KEY_META) || "null");
+          var img = localStorage.getItem(LS_KEY_IMG);
+          if (img && meta) {
+            infoDiv.innerHTML =
+              "<strong>Menú publicado:</strong> " +
+              meta.fecha +
+              " &mdash; Subido el " +
+              meta.subidoEl +
+              " a las " +
+              meta.subidoHora +
+              (meta.tipo === "pdf"
+                ? ' <i class="fas fa-file-pdf" style="color:#c62828;"></i> PDF'
+                : ' <i class="fas fa-image" style="color:#f57c00;"></i> Imagen');
+          } else {
+            infoDiv.innerHTML = "No hay menú publicado actualmente.";
+          }
+        } catch (e) {
+          infoDiv.innerHTML = "No hay menú publicado actualmente.";
+        }
+      }
+
+      // ============================================================
+      // MANEJO DE ARCHIVO
+      // ============================================================
+      var archivoBase64 = null;
+      var archivoTipo = null;
+
+      function manejarArchivo(event) {
+        var file = event.target.files[0];
+        procesarArchivo(file);
+      }
+
+      function procesarArchivo(file) {
+        if (!file) return;
+        if (file.size > 5 * 1024 * 1024) {
+          mostrarStatus("El archivo es demasiado grande (máx. 5 MB).", "err");
+          return;
+        }
+        var isPDF = file.type === "application/pdf";
+        archivoTipo = isPDF ? "pdf" : "img";
+
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          archivoBase64 = e.target.result;
+          mostrarPreview(archivoBase64, isPDF, file.name);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function mostrarPreview(data, isPDF, nombre) {
+        document.getElementById("dropZone").style.display = "none";
+        var pw = document.getElementById("previewWrap");
+        pw.style.display = "flex";
+        document.getElementById("previewFilename").textContent = nombre;
+        if (isPDF) {
+          document.getElementById("previewImg").style.display = "none";
+          document.getElementById("previewPdfIcon").style.display = "block";
+        } else {
+          document.getElementById("previewImg").src = data;
+          document.getElementById("previewImg").style.display = "block";
+          document.getElementById("previewPdfIcon").style.display = "none";
+        }
+        ocultarStatus();
+      }
+
+      function resetArchivo() {
+        archivoBase64 = null;
+        archivoTipo = null;
+        document.getElementById("fileInput").value = "";
+        document.getElementById("previewWrap").style.display = "none";
+        document.getElementById("dropZone").style.display = "block";
+        document.getElementById("previewImg").src = "";
+        ocultarStatus();
+      }
+
+      // ============================================================
+      // GUARDAR MENÚ
+      // ============================================================
+      // REQ-02: guardarMenu y eliminarMenu ahora llaman al API protegido por JWT
+      function guardarMenu() {
+        if (!archivoBase64) {
+          mostrarStatus("Primero selecciona una imagen o PDF del menú.", "err");
+          return;
+        }
+        var fecha = document.getElementById("menuFecha").value;
+        if (!fecha) {
+          mostrarStatus("Selecciona la fecha del menú.", "err");
+          return;
+        }
+
+        var session = getSession();
+        if (!session || !tokenValido(session)) {
+          mostrarStatus(
+            "Sesión expirada. Recarga la página e inicia sesión nuevamente.",
+            "err",
+          );
+          return;
+        }
+
+        var btnGuardar = document.getElementById("btnGuardar");
+        btnGuardar.disabled = true;
+        mostrarStatus("Publicando menú...", "ok");
+
+        fetch("/api/cafeteria/menu", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + session.token,
+          },
+          body: JSON.stringify({
+            fecha: fecha,
+            imagen_base64: archivoBase64,
+            tipo_archivo: archivoTipo,
+          }),
+        })
+          .then(function (r) {
+            return r.json().then(function (d) {
+              return { status: r.status, data: d };
+            });
+          })
+          .then(function (res) {
+            btnGuardar.disabled = false;
+            if (res.status === 201) {
+              mostrarStatus(
+                "¡Menú publicado correctamente! Se actualizó en la app.",
+                "ok",
+              );
+              actualizarInfoActual();
+            } else if (res.status === 403) {
+              mostrarStatus(
+                "Acceso denegado: no tienes permisos para publicar el menú.",
+                "err",
+              );
+            } else {
+              mostrarStatus(
+                "Error al publicar: " + (res.data.error || "intenta de nuevo."),
+                "err",
+              );
+            }
+          })
+          .catch(function () {
+            btnGuardar.disabled = false;
+            mostrarStatus("Error de conexión al publicar el menú.", "err");
+          });
+      }
+
+      function eliminarMenu() {
+        if (!confirm("¿Eliminar el menú publicado actualmente?")) return;
+
+        var session = getSession();
+        if (!session || !tokenValido(session)) {
+          mostrarStatus(
+            "Sesión expirada. Recarga la página e inicia sesión nuevamente.",
+            "err",
+          );
+          return;
+        }
+
+        fetch("/api/cafeteria/menu", {
+          method: "DELETE",
+          headers: { Authorization: "Bearer " + session.token },
+        })
+          .then(function (r) {
+            return r.json().then(function (d) {
+              return { status: r.status, data: d };
+            });
+          })
+          .then(function (res) {
+            if (res.status === 200) {
+              resetArchivo();
+              actualizarInfoActual();
+              mostrarStatus("Menú eliminado. Ya no aparecerá en la app.", "ok");
+            } else if (res.status === 403) {
+              mostrarStatus(
+                "Acceso denegado: no tienes permisos para eliminar el menú.",
+                "err",
+              );
+            } else {
+              mostrarStatus(
+                "Error al eliminar: " + (res.data.error || "intenta de nuevo."),
+                "err",
+              );
+            }
+          })
+          .catch(function () {
+            mostrarStatus("Error de conexión al eliminar el menú.", "err");
+          });
+      }
+
+      // ============================================================
+      // UTILIDADES
+      // ============================================================
+      function formatearFechaDisplay(fechaISO) {
+        var p = fechaISO.split("-");
+        var meses = [
+          "enero",
+          "febrero",
+          "marzo",
+          "abril",
+          "mayo",
+          "junio",
+          "julio",
+          "agosto",
+          "septiembre",
+          "octubre",
+          "noviembre",
+          "diciembre",
+        ];
+        return (
+          parseInt(p[2]) + " de " + meses[parseInt(p[1]) - 1] + " de " + p[0]
+        );
+      }
+
+      function mostrarStatus(msg, tipo) {
+        var el = document.getElementById("statusMsg");
+        el.className = "status-msg " + tipo;
+        el.innerHTML =
+          '<i class="fas fa-' +
+          (tipo === "ok" ? "check-circle" : "exclamation-circle") +
+          '"></i> ' +
+          msg;
+      }
+
+      function ocultarStatus() {
+        document.getElementById("statusMsg").className = "status-msg";
+      }
+
+      // ============================================================
+      // DRAG & DROP
+      // ============================================================
+      var dz = document.getElementById("dropZone");
+      dz.addEventListener("dragover", function (e) {
+        e.preventDefault();
+        dz.classList.add("dragover");
+      });
+      dz.addEventListener("dragleave", function () {
+        dz.classList.remove("dragover");
+      });
+      dz.addEventListener("drop", function (e) {
+        e.preventDefault();
+        dz.classList.remove("dragover");
+        var file = e.dataTransfer.files[0];
+        if (file) procesarArchivo(file);
+      });
+
+      // ============================================================
+      // AUTO-LOGIN si la sesión sigue activa
+      // ============================================================
+      if (sessionStorage.getItem(LS_KEY_SESSION) === "1") {
+        mostrarPanel();
+      }
+    </script>
+  </body>
+</html>

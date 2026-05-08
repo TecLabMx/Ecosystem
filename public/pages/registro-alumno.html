@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONOCE-TEC - Registro de Alumno</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="../css/styles-registro.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row align-items-center py-3 px-4">
+                <div class="col-auto">
+                    <div class="logo-circle">
+                        <span class="logo-text">CT</span>
+                    </div>
+                </div>
+                <div class="col">
+                    <h1 class="header-title">CONOCE-TEC</h1>
+                    <p class="header-subtitle">Explorando el Instituto Tecnológico de Minatitlán</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Hero -->
+    <section class="banner-section">
+        <img src="../img/banner-profesionales.png" alt="Profesionales" class="banner-image">
+        <div class="banner-overlay"></div>
+    </section>
+
+    <!-- Sección Principal de Registro -->
+    <main class="main-section-registro">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <!-- Tarjeta de Registro -->
+                    <div class="registro-card">
+                        <!-- Título -->
+                        <div class="registro-header">
+                            <h2 class="registro-title">Regístrate</h2>
+                            <p class="registro-subtitle">Crea tu cuenta para explorar el campus.</p>
+                        </div>
+
+                        <!-- Formulario -->
+                        <form id="formRegistro" class="registro-form">
+                            <!-- Campo: Nombre Completo -->
+                            <div class="form-group-custom">
+                                <div class="input-group-custom">
+                                    <span class="input-icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <input 
+                                        type="text" 
+                                        class="input-custom" 
+                                        id="nombreCompleto" 
+                                        placeholder="Nombre Completo"
+                                        required
+                                    >
+                                </div>
+                                <small class="error-message" id="errorNombre"></small>
+                            </div>
+
+                            <!-- Campo: Número de Control -->
+                            <div class="form-group-custom">
+                                <div class="input-group-custom">
+                                    <span class="input-icon">
+                                        <i class="fas fa-id-card"></i>
+                                    </span>
+                                    <input 
+                                        type="text" 
+                                        class="input-custom" 
+                                        id="numeroControl" 
+                                        placeholder="Número de Control"
+                                        maxlength="20"
+                                        required
+                                    >
+                                </div>
+                                <small class="error-message" id="errorNumeroControl"></small>
+                            </div>
+
+                            <!-- Campo: Correo Electrónico -->
+                            <div class="form-group-custom">
+                                <div class="input-group-custom">
+                                    <span class="input-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                    <input 
+                                        type="email" 
+                                        class="input-custom" 
+                                        id="correo" 
+                                        placeholder="Correo Electrónico"
+                                        required
+                                    >
+                                    <span class="input-icon-right toggle-email" id="toggleEmail">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <small class="error-message" id="errorCorreo"></small>
+                            </div>
+
+                            <!-- Campo: Contraseña -->
+                            <div class="form-group-custom">
+                                <div class="input-group-custom">
+                                    <span class="input-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                    <input 
+                                        type="password" 
+                                        class="input-custom" 
+                                        id="contrasena" 
+                                        placeholder="Contraseña"
+                                        maxlength="30"
+                                        required
+                                    >
+                                    <span class="input-icon-right toggle-password" id="togglePassword" data-target="contrasena">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <small class="error-message" id="errorContrasena"></small>
+                                <div class="password-strength" id="passwordStrength">
+                                    <div class="strength-bar"></div>
+                                    <small class="strength-text"></small>
+                                </div>
+                            </div>
+
+                            <!-- Campo: Confirmar Contraseña -->
+                            <div class="form-group-custom">
+                                <div class="input-group-custom">
+                                    <span class="input-icon">
+                                        <i class="fas fa-lock"></i>
+                                    </span>
+                                    <input 
+                                        type="password" 
+                                        class="input-custom" 
+                                        id="confirmarContrasena" 
+                                        placeholder="Confirmar Contraseña"
+                                        maxlength="30"
+                                        required
+                                    >
+                                    <span class="input-icon-right toggle-password" id="toggleConfirmar" data-target="confirmarContrasena">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <small class="error-message" id="errorConfirmar"></small>
+                            </div>
+
+                            <!-- Checkbox: Términos y Condiciones -->
+                            <div class="form-check-custom">
+                                <input 
+                                    class="form-check-input-custom" 
+                                    type="checkbox" 
+                                    id="terminos"
+                                    required
+                                >
+                                <label class="form-check-label-custom" for="terminos">
+                                    Acepto los Términos y Condiciones y la <strong>Política de Privacidad</strong>
+                                </label>
+                            </div>
+                            <small class="error-message" id="errorTerminos"></small>
+
+                            <!-- Botón: Crear Cuenta -->
+                            <button type="submit" class="btn-crear-cuenta" id="btnCrearCuenta">
+                                Crear Cuenta
+                            </button>
+
+                            <!-- Checkbox: Recuérdame -->
+                            <div class="form-check-custom mt-3">
+                                <input 
+                                    class="form-check-input-custom" 
+                                    type="checkbox" 
+                                    id="recordarme"
+                                >
+                                <label class="form-check-label-custom" for="recordarme">
+                                    Recuérdame
+                                </label>
+                            </div>
+
+                            <!-- Link: Ya tienes cuenta -->
+                            <div class="text-center mt-4">
+                                <p class="cuenta-existente">
+                                    ¿Ya tienes una cuenta? 
+                                    <a href="../index.html" class="link-iniciar-sesion">Inicia Sesión</a>
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript personalizado -->
+    <script src="../js/script-registro.js"></script>
+</body>
+</html>

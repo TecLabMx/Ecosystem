@@ -1,0 +1,338 @@
+/* ========================================
+   OPTIMIZACIONES RESPONSIVAS
+   Para PC, Tablets y Móviles
+   ======================================== */
+
+/* ========================================
+   AJUSTES GENERALES PARA MÓVILES
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Ocultar elementos que saturan en móvil */
+  .floating-route-button {
+    bottom: 80px !important;
+    right: 10px !important;
+  }
+  
+  /* Ajustar tamaño del mapa para mejor visibilidad */
+  #map {
+    height: 100vh;
+  }
+  
+  /* Reducir tamaño de marcadores en móvil */
+  .leaflet-marker-icon {
+    transform: scale(0.9);
+  }
+  
+  /* Ajustar popups para móvil */
+  .leaflet-popup-content-wrapper {
+    max-width: 280px;
+    font-size: 13px;
+  }
+  
+  .leaflet-popup-content {
+    margin: 12px;
+  }
+  
+  /* Optimizar controles de zoom */
+  .leaflet-control-zoom {
+    margin-right: 10px !important;
+    margin-bottom: 100px !important;
+  }
+  
+  .leaflet-control-zoom a {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+    font-size: 18px !important;
+  }
+}
+
+/* ========================================
+   AJUSTES PARA TABLETS
+   ======================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Optimizar espacio en tablets */
+  .destination-card {
+    max-width: 420px;
+  }
+  
+  .help-modal-content {
+    max-width: 600px;
+  }
+  
+  /* Ajustar controles flotantes */
+  .help-floating-button {
+    bottom: 100px;
+    right: 24px;
+  }
+}
+
+/* ========================================
+   AJUSTES PARA PANTALLAS GRANDES (PC)
+   ======================================== */
+
+@media (min-width: 1025px) {
+  /* Optimizar para pantallas grandes */
+  .destination-card {
+    max-width: 500px;
+  }
+  
+  .help-modal-content {
+    max-width: 750px;
+  }
+  
+  /* Mejorar interacciones hover en PC */
+  .destination-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .help-floating-button:hover {
+    cursor: pointer;
+  }
+}
+
+/* ========================================
+   OPTIMIZACIONES DE VISIBILIDAD DEL MAPA
+   ======================================== */
+
+/* Reducir opacidad de elementos superpuestos */
+.route-info {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.directions-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .route-info {
+    background: rgba(44, 62, 80, 0.95);
+  }
+  
+  .directions-panel {
+    background: rgba(44, 62, 80, 0.95);
+  }
+}
+
+/* ========================================
+   PREVENIR SUPERPOSICIÓN DE BOTONES
+   ======================================== */
+
+/* Espaciado entre botones flotantes */
+.help-floating-button {
+  z-index: 999;
+}
+
+.floating-route-button {
+  z-index: 998;
+}
+
+.destination-card {
+  z-index: 1000;
+}
+
+.help-modal {
+  z-index: 2000;
+}
+
+/* Ajustar posiciones para evitar superposición */
+@media (max-width: 768px) {
+  /* En móvil, apilar botones verticalmente */
+  .help-floating-button {
+    bottom: 20px;
+    right: 16px;
+  }
+  
+  .floating-route-button {
+    display: none; /* Ocultar en móvil si hay tarjeta de destino */
+  }
+  
+  /* Mostrar solo cuando sea necesario */
+  .floating-route-button.active {
+    display: block;
+    bottom: 90px;
+    right: 16px;
+  }
+}
+
+/* ========================================
+   OPTIMIZACIÓN DE CLUSTERS EN MÓVIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Reducir tamaño de clusters */
+  .marker-cluster-small,
+  .marker-cluster-medium,
+  .marker-cluster-large {
+    width: 35px !important;
+    height: 35px !important;
+    font-size: 12px !important;
+  }
+  
+  .marker-cluster-small div,
+  .marker-cluster-medium div,
+  .marker-cluster-large div {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+}
+
+/* ========================================
+   MEJORAS DE ACCESIBILIDAD TÁCTIL
+   ======================================== */
+
+@media (max-width: 768px) {
+  /* Aumentar área táctil de botones */
+  button,
+  .btn,
+  .btn-destination-primary,
+  .btn-destination-secondary {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mejorar espaciado entre elementos interactivos */
+  .destination-card-actions {
+    gap: 12px;
+  }
+  
+  .help-section {
+    padding: 18px;
+  }
+}
+
+/* ========================================
+   OPTIMIZACIÓN DE RENDIMIENTO
+   ======================================== */
+
+/* Reducir animaciones en dispositivos de bajo rendimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========================================
+   AJUSTES PARA ORIENTACIÓN HORIZONTAL
+   ======================================== */
+
+@media (max-width: 768px) and (orientation: landscape) {
+  /* Optimizar para móviles en horizontal */
+  .destination-card {
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  
+  .help-modal-content {
+    max-height: 80vh;
+  }
+  
+  .help-floating-button {
+    bottom: 15px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ========================================
+   AJUSTES PARA PANTALLAS MUY PEQUEÑAS
+   ======================================== */
+
+@media (max-width: 375px) {
+  /* Dispositivos muy pequeños (iPhone SE, etc.) */
+  .destination-card {
+    width: 98%;
+    bottom: 5px;
+  }
+  
+  .destination-name {
+    font-size: 16px;
+  }
+  
+  .destination-description {
+    font-size: 12px;
+  }
+  
+  .help-floating-button {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 12px;
+  }
+  
+  .btn-destination-primary,
+  .btn-destination-secondary {
+    font-size: 13px;
+    padding: 10px 14px;
+  }
+}
+
+/* ========================================
+   AJUSTES PARA PANTALLAS MUY GRANDES
+   ======================================== */
+
+@media (min-width: 1920px) {
+  /* Pantallas 4K y superiores */
+  .destination-card {
+    max-width: 550px;
+  }
+  
+  .help-modal-content {
+    max-width: 850px;
+  }
+  
+  .help-floating-button {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+}
+
+/* ========================================
+   MODO OSCURO - AJUSTES RESPONSIVOS
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  /* Mejorar contraste en modo oscuro */
+  .leaflet-popup-content-wrapper {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  .destination-card {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+  
+  .help-modal-content {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  /* Ocultar elementos no necesarios al imprimir */
+  .help-floating-button,
+  .destination-card-close,
+  .help-modal-close,
+  .floating-route-button {
+    display: none !important;
+  }
+  
+  /* Optimizar para impresión */
+  .destination-card,
+  .help-modal-content {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}

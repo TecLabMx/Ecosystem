@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>ConoceTec - Navegación Interna</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Aplicación de navegación interna para el Instituto Tecnológico de Minatitlán" />
+    <meta name="theme-color" content="#3498db" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ConoceTec" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect fill='%233498db' width='192' height='192'/><text x='50%' y='50%' font-size='80' font-weight='bold' fill='white' text-anchor='middle' dominant-baseline='central'>CT</text></svg>" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.1/dist/MarkerCluster.Default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_mejoras.css" />
+    <link rel="stylesheet" href="waze_dark_mode.css" />
+    <link rel="stylesheet" href="waze_navigation_panel.css" />
+    <link rel="stylesheet" href="floating_panel.css" />
+    <link rel="stylesheet" href="waze_reports.css" />
+    <link rel="stylesheet" href="destination_card.css" />
+    <link rel="stylesheet" href="help_system.css" />
+    <link rel="stylesheet" href="responsive_optimizations.css" />
+    <link rel="stylesheet" href="location_stable.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- Main Content - Solo Mapa -->
+      <div class="main-content" role="main">
+        <!-- Map Container -->
+        <div class="map-container">
+          <div id="map"></div>
+          
+          <!-- Floating Calculate Route Button -->
+          <div class="floating-route-button" id="floating-route-button">
+            <button class="btn btn-success" id="btn-calculate-route-floating" aria-label="Calcular ruta entre los puntos seleccionados">
+              <i class="fas fa-directions" aria-hidden="true"></i> Generar Ruta
+            </button>
+          </div>
+
+          <!-- Route Info -->
+          <div class="route-info" id="route-info">
+            <div class="route-header">
+              <div class="route-title">Ruta Calculada a <span id="selected-poi-name"></span></div>
+              <button class="route-close" id="route-close">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="current-instruction-box">
+              <div class="current-instruction-title">Próxima Instrucción:</div>
+              <div class="current-instruction-text" id="current-instruction">Esperando ubicación...</div>
+            </div>
+            <div class="route-details">
+              <div class="route-detail">
+                <i class="fas fa-ruler"></i>
+                <span id="route-distance">--</span>
+              </div>
+              <div class="route-detail">
+                <i class="fas fa-clock"></i>
+                <span id="route-time">--</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="btn-print-route" style="margin-top: 10px; font-size: 12px;" aria-label="Imprimir la ruta calculada">
+              <i class="fas fa-print" aria-hidden="true"></i> Imprimir
+            </button>
+          </div>
+
+          <!-- Directions Panel (Indicaciones en Tiempo Real) -->
+          <div class="directions-panel" id="directions-panel">
+            <div class="directions-header">
+              <button class="directions-close" id="directions-close" aria-label="Cerrar indicaciones">
+                <i class="fas fa-times"></i>
+              </button>
+              <h3>Indicaciones de Navegacion</h3>
+            </div>
+            
+            <div class="directions-progress">
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+              <div class="progress-text">
+                <span id="progress-distance">0 m</span> / <span id="progress-total">0 m</span>
+              </div>
+            </div>
+
+            <div class="directions-current">
+              <div class="current-instruction" id="current-instruction">
+                <i class="fas fa-map-pin"></i>
+                <span>Cargando indicaciones...</span>
+              </div>
+            </div>
+
+            <div class="directions-list" id="directions-list">
+              <!-- Las indicaciones se cargaran aqui dinamicamente -->
+            </div>
+
+            <div class="directions-status" id="directions-status">
+              <!-- Estado del seguimiento en tiempo real -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.1/dist/leaflet.markercluster.js"></script>
+    <script src="https://unpkg.com/@turf/turf@6.5.0/turf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
+    <script src="config.js"></script>
+    <script src="building-images.js"></script>
+    <script src="script_simplified.js"></script>
+    <script src="funcionalidades_nuevas.js"></script>
+    <script src="optimizaciones.js"></script>
+    <script src="waze_navigation.js"></script>
+    <script src="waze_integration.js"></script>
+    <script src="test_waze_integration.js"></script>
+    <script src="debug_panel.js"></script>
+    <script src="floating_panel.js"></script>
+    <script src="waze_reports.js"></script>
+    <script src="map_destination_improved.js"></script>
+    <script src="help_instructions.js"></script>
+    <script src="location_stable.js"></script>
+    <script>
+      // Registrar Service Worker para modo offline
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registrado:', registration);
+          })
+          .catch(error => {
+            console.error('Error registrando Service Worker:', error);
+          });
+      }
+    </script>
+  </body>
+</html>

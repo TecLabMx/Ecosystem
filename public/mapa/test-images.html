@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Imágenes - ConoceTec</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .building {
+            background: white;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .building h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .images img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 2px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prueba de Imágenes de Edificios</h1>
+    <div id="buildings"></div>
+
+    <script src="building-images.js"></script>
+    <script>
+        const container = document.getElementById('buildings');
+        
+        for (const [buildingName, images] of Object.entries(buildingImages)) {
+            const buildingDiv = document.createElement('div');
+            buildingDiv.className = 'building';
+            
+            const title = document.createElement('h2');
+            title.textContent = buildingName + ' (' + images.length + ' imágenes)';
+            buildingDiv.appendChild(title);
+            
+            const imagesDiv = document.createElement('div');
+            imagesDiv.className = 'images';
+            
+            images.forEach(imgPath => {
+                const img = document.createElement('img');
+                img.src = imgPath;
+                img.alt = buildingName;
+                img.onerror = function() {
+                    this.style.border = '2px solid red';
+                    this.alt = 'Error cargando: ' + imgPath;
+                };
+                imagesDiv.appendChild(img);
+            });
+            
+            buildingDiv.appendChild(imagesDiv);
+            container.appendChild(buildingDiv);
+        }
+    </script>
+</body>
+</html>

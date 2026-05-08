@@ -1,0 +1,890 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "1",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "architect": "Moderna Funcional",
+        "building": "school",
+        "building:levels": "2",
+        "height": "8",
+        "name": "Edificio ACB",
+        "id": "way/1434248966"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55589215069888,
+          18.005179976646534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "2",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "school",
+        "building:levels": "1",
+        "height": "3.5",
+        "name": "Edificio ACA",
+        "id": "way/1434248967"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55589416080304,
+          18.004955689105877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "1",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "school",
+        "building:levels": "1",
+        "height": "3",
+        "name": "Edificio B",
+        "id": "way/1434248970"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55564366501333,
+          18.005432166622967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "2",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Avenida Tecnológico",
+        "building": "school",
+        "height": "3",
+        "layer": "1",
+        "name": "Edificio LQG",
+        "id": "way/1434248973"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5560730565462,
+          18.00571702376178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T03:24:35Z",
+        "version": "1",
+        "changeset": "172639812",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "1",
+        "height": "3",
+        "name": "Edificio C",
+        "id": "way/1434260881"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55644634106642,
+          18.005284622771242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:11:48Z",
+        "version": "1",
+        "changeset": "172665393",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "1",
+        "height": "3",
+        "layer": "1",
+        "name": "Edificio A",
+        "id": "way/1434394328"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55538556065557,
+          18.00564080914811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:11:48Z",
+        "version": "1",
+        "changeset": "172665393",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "6",
+        "name": "Edificio H",
+        "id": "way/1434394333"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55720103996943,
+          18.006240184437566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "1",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "8",
+        "name": "Edificio LISC",
+        "id": "way/1434402989"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55749573927483,
+          18.006483126868847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "1",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "building": "college",
+        "building:levels": "2",
+        "height": "6",
+        "layer": "1",
+        "name": "Edificio F",
+        "id": "way/1434402994"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55662383732708,
+          18.005784203989226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "timestamp": "2025-10-14T21:24:17Z",
+        "version": "1",
+        "changeset": "173294474",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "leisure": "sports_centre",
+        "name": "Domo",
+        "id": "way/1442232408"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.55771986567905,
+          18.00603906365548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673259",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "leisure": "sports_centre",
+        "name": "Domo",
+        "id": "node/13139673259"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5576709,
+          18.0060325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673262",
+      "properties": {
+        "timestamp": "2025-09-30T15:53:11Z",
+        "version": "2",
+        "changeset": "172667502",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "amenity": "school",
+        "grades": "2",
+        "name": "Edificio H",
+        "operator": "Aulas de Clases",
+        "operator:type": "clases",
+        "id": "node/13139673262"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5571291,
+          18.0062283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673263",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio G",
+        "id": "node/13139673263"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5571236,
+          18.0059792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673264",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LIE-2",
+        "id": "node/13139673264",
+        "description": "Laboratorio de Electrónica 2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.557472,
+          18.00671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673265",
+      "properties": {
+        "timestamp": "2025-10-14T21:24:17Z",
+        "version": "2",
+        "changeset": "173294474",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio LIE-1",
+        "id": "node/13139673265",
+        "description": "Laboratorio de Electrónica 1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574331,
+          18.0069005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673266",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio CECT",
+        "id": "node/13139673266"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5574421,
+          18.0071819
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673272",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "library",
+        "name": "Edificio O",
+        "id": "node/13139673272",
+        "description": "Centro de Información"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5566627,
+          18.0063285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673273",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio J",
+        "id": "node/13139673273"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5566346,
+          18.0067243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673274",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio I",
+        "id": "node/13139673274"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556756,
+          18.0069246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673275",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio de LII",
+        "id": "node/13139673275",
+        "description": "Laboratorio de Industrial"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5571032,
+          18.0056146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673276",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio E",
+        "id": "node/13139673276"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5567752,
+          18.0055757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673277",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "language_school",
+        "name": "Edificio CI",
+        "id": "node/13139673277"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5567909,
+          18.0054216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673278",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio D",
+        "id": "node/13139673278"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5563057,
+          18.0055249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673279",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio C",
+        "id": "node/13139673279"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5564048,
+          18.0052848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673280",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio F",
+        "id": "node/13139673280"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5565833,
+          18.0057926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673281",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio DPI",
+        "id": "node/13139673281"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5562137,
+          18.0060021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673282",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio LQG",
+        "id": "node/13139673282"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5560406,
+          18.0057126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673283",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "research_institute",
+        "name": "Edificio UVMA",
+        "id": "node/13139673283"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5557874,
+          18.0059295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673288",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio AC",
+        "id": "node/13139673288"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.556393,
+          18.0050462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673291",
+      "properties": {
+        "timestamp": "2025-09-30T02:40:57Z",
+        "version": "2",
+        "changeset": "172639095",
+        "user": "TecNM campus Minatitlán",
+        "uid": "23257776",
+        "addr:city": "Minatitlán",
+        "addr:postcode": "96848",
+        "addr:state": "Ver",
+        "addr:street": "Boulevard Instituto Tecnológico (Carretera Transístmica)",
+        "name": "Edificio ACB",
+        "office": "educational_institution",
+        "opening_hours": "Mo-Fr 09:00-18:00",
+        "phone": "9222224345",
+        "website": "https://minatitlan.tecnm.mx/",
+        "id": "node/13139673291"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5558909,
+          18.005178
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673292",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "name": "Edificio ACA",
+        "office": "educational_institution",
+        "id": "node/13139673292"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5558862,
+          18.0049462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673293",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio B",
+        "id": "node/13139673293"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5556422,
+          18.005425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673294",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio A",
+        "id": "node/13139673294"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5553636,
+          18.0056457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673296",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "community_centre",
+        "name": "Edificio LCI",
+        "id": "node/13139673296",
+        "description": "Sala de Usos Múltiples, Taller de Electromecánica, Departamento de Recursos Materiales Y Servicios, Departamento de Mantenimiento"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5553519,
+          18.006011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673297",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio LIEM",
+        "id": "node/13139673297"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5557267,
+          18.0062752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673298",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio LAI",
+        "id": "node/13139673298"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5562375,
+          18.006642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673299",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "cafe",
+        "name": "Palapa",
+        "id": "node/13139673299"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5560301,
+          18.0066074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139673300",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio V",
+        "id": "node/13139673300"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.5559496,
+          18.006511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13139686801",
+      "properties": {
+        "timestamp": "2025-09-12T18:31:44Z",
+        "version": "1",
+        "changeset": "171845725",
+        "user": "AndresSM30",
+        "uid": "23279192",
+        "amenity": "school",
+        "name": "Edificio S.G",
+        "id": "node/13139686801"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -94.555679,
+          18.0065002
+        ]
+      }
+    }
+  ]
+}

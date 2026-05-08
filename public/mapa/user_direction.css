@@ -1,0 +1,213 @@
+/* ========================================
+   ESTILOS PARA DIRECCIÓN MEJORADA DEL USUARIO
+   ======================================== */
+
+/* Icono del usuario con rotación suave */
+.user-location-marker i {
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+/* Línea de dirección */
+.leaflet-pane .leaflet-overlay-pane svg path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Indicador de dirección cardinal */
+.direction-cardinal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 14px;
+  z-index: 400;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+}
+
+.direction-cardinal .compass {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.direction-cardinal .compass::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background: #3498db;
+  top: 2px;
+  transform-origin: center 14px;
+  transition: transform 0.3s ease-out;
+}
+
+.direction-cardinal .heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.direction-cardinal .heading-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.direction-cardinal .heading-label {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+}
+
+/* Botón para solicitar permiso de brújula (iOS) */
+#request-heading-permission {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 500;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+  transition: all 0.3s ease;
+}
+
+#request-heading-permission:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.6);
+}
+
+#request-heading-permission:active {
+  transform: translateY(0);
+}
+
+/* Animación de pulso para el botón */
+@keyframes pulse-button {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(52, 152, 219, 0.8);
+  }
+}
+
+#request-heading-permission.active {
+  animation: pulse-button 2s ease-in-out infinite;
+}
+
+/* Modo oscuro */
+@media (prefers-color-scheme: dark) {
+  .direction-cardinal {
+    background: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .direction-cardinal .heading-value {
+    color: #ecf0f1;
+  }
+
+  .direction-cardinal .heading-label {
+    color: #95a5a6;
+  }
+
+  .direction-cardinal .compass {
+    border-color: #3498db;
+    color: #3498db;
+  }
+
+  .direction-cardinal .compass::before {
+    background: #3498db;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .direction-cardinal {
+    top: auto;
+    right: auto;
+    bottom: 100px;
+    left: 20px;
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .direction-cardinal .compass {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .direction-cardinal .heading-value {
+    font-size: 14px;
+  }
+
+  #request-heading-permission {
+    bottom: 80px;
+    padding: 10px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Línea de dirección con efecto de brillo */
+.leaflet-pane .direction-line {
+  filter: drop-shadow(0 0 2px rgba(52, 152, 219, 0.5));
+}
+
+/* Animación de parpadeo para indicador de actualización */
+@keyframes heading-update {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.direction-cardinal.updating {
+  animation: heading-update 0.5s ease-in-out;
+}
+
+/* Transición suave para cambios de dirección */
+.direction-cardinal .compass::before {
+  will-change: transform;
+}
+
+/* Efecto de brillo en la línea de dirección */
+.leaflet-overlay-pane svg path[stroke='#3498db'] {
+  filter: drop-shadow(0 0 3px rgba(52, 152, 219, 0.4));
+  animation: line-glow 2s ease-in-out infinite;
+}
+
+@keyframes line-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(52, 152, 219, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(52, 152, 219, 0.7));
+  }
+}
