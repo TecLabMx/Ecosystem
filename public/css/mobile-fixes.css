@@ -1,22 +1,153 @@
 /* ============================================================
-   CONOCE-TEC — PARCHES RESPONSIVOS MÓVIL v3
-   Agregar este <link> DESPUÉS de styles-dashboard.css
-   y styles-agenda.css en el dashboard HTML.
+   CONOCE-TEC — mobile-fixes.css  VERSIÓN FINAL
+   Cargado después de styles-dashboard.css y styles-agenda.css
    ============================================================ */
 
 /* ============================================================
-   FIX 1: BANNER DE BIENVENIDA
-   - Imagen del personaje se sale del contenedor en móvil
-   - El texto se desbordaba verticalmente
+   1. LAYOUT: body y contenedor llenan toda la pantalla
    ============================================================ */
+html, body {
+  height: 100%;
+  min-height: 100vh;
+}
 
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.main-container {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================================
+   2. SECCIÓN INICIO — no estirarse, scroll natural
+   ============================================================ */
+#sectionInicio.section-mapa.active {
+  flex: 0 0 auto;
+  min-height: auto;
+  overflow-y: visible;
+}
+
+/* ============================================================
+   3. DESKTOP ≥ 769px — header-nav visible, bottom-nav oculta
+   ============================================================ */
+@media (min-width: 769px) {
+  .header-nav {
+    display: flex !important;
+  }
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+  .main-content {
+    padding-bottom: 0;
+  }
+}
+
+/* ============================================================
+   4. MÓVIL ≤ 768px
+   ============================================================ */
 @media (max-width: 768px) {
+
+  /* ---- Layout base ---- */
+  body { height: auto; }
+
+  .main-content {
+    padding-bottom: 62px; /* espacio para nav inferior */
+  }
+
+  /* ---- Header: ocultar nav de texto ---- */
+  .header-nav {
+    display: none !important;
+  }
+
+  .header-dashboard {
+    padding: 0 14px;
+    height: 58px;
+  }
+
+  .header-user-pill .header-user-info,
+  .user-chevron {
+    display: none;
+  }
+
+  /* ---- NAV INFERIOR FIJA ---- */
+  .mobile-bottom-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    border-top: 1.5px solid #e2e8f0;
+    box-shadow: 0 -2px 14px rgba(0,0,0,0.10);
+    z-index: 9999;
+    align-items: stretch;
+    justify-content: space-around;
+  }
+
+  .nav-bottom-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    flex: 1;
+    text-decoration: none;
+    color: #94a3b8;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 6px 2px;
+    cursor: pointer;
+    border-top: 2.5px solid transparent;
+    transition: color 0.18s, border-color 0.18s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .nav-bottom-item i {
+    font-size: 19px;
+    line-height: 1;
+  }
+
+  .nav-bottom-item span {
+    font-size: 8.5px;
+    white-space: nowrap;
+  }
+
+  .nav-bottom-item.active {
+    color: #1e40af;
+    border-top-color: #1e40af;
+  }
+
+  /* ---- Sección Inicio ---- */
+  #sectionInicio.section-mapa {
+    padding: 14px 14px 12px;
+    gap: 14px;
+  }
+
+  /* ---- Welcome Banner ---- */
   .welcome-banner {
     flex-direction: row !important;
-    align-items: flex-end !important;
     padding: 20px 0 0 20px !important;
     min-height: unset !important;
+    align-items: flex-end !important;
     overflow: hidden !important;
+    border-radius: 14px !important;
   }
 
   .welcome-banner-text {
@@ -60,112 +191,112 @@
     object-fit: contain !important;
     object-position: bottom right !important;
   }
-}
 
-@media (max-width: 480px) {
-  .welcome-banner {
-    flex-direction: row !important;
-    padding: 16px 0 0 16px !important;
+  /* ---- Mural Banner ---- */
+  .mural-image-container {
+    height: 190px !important;
+    border-radius: 12px;
   }
 
-  .welcome-banner-text {
-    max-width: calc(100% - 95px) !important;
-    padding-bottom: 14px !important;
+  .mural-overlay h2 { font-size: 16px; }
+
+  /* ---- Info cards (historia / misión / visión) ---- */
+  .info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
   }
 
-  .welcome-title {
-    font-size: 1.05rem !important;
+  .info-card {
+    padding: 16px;
+    gap: 14px;
   }
 
-  .welcome-subtitle {
-    font-size: 0.76rem !important;
-    line-height: 1.45 !important;
-    margin-bottom: 10px !important;
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    flex-shrink: 0;
   }
 
-  .welcome-banner-img {
-    flex: 0 0 90px !important;
-    width: 90px !important;
-    height: 105px !important;
+  .info-text-content h3 { font-size: 15px; }
+  .info-text-content p  { font-size: 13px; }
+
+  /* ---- Aprendizaje en línea ---- */
+  .aprendizaje-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
   }
 
-  .welcome-img {
-    height: 105px !important;
-    width: 90px !important;
-    max-width: 90px !important;
+  /* ---- Footer ---- */
+  .dashboard-footer { margin: 0 -14px -12px; }
+
+  .footer-main {
+    flex-direction: column;
+    padding: 20px 20px 12px;
+    gap: 14px;
   }
-}
 
-/* ============================================================
-   FIX 2: SECCIÓN MAPA — espacio gris vacío y mapa más grande
-   El iframe tiene altura fija pequeña y deja un hueco vacío
-   ============================================================ */
+  .footer-col + .footer-col {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 12px;
+  }
 
-@media (max-width: 768px) {
-  .section-mapa.active {
-    padding: 10px 10px 10px 10px;
+  .footer-bottom {
+    padding: 10px 20px;
+    font-size: 0.74rem;
+    text-align: center;
+  }
+
+  /* ---- Sección Mapa ---- */
+  #sectionMapa.section-mapa {
+    padding: 10px;
     gap: 8px;
     flex: 1;
     overflow: hidden;
   }
 
-  /* Más grande: ocupa casi toda la pantalla disponible */
   .map-container {
     height: calc(100vh - 180px) !important;
-    min-height: 400px;
-    max-height: none;
+    min-height: 380px;
     flex: 1;
   }
 
-  .map-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
-  }
-
   #mapIframeAlumno,
   #mapIframeVisitante {
-    height: calc(100vh - 180px) !important;
-    min-height: 400px;
-    width: 100%;
-    border: none;
-    display: block;
+    height: 100% !important;
+    min-height: 380px;
   }
 
-  /* La tarjeta azul descriptiva: más compacta para dar más espacio al mapa */
-  .section-mapa > div:first-child {
-    flex-shrink: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .map-container {
-    height: calc(100vh - 165px) !important;
-    min-height: 360px;
+  /* ---- Sección Notas ---- */
+  #sectionNotas.notas-app {
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: calc(100vh - 120px);
   }
 
-  #mapIframeAlumno,
-  #mapIframeVisitante {
-    height: calc(100vh - 165px) !important;
-    min-height: 360px;
+  .notas-sidebar {
+    width: 100% !important;
+    min-width: unset !important;
+    border-right: none;
+    border-bottom: 1.5px solid #e2e6f3;
+    padding: 12px 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-}
 
-/* ============================================================
-   FIX 3: DIRECTORIO — paginación cortada y overflow en móvil
-   La paginación tiene muchos botones que desbordan la pantalla
-   ============================================================ */
-
-@media (max-width: 768px) {
-  /* Contenedor principal: columna en móvil */
+  /* ---- Sección Directorio ---- */
   #sectionDirectorio.directorio-app {
     flex-direction: column;
     overflow-y: auto;
     overflow-x: hidden;
+    min-height: calc(100vh - 120px);
   }
 
-  /* Sidebar ocupa todo el ancho */
   .dir-sidebar {
     width: 100% !important;
     min-width: unset !important;
@@ -174,52 +305,15 @@
     padding: 14px 16px;
   }
 
-  /* Grid: 1 columna en móvil pequeño, 2 en más grande */
+  .dir-main {
+    padding: 14px 14px 80px;
+  }
+
   .dir-grid {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
-  /* Paginación: scroll horizontal para no cortar los botones */
-  .dir-pagination {
-    flex-wrap: wrap;
-    gap: 8px;
-    padding-top: 12px;
-  }
-
-  .dir-pag-info {
-    width: 100%;
-    margin-right: 0;
-    font-size: 0.78rem;
-    color: #666;
-  }
-
-  /* Botones de paginación: contenedor con scroll horizontal */
-  .dir-pag-btns {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    gap: 4px;
-    padding-bottom: 4px;
-    width: 100%;
-    /* scrollbar invisible pero funcional */
-    scrollbar-width: none;
-  }
-
-  .dir-pag-btns::-webkit-scrollbar {
-    display: none;
-  }
-
-  .dir-pag-btn {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    font-size: 0.8rem;
-    border-radius: 6px;
-  }
-
-  /* Topbar del directorio: apilar en móvil */
   .dir-topbar {
     flex-wrap: wrap;
     gap: 8px;
@@ -231,62 +325,34 @@
     flex: 1 1 100%;
   }
 
-  /* Botón nuevo contacto: ancho completo en móvil */
-  .dir-btn-nuevo,
-  .dir-btn-dropdown {
+  .dir-pag-btns {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+    scrollbar-width: none;
+  }
+
+  .dir-pag-btns::-webkit-scrollbar { display: none; }
+
+  .dir-pag-btn {
     flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    border-radius: 6px;
   }
 
-  /* Tarjeta del directorio en móvil: más compacta */
-  .dir-card {
-    padding-bottom: 12px;
-  }
+  .dir-avatar        { width: 70px; height: 70px; font-size: 1.7rem; }
+  .dir-avatar-wrap   { margin-top: -24px; }
+  .dir-nombre-contacto { font-size: 0.92rem; }
+  .dir-puesto        { font-size: 0.75rem; }
+  .dir-btn-perfil    { padding: 7px 22px; font-size: 0.74rem; }
 
-  .dir-card-top {
-    padding: 8px 12px 24px 12px;
-  }
-
-  .dir-avatar {
-    width: 70px;
-    height: 70px;
-    font-size: 1.7rem;
-  }
-
-  .dir-avatar-wrap {
-    margin-top: -24px;
-  }
-
-  .dir-nombre-contacto {
-    font-size: 0.92rem;
-  }
-
-  .dir-puesto {
-    font-size: 0.75rem;
-  }
-
-  .dir-btn-perfil {
-    padding: 7px 22px;
-    font-size: 0.74rem;
-  }
-
-  /* Main del directorio: sin padding excesivo */
-  .dir-main {
-    padding: 14px 14px 80px 14px; /* 80px para la bottom nav */
-  }
-}
-
-@media (min-width: 480px) and (max-width: 768px) {
-  /* En tablets pequeñas: 2 columnas para el grid */
-  .dir-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* ============================================================
-   FIX 4: AGENDA — vista semanal desbordada horizontalmente
-   ============================================================ */
-
-@media (max-width: 768px) {
+  /* ---- Sección Agenda ---- */
   .ag2-schedule-wrap {
     overflow-x: auto !important;
     overflow-y: auto !important;
@@ -297,31 +363,13 @@
   .ag2-sched-head,
   .ag2-sched-body {
     min-width: 500px;
-  }
-
-  .ag2-sched-head {
     grid-template-columns: 42px repeat(7, 1fr);
   }
 
-  .ag2-sched-body {
-    grid-template-columns: 42px repeat(7, 1fr);
-  }
-
-  .ag2-sched-num {
-    font-size: 1rem !important;
-  }
-  .ag2-sched-name {
-    font-size: 0.65rem !important;
-  }
-
-  .ag2-hour {
-    height: 38px;
-    font-size: 0.65rem;
-  }
-
-  .ag2-sched-slot {
-    height: 38px;
-  }
+  .ag2-hour        { height: 38px; font-size: 0.65rem; }
+  .ag2-sched-slot  { height: 38px; }
+  .ag2-sched-num   { font-size: 1rem !important; }
+  .ag2-sched-name  { font-size: 0.65rem !important; }
 
   .ag2-weekly-header {
     padding: 12px 14px 10px;
@@ -329,93 +377,78 @@
     gap: 8px;
   }
 
-  .ag2-weekly-header h3 {
-    font-size: 0.88rem;
-  }
-  .ag2-view-select-wrap {
-    padding: 4px 10px;
-    font-size: 0.75rem;
-  }
-}
+  .ag2-weekly-header h3 { font-size: 0.88rem; }
 
-@media (max-width: 480px) {
-  .ag2-sched-head,
-  .ag2-sched-body {
-    min-width: 420px;
-  }
-
-  .ag2-sched-head {
-    grid-template-columns: 36px repeat(7, 1fr);
-  }
-  .ag2-sched-body {
-    grid-template-columns: 36px repeat(7, 1fr);
-  }
-
-  .ag2-sched-num {
-    font-size: 0.88rem !important;
-  }
-  .ag2-sched-name {
-    font-size: 0.6rem !important;
-  }
-
-  .ag2-hour {
-    height: 34px;
-    font-size: 0.6rem;
-    padding-right: 4px;
-  }
-  .ag2-sched-slot {
-    height: 34px;
-  }
-
-  .ag2-tabs {
-    padding: 0 8px;
-    gap: 2px;
-  }
-  .ag2-tab {
-    font-size: 0.78rem;
-    padding: 8px 10px;
+  /* ---- Sección Servicios ---- */
+  #sectionServicios.svc-section {
+    overflow-y: auto;
+    min-height: calc(100vh - 120px);
   }
 }
 
 /* ============================================================
-   BONUS: Mejoras generales del dashboard en móvil
+   5. TABLET — directorio 2 columnas
    ============================================================ */
+@media (min-width: 481px) and (max-width: 768px) {
+  .dir-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
 
-@media (max-width: 768px) {
-  .header-dashboard {
-    padding: 0 14px;
-    height: 58px;
-  }
+/* ============================================================
+   6. MÓVIL PEQUEÑO ≤ 480px
+   ============================================================ */
+@media (max-width: 480px) {
 
-  .logo-itm-img {
-    width: 38px;
-    height: 38px;
-  }
-  .header-inst {
-    font-size: 10px;
-  }
-  .user-avatar-img {
-    width: 32px;
-    height: 32px;
-  }
+  .header-dashboard { height: 52px; padding: 0 12px; }
 
-  .mobile-bottom-nav {
-    height: 58px;
+  #sectionInicio.section-mapa { padding: 12px 12px 10px; gap: 12px; }
+
+  .welcome-banner {
+    padding: 16px 0 0 16px !important;
+    border-radius: 12px !important;
   }
 
-  .nav-bottom-item {
-    padding: 5px 2px;
-    min-width: 0;
+  .welcome-banner-text {
+    max-width: calc(100% - 96px) !important;
+    padding-bottom: 14px !important;
   }
 
-  .nav-bottom-item i {
-    font-size: 19px;
-  }
-  .nav-bottom-item span {
-    font-size: 8.5px;
+  .welcome-title    { font-size: 1.05rem !important; }
+  .welcome-subtitle { font-size: 0.76rem !important; margin-bottom: 10px !important; }
+
+  .welcome-banner-img {
+    flex: 0 0 90px !important;
+    width: 90px !important;
+    height: 106px !important;
   }
 
-  .main-wrapper {
-    padding-bottom: 58px;
+  .welcome-img {
+    height: 106px !important;
+    width: 90px !important;
+    max-width: 90px !important;
   }
+
+  .mural-image-container { height: 160px !important; }
+  .mural-overlay h2      { font-size: 14px; }
+
+  .mobile-bottom-nav { height: 56px; }
+  .nav-bottom-item i  { font-size: 17px; }
+  .nav-bottom-item span { font-size: 8px; }
+
+  .main-content { padding-bottom: 58px; }
+
+  .ag2-sched-head,
+  .ag2-sched-body {
+    min-width: 420px;
+    grid-template-columns: 36px repeat(7, 1fr);
+  }
+
+  .ag2-hour       { height: 34px; font-size: 0.6rem; }
+  .ag2-sched-slot { height: 34px; }
+  .ag2-sched-num  { font-size: 0.88rem !important; }
+  .ag2-sched-name { font-size: 0.6rem !important; }
+
+  .ag2-tabs { padding: 0 8px; gap: 2px; }
+  .ag2-tab  { font-size: 0.78rem; padding: 8px 10px; }
 }

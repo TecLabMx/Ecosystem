@@ -1607,11 +1607,16 @@ function cerrarModalInvestigacionEducativaV(event) {
         if (elRegistrados) elRegistrados.textContent = registrados.toLocaleString('es-MX');
     }
 
-    // Actualizar al cargar
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', actualizarContadoresV);
-    } else {
+    // Actualizar al cargar — con retry
+    function iniciarContadoresV() {
         actualizarContadoresV();
+        setTimeout(actualizarContadoresV, 500);
+        setTimeout(actualizarContadoresV, 2000);
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', iniciarContadoresV);
+    } else {
+        iniciarContadoresV();
     }
 
     // Actualizar en tiempo real si otra pestaña/ventana cambia el storage

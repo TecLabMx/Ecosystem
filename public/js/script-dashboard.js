@@ -1081,11 +1081,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Actualizar al cargar
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", actualizarContadores);
-  } else {
+  // Actualizar al cargar — con retry para asegurar que el DOM esté listo
+  function iniciarContadores() {
+    // Intentar inmediatamente
     actualizarContadores();
+    // Retry a los 500ms por si el DOM no estaba listo
+    setTimeout(actualizarContadores, 500);
+    // Retry final a los 2s para la llamada a la API
+    setTimeout(actualizarContadores, 2000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", iniciarContadores);
+  } else {
+    iniciarContadores();
   }
 
   // Sincronizar visitas entre pestañas
