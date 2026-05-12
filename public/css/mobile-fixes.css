@@ -1,102 +1,84 @@
 /* ============================================================
-   CONOCE-TEC — mobile-fixes.css  VERSIÓN FINAL
-   Cargado después de styles-dashboard.css y styles-agenda.css
+   CONOCE-TEC — RESPONSIVE MÓVIL v4 (COMPLETO)
+   Aplicar DESPUÉS de styles-dashboard.css y styles-agenda.css
    ============================================================ */
 
 /* ============================================================
-   1. LAYOUT: body y contenedor llenan toda la pantalla
+   BASE: VARIABLES Y RESET MÓVIL
    ============================================================ */
+
+:root {
+  --bottom-nav-height: 60px;
+  --header-height: 58px;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 html, body {
-  height: 100%;
-  min-height: 100vh;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-}
-
-.main-container {
-  flex: 1;
-  min-height: 0;
-  overflow: hidden;
-  display: flex;
-}
-
-.main-content {
-  flex: 1;
-  min-height: 0;
-  overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  display: flex;
-  flex-direction: column;
 }
 
 /* ============================================================
-   2. SECCIÓN INICIO — no estirarse, scroll natural
+   FIX CRÍTICO: CONTENEDOR PRINCIPAL
+   El CSS base apuntaba a .main-wrapper pero el HTML usa .main-container
    ============================================================ */
-#sectionInicio.section-mapa.active {
-  flex: 0 0 auto;
-  min-height: auto;
-  overflow-y: visible;
-}
 
-/* ============================================================
-   3. DESKTOP ≥ 769px — header-nav visible, bottom-nav oculta
-   ============================================================ */
-@media (min-width: 769px) {
-  .header-nav {
-    display: flex !important;
-  }
-  .mobile-bottom-nav {
-    display: none !important;
-  }
-  .main-content {
-    padding-bottom: 0;
-  }
-}
-
-/* ============================================================
-   4. MÓVIL ≤ 768px
-   ============================================================ */
 @media (max-width: 768px) {
-
-  /* ---- Layout base ---- */
-  body { height: auto; }
-
-  .main-content {
-    padding-bottom: 62px; /* espacio para nav inferior */
+  .main-container {
+    padding-bottom: calc(var(--bottom-nav-height) + var(--safe-bottom));
   }
+}
 
-  /* ---- Header: ocultar nav de texto ---- */
-  .header-nav {
-    display: none !important;
-  }
+/* ============================================================
+   HEADER — compacto, ocultar texto en móvil
+   ============================================================ */
 
+@media (max-width: 768px) {
   .header-dashboard {
+    height: var(--header-height);
     padding: 0 14px;
-    height: 58px;
+    position: sticky;
+    top: 0;
+    z-index: 200;
   }
-
-  .header-user-pill .header-user-info,
-  .user-chevron {
-    display: none;
+  .header-content { gap: 10px; }
+  .header-text { display: none; }
+  .logo-itm-img { width: 38px; height: 38px; }
+  .header-nav { display: none !important; }
+  .header-right { gap: 10px; }
+  .notification-icon { font-size: 18px; }
+  .header-user-info,
+  .user-chevron { display: none; }
+  .header-user-pill {
+    padding: 4px;
+    border-radius: 50%;
+    border-width: 2px;
   }
+  .user-avatar-img { width: 34px; height: 34px; }
+}
 
-  /* ---- NAV INFERIOR FIJA ---- */
+@media (max-width: 400px) {
+  .header-dashboard { padding: 0 10px; }
+  .logo-itm-img { width: 32px; height: 32px; }
+}
+
+/* ============================================================
+   BOTTOM NAV — fija, siempre visible en móvil
+   ============================================================ */
+
+@media (max-width: 768px) {
   .mobile-bottom-nav {
     display: flex !important;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: var(--bottom-nav-height);
+    padding-bottom: var(--safe-bottom);
     background: #ffffff;
     border-top: 1.5px solid #e2e8f0;
-    box-shadow: 0 -2px 14px rgba(0,0,0,0.10);
-    z-index: 9999;
+    box-shadow: 0 -3px 16px rgba(0,0,0,0.10);
+    z-index: 1000;
     align-items: stretch;
     justify-content: space-around;
   }
@@ -110,345 +92,405 @@ body {
     flex: 1;
     text-decoration: none;
     color: #94a3b8;
-    font-size: 10px;
     font-weight: 500;
-    padding: 6px 2px;
-    cursor: pointer;
+    padding: 5px 2px;
     border-top: 2.5px solid transparent;
-    transition: color 0.18s, border-color 0.18s;
+    transition: color 0.15s, border-color 0.15s;
     -webkit-tap-highlight-color: transparent;
   }
 
-  .nav-bottom-item i {
-    font-size: 19px;
-    line-height: 1;
+  .nav-bottom-item i { font-size: 20px; line-height: 1; }
+  .nav-bottom-item span { font-size: 8.5px; white-space: nowrap; }
+  .nav-bottom-item.active { color: #1e40af; border-top-color: #1e40af; }
+  .nav-bottom-item:active { background: rgba(30,64,175,0.06); }
+}
+
+/* ============================================================
+   SECCIÓN INICIO — Banner, mural, info, aprendizaje, footer
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .section-mapa {
+    padding: 14px 14px 20px !important;
+    gap: 14px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
-  .nav-bottom-item span {
-    font-size: 8.5px;
-    white-space: nowrap;
-  }
-
-  .nav-bottom-item.active {
-    color: #1e40af;
-    border-top-color: #1e40af;
-  }
-
-  /* ---- Sección Inicio ---- */
-  #sectionInicio.section-mapa {
-    padding: 14px 14px 12px;
-    gap: 14px;
-  }
-
-  /* ---- Welcome Banner ---- */
+  /* Banner bienvenida */
   .welcome-banner {
     flex-direction: row !important;
-    padding: 20px 0 0 20px !important;
-    min-height: unset !important;
     align-items: flex-end !important;
+    padding: 18px 0 0 18px !important;
+    min-height: unset !important;
     overflow: hidden !important;
-    border-radius: 14px !important;
   }
-
   .welcome-banner-text {
     flex: 1 1 auto !important;
     min-width: 0 !important;
-    max-width: calc(100% - 120px) !important;
-    padding-bottom: 18px !important;
-    overflow: hidden !important;
+    max-width: calc(100% - 115px) !important;
+    padding-bottom: 16px !important;
   }
-
   .welcome-title {
-    font-size: 1.2rem !important;
-    font-weight: 800 !important;
+    font-size: 1.15rem !important;
     white-space: normal !important;
     word-break: normal !important;
-    overflow-wrap: break-word !important;
   }
-
   .welcome-subtitle {
     font-size: 0.8rem !important;
     line-height: 1.5 !important;
     white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
     hyphens: none !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 12px !important;
   }
-
   .welcome-banner-img {
-    flex: 0 0 115px !important;
-    width: 115px !important;
-    height: 130px !important;
+    flex: 0 0 110px !important;
+    width: 110px !important;
+    height: 125px !important;
     align-self: flex-end !important;
     overflow: hidden !important;
   }
-
   .welcome-img {
-    height: 130px !important;
-    width: 115px !important;
-    max-width: 115px !important;
+    height: 125px !important;
+    width: 110px !important;
+    max-width: 110px !important;
     object-fit: contain !important;
     object-position: bottom right !important;
   }
 
-  /* ---- Mural Banner ---- */
-  .mural-image-container {
-    height: 190px !important;
-    border-radius: 12px;
-  }
+  /* Mural */
+  .mural-image-container { height: 200px !important; }
+  .mural-overlay h2 { font-size: 16px !important; }
+  .mural-overlay p { font-size: 12px !important; }
 
-  .mural-overlay h2 { font-size: 16px; }
-
-  /* ---- Info cards (historia / misión / visión) ---- */
+  /* Info grid misión/visión */
   .info-grid {
     grid-template-columns: 1fr !important;
-    gap: 12px;
+    gap: 12px !important;
   }
+  .info-card { padding: 16px !important; }
 
-  .info-card {
-    padding: 16px;
-    gap: 14px;
+  /* Aprendizaje */
+  .aprendizaje-section {
+    margin: 0 -14px !important;
+    padding: 20px 14px 18px !important;
   }
+  .aprendizaje-title { font-size: 1.1rem !important; margin-bottom: 16px !important; }
+  .aprendizaje-logos { gap: 10px !important; flex-wrap: wrap !important; }
+  .ap-logo-card { min-width: 90px !important; height: 52px !important; padding: 8px 14px !important; }
 
-  .info-icon {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-    flex-shrink: 0;
-  }
-
-  .info-text-content h3 { font-size: 15px; }
-  .info-text-content p  { font-size: 13px; }
-
-  /* ---- Aprendizaje en línea ---- */
-  .aprendizaje-logos {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  /* ---- Footer ---- */
-  .dashboard-footer { margin: 0 -14px -12px; }
-
+  /* Footer */
+  .dashboard-footer { margin: 0 -14px -20px !important; }
   .footer-main {
-    flex-direction: column;
-    padding: 20px 20px 12px;
-    gap: 14px;
+    flex-direction: column !important;
+    padding: 20px 18px !important;
+    gap: 14px !important;
   }
-
   .footer-col + .footer-col {
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,0.12);
-    padding-top: 12px;
+    padding-left: 0 !important;
+    border-left: none !important;
+    border-top: 1px solid rgba(255,255,255,0.12) !important;
+    padding-top: 14px !important;
   }
+  .footer-col-stats { min-width: unset !important; }
+  .footer-bottom { padding: 10px 18px !important; }
+  .footer-bottom p { font-size: 0.72rem !important; }
+}
 
-  .footer-bottom {
-    padding: 10px 20px;
-    font-size: 0.74rem;
-    text-align: center;
+@media (max-width: 480px) {
+  .welcome-banner-text {
+    max-width: calc(100% - 90px) !important;
+    padding-bottom: 12px !important;
   }
+  .welcome-title { font-size: 1rem !important; }
+  .welcome-subtitle { font-size: 0.75rem !important; }
+  .welcome-banner-img { flex: 0 0 85px !important; width: 85px !important; height: 100px !important; }
+  .welcome-img { height: 100px !important; width: 85px !important; max-width: 85px !important; }
+}
 
-  /* ---- Sección Mapa ---- */
+/* ============================================================
+   SECCIÓN MAPA — iframe ocupa toda la pantalla disponible
+   ============================================================ */
+
+@media (max-width: 768px) {
   #sectionMapa.section-mapa {
-    padding: 10px;
-    gap: 8px;
+    padding: 10px !important;
+    gap: 8px !important;
     flex: 1;
     overflow: hidden;
   }
-
   .map-container {
-    height: calc(100vh - 180px) !important;
-    min-height: 380px;
+    height: calc(100dvh - var(--header-height) - var(--bottom-nav-height) - 80px) !important;
+    min-height: 350px;
+    max-height: none;
     flex: 1;
   }
-
+  .map-container iframe,
   #mapIframeAlumno,
   #mapIframeVisitante {
-    height: 100% !important;
-    min-height: 380px;
-  }
-
-  /* ---- Sección Notas ---- */
-  #sectionNotas.notas-app {
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    min-height: calc(100vh - 120px);
-  }
-
-  .notas-sidebar {
-    width: 100% !important;
-    min-width: unset !important;
-    border-right: none;
-    border-bottom: 1.5px solid #e2e6f3;
-    padding: 12px 14px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  /* ---- Sección Directorio ---- */
-  #sectionDirectorio.directorio-app {
-    flex-direction: column;
-    overflow-y: auto;
-    overflow-x: hidden;
-    min-height: calc(100vh - 120px);
-  }
-
-  .dir-sidebar {
-    width: 100% !important;
-    min-width: unset !important;
-    border-right: none;
-    border-bottom: 1.5px solid #e2e6f3;
-    padding: 14px 16px;
-  }
-
-  .dir-main {
-    padding: 14px 14px 80px;
-  }
-
-  .dir-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .dir-topbar {
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 12px;
-  }
-
-  .dir-search-wrap {
     width: 100%;
-    flex: 1 1 100%;
+    height: 100% !important;
+    min-height: unset !important;
+    border: none;
+    display: block;
+    border-radius: 10px;
   }
+}
 
-  .dir-pag-btns {
-    display: flex;
+@media (max-width: 480px) {
+  .map-container { height: calc(100dvh - var(--header-height) - var(--bottom-nav-height) - 70px) !important; min-height: 300px; }
+}
+
+/* ============================================================
+   SECCIÓN AGENDA — scroll horizontal en vista semanal
+   ============================================================ */
+
+@media (max-width: 768px) {
+  #sectionAgenda.agenda-section { overflow-y: auto; overflow-x: hidden; }
+
+  .ag2-tabs {
+    padding: 0 10px;
+    gap: 2px;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    gap: 4px;
-    padding-bottom: 4px;
-    width: 100%;
     scrollbar-width: none;
   }
+  .ag2-tabs::-webkit-scrollbar { display: none; }
+  .ag2-tab { font-size: 0.8rem; padding: 10px 12px; white-space: nowrap; flex-shrink: 0; }
 
-  .dir-pag-btns::-webkit-scrollbar { display: none; }
+  .ag2-weekly-header { padding: 12px 12px 8px; flex-wrap: wrap; gap: 6px; }
+  .ag2-weekly-header h3 { font-size: 0.88rem; }
 
-  .dir-pag-btn {
-    flex-shrink: 0;
-    width: 32px;
-    height: 32px;
-    font-size: 0.8rem;
-    border-radius: 6px;
-  }
-
-  .dir-avatar        { width: 70px; height: 70px; font-size: 1.7rem; }
-  .dir-avatar-wrap   { margin-top: -24px; }
-  .dir-nombre-contacto { font-size: 0.92rem; }
-  .dir-puesto        { font-size: 0.75rem; }
-  .dir-btn-perfil    { padding: 7px 22px; font-size: 0.74rem; }
-
-  /* ---- Sección Agenda ---- */
   .ag2-schedule-wrap {
     overflow-x: auto !important;
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
-    padding: 0 8px 10px;
+    padding: 0 8px 80px;
   }
-
   .ag2-sched-head,
-  .ag2-sched-body {
-    min-width: 500px;
-    grid-template-columns: 42px repeat(7, 1fr);
-  }
-
-  .ag2-hour        { height: 38px; font-size: 0.65rem; }
-  .ag2-sched-slot  { height: 38px; }
-  .ag2-sched-num   { font-size: 1rem !important; }
-  .ag2-sched-name  { font-size: 0.65rem !important; }
-
-  .ag2-weekly-header {
-    padding: 12px 14px 10px;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .ag2-weekly-header h3 { font-size: 0.88rem; }
-
-  /* ---- Sección Servicios ---- */
-  #sectionServicios.svc-section {
-    overflow-y: auto;
-    min-height: calc(100vh - 120px);
-  }
+  .ag2-sched-body { min-width: 500px; }
+  .ag2-sched-head { grid-template-columns: 42px repeat(7, 1fr); }
+  .ag2-sched-body { grid-template-columns: 42px repeat(7, 1fr); }
+  .ag2-sched-num { font-size: 1rem !important; }
+  .ag2-sched-name { font-size: 0.65rem !important; }
+  .ag2-hour { height: 38px; font-size: 0.65rem; }
+  .ag2-sched-slot { height: 38px; }
 }
 
-/* ============================================================
-   5. TABLET — directorio 2 columnas
-   ============================================================ */
-@media (min-width: 481px) and (max-width: 768px) {
-  .dir-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
-/* ============================================================
-   6. MÓVIL PEQUEÑO ≤ 480px
-   ============================================================ */
 @media (max-width: 480px) {
-
-  .header-dashboard { height: 52px; padding: 0 12px; }
-
-  #sectionInicio.section-mapa { padding: 12px 12px 10px; gap: 12px; }
-
-  .welcome-banner {
-    padding: 16px 0 0 16px !important;
-    border-radius: 12px !important;
-  }
-
-  .welcome-banner-text {
-    max-width: calc(100% - 96px) !important;
-    padding-bottom: 14px !important;
-  }
-
-  .welcome-title    { font-size: 1.05rem !important; }
-  .welcome-subtitle { font-size: 0.76rem !important; margin-bottom: 10px !important; }
-
-  .welcome-banner-img {
-    flex: 0 0 90px !important;
-    width: 90px !important;
-    height: 106px !important;
-  }
-
-  .welcome-img {
-    height: 106px !important;
-    width: 90px !important;
-    max-width: 90px !important;
-  }
-
-  .mural-image-container { height: 160px !important; }
-  .mural-overlay h2      { font-size: 14px; }
-
-  .mobile-bottom-nav { height: 56px; }
-  .nav-bottom-item i  { font-size: 17px; }
-  .nav-bottom-item span { font-size: 8px; }
-
-  .main-content { padding-bottom: 58px; }
-
   .ag2-sched-head,
-  .ag2-sched-body {
-    min-width: 420px;
-    grid-template-columns: 36px repeat(7, 1fr);
+  .ag2-sched-body { min-width: 420px; }
+  .ag2-sched-head { grid-template-columns: 36px repeat(7, 1fr); }
+  .ag2-sched-body { grid-template-columns: 36px repeat(7, 1fr); }
+  .ag2-hour { height: 34px; font-size: 0.6rem; }
+  .ag2-sched-slot { height: 34px; }
+}
+
+/* ============================================================
+   SECCIÓN NOTAS — sidebar horizontal con scroll
+   ============================================================ */
+
+@media (max-width: 768px) {
+  #sectionNotas.notas-app {
+    flex-direction: column !important;
+    overflow-y: auto;
+  }
+  .notas-sidebar {
+    width: 100% !important;
+    min-width: unset !important;
+    border-right: none !important;
+    border-bottom: 1.5px solid #e2e6f3 !important;
+    padding: 12px 14px 10px !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .notas-btn-nueva {
+    order: -1;
+    padding: 9px 16px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+  .notas-categorias-label { font-size: 0.82rem; }
+  .notas-categorias-list {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px !important;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    width: 100%;
+  }
+  .notas-categorias-list::-webkit-scrollbar { display: none; }
+  .notas-cat-item {
+    white-space: nowrap;
+    flex-shrink: 0;
+    border-radius: 20px;
+    padding: 5px 12px !important;
+    font-size: 0.78rem;
+  }
+  .notas-main {
+    padding: 14px 14px 80px !important;
+    overflow-y: auto;
+  }
+  .notas-grid { grid-template-columns: 1fr !important; }
+  .notas-card { padding: 14px !important; }
+}
+
+/* ============================================================
+   SECCIÓN DIRECTORIO — sidebar arriba, grid responsivo
+   ============================================================ */
+
+@media (max-width: 768px) {
+  #sectionDirectorio.directorio-app {
+    flex-direction: column !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .dir-sidebar {
+    width: 100% !important;
+    min-width: unset !important;
+    border-right: none !important;
+    border-bottom: 1.5px solid #e2e6f3 !important;
+    padding: 12px 14px !important;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .dir-main { padding: 14px 14px 80px !important; overflow-y: auto; }
+  .dir-topbar { flex-wrap: wrap !important; gap: 8px !important; margin-bottom: 12px !important; }
+  .dir-search-wrap { width: 100% !important; flex: 1 1 100% !important; }
+  .dir-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .dir-pagination { flex-wrap: wrap !important; gap: 8px !important; padding-top: 12px !important; }
+  .dir-pag-info { width: 100% !important; margin-right: 0 !important; font-size: 0.78rem !important; }
+  .dir-pag-btns {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 4px !important;
+    width: 100% !important;
+    padding-bottom: 6px !important;
+    scrollbar-width: none !important;
+  }
+  .dir-pag-btns::-webkit-scrollbar { display: none !important; }
+  .dir-pag-btn { flex-shrink: 0 !important; width: 34px !important; height: 34px !important; font-size: 0.8rem !important; }
+  .dir-card-top { padding: 8px 12px 22px !important; }
+  .dir-avatar { width: 66px !important; height: 66px !important; font-size: 1.6rem !important; }
+  .dir-avatar-wrap { margin-top: -22px !important; }
+  .dir-nombre-contacto { font-size: 0.9rem !important; }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .dir-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ============================================================
+   SECCIÓN SERVICIOS — grid 2 col en móvil
+   ============================================================ */
+
+@media (max-width: 768px) {
+  #sectionServicios.svc-section { overflow-y: auto; }
+  .svc-header { padding: 24px 16px 18px !important; }
+  .svc-title { font-size: 1.4rem !important; }
+  .svc-subtitle { font-size: 0.85rem !important; }
+  .svc-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    padding: 0 14px 80px !important;
+  }
+  .svc-card-inner { padding: 18px 14px !important; }
+  .svc-card-title { font-size: 0.9rem !important; }
+  .svc-card-desc { font-size: 0.78rem !important; }
+  .svc-help-banner { margin: 0 14px 18px !important; padding: 14px 16px !important; }
+}
+
+@media (max-width: 400px) {
+  .svc-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ============================================================
+   MODALES — hoja inferior (bottom sheet) en móvil
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .dir-modal-overlay {
+    align-items: flex-end !important;
+    padding: 0 !important;
+  }
+  .ig-modal-card,
+  .caf-modal-card,
+  .dir-modal-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 20px 20px 0 0 !important;
+    max-height: 92dvh !important;
+    overflow-y: auto;
+    margin: 0 !important;
+  }
+  .ig-modal-header {
+    padding: 16px 16px 12px !important;
+    position: sticky;
+    top: 0;
+    background: inherit;
+    z-index: 1;
+  }
+}
+
+/* ============================================================
+   PANEL NOTIFICACIONES — ancho completo en móvil
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .notif-panel {
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    top: var(--header-height) !important;
+    border-radius: 0 0 16px 16px !important;
+    max-height: calc(100dvh - var(--header-height)) !important;
+  }
+}
+
+/* ============================================================
+   INPUTS — tamaño mínimo 16px para evitar zoom en iOS
+   ============================================================ */
+
+@media (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px !important;
   }
 
-  .ag2-hour       { height: 34px; font-size: 0.6rem; }
-  .ag2-sched-slot { height: 34px; }
-  .ag2-sched-num  { font-size: 0.88rem !important; }
-  .ag2-sched-name { font-size: 0.6rem !important; }
+  button, .btn, [class*="btn-"] {
+    min-height: 42px;
+  }
 
-  .ag2-tabs { padding: 0 8px; gap: 2px; }
-  .ag2-tab  { font-size: 0.78rem; padding: 8px 10px; }
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ============================================================
+   SAFE AREA — iPhone con notch / Dynamic Island
+   ============================================================ */
+
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 768px) {
+    .mobile-bottom-nav {
+      padding-bottom: env(safe-area-inset-bottom);
+      height: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+    }
+    .main-container {
+      padding-bottom: calc(var(--bottom-nav-height) + env(safe-area-inset-bottom));
+    }
+  }
 }

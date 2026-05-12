@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ========================================
   // SISTEMA DE ROLES — leer y aplicar permisos
   // ========================================
-  aplicarPermisosPorRol();
+  try { aplicarPermisosPorRol(); } catch(e) { console.warn("aplicarPermisosPorRol error:", e); }
 
   // Obtener elementos del DOM
   const sidebar = document.getElementById("sidebar");
@@ -1063,38 +1063,37 @@ document.addEventListener("DOMContentLoaded", function () {
       elVisitas.textContent = visitas.toLocaleString("es-MX");
     }
 
-    // Registrados: desde la BD
+    // Registrados: desde la BD con fallback a localStorage
     var elRegistrados = document.getElementById("footerRegistrados");
     if (elRegistrados) {
+      // Mostrar valor local mientras llega la API
+      var regLocal = parseInt(localStorage.getItem("contadorRegistrados") || "0", 10);
+      if (regLocal > 0) {
+        elRegistrados.textContent = regLocal.toLocaleString("es-MX");
+      }
       fetch("/api/auth/count")
         .then(function (r) {
+          if (!r.ok) throw new Error("API no disponible");
           return r.json();
         })
         .then(function (data) {
           if (typeof data.total === "number") {
             elRegistrados.textContent = data.total.toLocaleString("es-MX");
+            localStorage.setItem("contadorRegistrados", data.total);
           }
         })
         .catch(function () {
-          elRegistrados.textContent = "—";
+          var saved = parseInt(localStorage.getItem("contadorRegistrados") || "0", 10);
+          elRegistrados.textContent = saved > 0 ? saved.toLocaleString("es-MX") : "—";
         });
     }
   }
 
-  // Actualizar al cargar — con retry para asegurar que el DOM esté listo
-  function iniciarContadores() {
-    // Intentar inmediatamente
-    actualizarContadores();
-    // Retry a los 500ms por si el DOM no estaba listo
-    setTimeout(actualizarContadores, 500);
-    // Retry final a los 2s para la llamada a la API
-    setTimeout(actualizarContadores, 2000);
-  }
-
+  // Actualizar al cargar
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", iniciarContadores);
+    document.addEventListener("DOMContentLoaded", actualizarContadores);
   } else {
-    iniciarContadores();
+    actualizarContadores();
   }
 
   // Sincronizar visitas entre pestañas

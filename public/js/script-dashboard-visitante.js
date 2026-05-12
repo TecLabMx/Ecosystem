@@ -1603,20 +1603,28 @@ function cerrarModalInvestigacionEducativaV(event) {
         var elVisitas     = document.getElementById('sidebarVisitasV');
         var elRegistrados = document.getElementById('sidebarRegistradosV');
 
-        if (elVisitas)     elVisitas.textContent     = visitas.toLocaleString('es-MX');
-        if (elRegistrados) elRegistrados.textContent = registrados.toLocaleString('es-MX');
+        if (elVisitas)     elVisitas.textContent     = visitas > 0 ? visitas.toLocaleString('es-MX') : '—';
+        if (elRegistrados) elRegistrados.textContent = registrados > 0 ? registrados.toLocaleString('es-MX') : '—';
+
+        // Intentar actualizar registrados desde la API
+        if (elRegistrados) {
+            fetch('/api/auth/count')
+                .then(function(r) { if (!r.ok) throw new Error('no API'); return r.json(); })
+                .then(function(data) {
+                    if (typeof data.total === 'number') {
+                        elRegistrados.textContent = data.total.toLocaleString('es-MX');
+                        localStorage.setItem('contadorRegistrados', data.total);
+                    }
+                })
+                .catch(function() { /* usa el valor localStorage ya mostrado */ });
+        }
     }
 
-    // Actualizar al cargar — con retry
-    function iniciarContadoresV() {
-        actualizarContadoresV();
-        setTimeout(actualizarContadoresV, 500);
-        setTimeout(actualizarContadoresV, 2000);
-    }
+    // Actualizar al cargar
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', iniciarContadoresV);
+        document.addEventListener('DOMContentLoaded', actualizarContadoresV);
     } else {
-        iniciarContadoresV();
+        actualizarContadoresV();
     }
 
     // Actualizar en tiempo real si otra pestaña/ventana cambia el storage

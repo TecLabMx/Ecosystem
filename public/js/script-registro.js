@@ -127,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
             sessionStorage.setItem('nombreUsuario',data.user.nombre);
             sessionStorage.setItem('horaLogin',    new Date().toLocaleTimeString());
 
+            // Incrementar contador local de registrados
+            var regActual = parseInt(localStorage.getItem('contadorRegistrados') || '0', 10);
+            localStorage.setItem('contadorRegistrados', regActual + 1);
+
             mostrarAlerta('¡Cuenta creada exitosamente! Bienvenido ' + data.user.nombre, 'success');
             setTimeout(function() {
                 window.location.href = 'dashboard-alumno.html';

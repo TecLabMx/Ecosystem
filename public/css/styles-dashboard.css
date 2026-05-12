@@ -5477,8 +5477,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  /* Espacio para que el contenido no quede tapado */
-  .main-wrapper {
+  /* Espacio para que el contenido no quede tapado por la bottom nav */
+  .main-container {
     padding-bottom: 64px;
   }
 
